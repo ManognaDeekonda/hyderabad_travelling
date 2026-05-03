@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Smart Travel Plan</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+body{
+font-family:'Poppins',sans-serif;
+background:#000;
+color:white;
+overflow-x:hidden;
+}
+
+#particles-js{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+z-index:0;
+}
+
+.wrap{
+position:relative;
+z-index:10;
+max-width:1200px;
+margin:auto;
+padding:40px 20px;
+}
+
+.glass{
+background:rgba(255,255,255,.05);
+backdrop-filter:blur(14px);
+border:1px solid rgba(255,255,255,.08);
+box-shadow:0 0 18px rgba(0,255,255,.08);
+border-radius:20px;
+padding:20px;
+}
+
+.gradientText{
+background:linear-gradient(90deg,#00eaff,#d946ef);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.hoverUp{
+transition:.3s;
+}
+
+.hoverUp:hover{
+transform:translateY(-5px);
+}
+
+.line{
+position:absolute;
+left:17px;
+top:0;
+bottom:0;
+width:2px;
+background:linear-gradient(#00ffff,#d946ef);
+}
+
+.dot{
+width:14px;
+height:14px;
+border-radius:50%;
+background:#00ffff;
+margin-top:8px;
+}
+</style>
+</head>
+
+<body>
+
+<div id="particles-js"></div>
+
+<div class="wrap">
+
+<!-- Heading -->
+<div class="text-center mb-10">
+<h1 class="text-5xl font-extrabold mb-4">
+Your <span class="gradientText">Perfect Plan</span>
+</h1>
+<p class="text-gray-300">
+Smart recommendations based on your mood, budget and vibe ✨
+</p>
+</div>
+
+<!-- Summary -->
+<div class="glass mb-10">
+<div class="grid md:grid-cols-3 gap-6 text-center">
+
+<div>
+<p class="text-gray-400">Destination</p>
+<h3 class="text-2xl text-cyan-400 font-bold">{{ destination }}</h3>
+</div>
+
+<div>
+<p class="text-gray-400">Budget</p>
+<h3 class="text-2xl text-cyan-400 font-bold">₹{{ budget }}</h3>
+</div>
+
+<div>
+<p class="text-gray-400">Duration</p>
+<h3 class="text-2xl text-cyan-400 font-bold">{{ duration }}</h3>
+</div>
+
+<div>
+<p class="text-gray-400">Interest</p>
+<h3>{{ interest }}</h3>
+</div>
+
+<div>
+<p class="text-gray-400">Company</p>
+<h3>{{ company }}</h3>
+</div>
+
+<div>
+<p class="text-gray-400">Mood</p>
+<h3>{{ mood }}</h3>
+</div>
+
+</div>
+</div>
+
+<!-- Itinerary -->
+<div class="glass mb-10">
+<h2 class="text-3xl font-bold mb-8 gradientText">Recommended Itinerary</h2>
+
+{% if itinerary %}
+<div class="relative pl-10">
+<div class="line"></div>
+
+{% for item in itinerary %}
+<div class="flex gap-5 mb-8 items-start">
+
+<div class="dot"></div>
+
+<div class="glass hoverUp w-full">
+
+<h3 class="text-cyan-400 font-bold">{{ item.slot }}</h3>
+
+<p class="text-2xl font-bold mt-2">
+{{ item.place.name }}
+</p>
+
+<p class="text-gray-400 mt-2">
+₹{{ item.place.price_range }} • {{ item.place.time_needed }}
+</p>
+
+<!-- 📍 MAPS -->
+{% if item.place.maps_link %}
+<a href="{{ item.place.maps_link }}" target="_blank"
+class="text-cyan-300 underline block mt-2">
+📍 Open in Google Maps
+</a>
+{% endif %}
+
+<!-- 🎥 YOUTUBE -->
+{% if item.place.youtube_link %}
+<a href="{{ item.place.youtube_link }}" target="_blank"
+class="text-pink-400 underline block mt-1">
+🎥 Watch Videos
+</a>
+{% endif %}
+
+</div>
+</div>
+{% endfor %}
+
+</div>
+
+{% else %}
+<p>No itinerary found.</p>
+{% endif %}
+</div>
+
+<!-- Budget Sections -->
+<div class="grid md:grid-cols-3 gap-8 mb-10">
+
+<!-- Within Budget -->
+<div class="glass">
+<h3 class="text-2xl text-green-400 font-bold mb-5">Within Budget ✅</h3>
+
+{% if within_budget %}
+{% for place in within_budget[:5] %}
+<div class="mb-4 border-b border-white/10 pb-3">
+
+<p class="font-semibold">{{ place.name }}</p>
+<p class="text-sm text-gray-400">₹{{ place.price_range }}</p>
+
+{% if place.maps_link %}
+<a href="{{ place.maps_link }}" target="_blank" class="text-cyan-300 text-sm block mt-1">
+📍 Maps
+</a>
+{% endif %}
+
+{% if place.youtube_link %}
+<a href="{{ place.youtube_link }}" target="_blank" class="text-pink-400 text-sm block">
+🎥 Video
+</a>
+{% endif %}
+
+</div>
+{% endfor %}
+{% else %}
+<p class="text-gray-400">No places found</p>
+{% endif %}
+</div>
+
+<!-- Upgrade -->
+<div class="glass">
+<h3 class="text-2xl text-yellow-400 font-bold mb-5">Upgrade Picks 💡</h3>
+
+{% if above_budget %}
+{% for place in above_budget[:5] %}
+<div class="mb-4 border-b border-white/10 pb-3">
+
+<p class="font-semibold">{{ place.name }}</p>
+<p class="text-sm text-gray-400">₹{{ place.price_range }}</p>
+
+{% if place.maps_link %}
+<a href="{{ place.maps_link }}" target="_blank" class="text-cyan-300 text-sm block mt-1">
+📍 Maps
+</a>
+{% endif %}
+
+{% if place.youtube_link %}
+<a href="{{ place.youtube_link }}" target="_blank" class="text-pink-400 text-sm block">
+🎥 Video
+</a>
+{% endif %}
+
+</div>
+{% endfor %}
+{% else %}
+<p class="text-gray-400">No places found</p>
+{% endif %}
+</div>
+
+<!-- Premium -->
+<div class="glass">
+<h3 class="text-2xl text-pink-400 font-bold mb-5">Premium ✨</h3>
+
+{% if premium %}
+{% for place in premium[:5] %}
+<div class="mb-4 border-b border-white/10 pb-3">
+
+<p class="font-semibold">{{ place.name }}</p>
+<p class="text-sm text-gray-400">₹{{ place.price_range }}</p>
+
+{% if place.maps_link %}
+<a href="{{ place.maps_link }}" target="_blank" class="text-cyan-300 text-sm block mt-1">
+📍 Maps
+</a>
+{% endif %}
+
+{% if place.youtube_link %}
+<a href="{{ place.youtube_link }}" target="_blank" class="text-pink-400 text-sm block">
+🎥 Video
+</a>
+{% endif %}
+
+</div>
+{% endfor %}
+{% else %}
+<p class="text-gray-400">No places found</p>
+{% endif %}
+</div>
+
+</div>
+
+<!-- Total Cost -->
+<div class="glass text-center mb-10">
+<p class="text-gray-400">Estimated Total Cost</p>
+<h2 class="text-5xl font-extrabold gradientText">₹{{ total_cost }}</h2>
+</div>
+
+<!-- Buttons -->
+<div class="flex flex-col md:flex-row gap-4 justify-center">
+
+<a href="/planner"
+class="px-8 py-4 rounded-full bg-cyan-500 text-black font-bold text-center">
+Plan Again 🚀
+</a>
+
+<a href="/"
+class="px-8 py-4 rounded-full border border-white/20 text-center">
+Back Home
+</a>
+
+</div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+
+<script>
+tsParticles.load("particles-js",{
+fullScreen:{enable:false},
+particles:{
+number:{value:40},
+size:{value:{min:3,max:8}},
+move:{enable:true,speed:1},
+opacity:{value:.8}
+}
+});
+</script>
+
+</body>
+</html>
