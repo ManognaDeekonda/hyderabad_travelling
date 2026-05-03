@@ -1,0 +1,5991 @@
+[
+  {
+    "name": "Shilparamam Madhapur",
+    "area": "Madhapur",
+    "category": "nature",
+    "subcategory": "cultural village",
+    "price_range": 60,
+    "best_time": "afternoon",
+    "mood_tags": [
+      "relaxed",
+      "cultural",
+      "family"
+    ],
+    "company_tags": [
+      "family",
+      "friends",
+      "couple"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.4,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Shilparamam+Madhapur+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Shilparamam+Madhapur+Hyderabad+review"
+  },
+  {
+    "name": "Paradise Biryani Madhapur",
+    "area": "Madhapur",
+    "category": "food",
+    "subcategory": "restaurant",
+    "price_range": 400,
+    "best_time": "night",
+    "mood_tags": [
+      "fun",
+      "hungry",
+      "group"
+    ],
+    "company_tags": [
+      "friends",
+      "family",
+      "couple"
+    ],
+    "time_needed": "1 hour",
+    "rating": 4.2,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Paradise+Biryani+Madhapur+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Paradise+Biryani+Madhapur+Hyderabad+review"
+  },
+  {
+    "name": "Pista House Madhapur",
+    "area": "Madhapur",
+    "category": "food",
+    "subcategory": "restaurant",
+    "price_range": 500,
+    "best_time": "night",
+    "mood_tags": [
+      "festive",
+      "hungry",
+      "group"
+    ],
+    "company_tags": [
+      "friends",
+      "family"
+    ],
+    "time_needed": "1 hour",
+    "rating": 4.3,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Pista+House+Madhapur+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Pista+House+Madhapur+Hyderabad+review"
+  },
+  {
+    "name": "Cream Stone Madhapur",
+    "area": "Madhapur",
+    "category": "food",
+    "subcategory": "dessert cafe",
+    "price_range": 350,
+    "best_time": "night",
+    "mood_tags": [
+      "sweet",
+      "fun",
+      "late-night"
+    ],
+    "company_tags": [
+      "friends",
+      "couple",
+      "family"
+    ],
+    "time_needed": "1 hour",
+    "rating": 4.4,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Cream+Stone+Madhapur+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Cream+Stone+Madhapur+Hyderabad+review"
+  },
+  {
+    "name": "The Chocolate Room Madhapur",
+    "area": "Madhapur",
+    "category": "food",
+    "subcategory": "dessert cafe",
+    "price_range": 450,
+    "best_time": "evening",
+    "mood_tags": [
+      "romantic",
+      "sweet",
+      "cozy"
+    ],
+    "company_tags": [
+      "couple",
+      "friends"
+    ],
+    "time_needed": "1.5 hours",
+    "rating": 4.2,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=The+Chocolate+Room+Madhapur+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=The+Chocolate+Room+Madhapur+Hyderabad+review"
+  },
+  {
+    "name": "Street Food Lane Madhapur",
+    "area": "Madhapur",
+    "category": "food",
+    "subcategory": "street food",
+    "price_range": 250,
+    "best_time": "night",
+    "mood_tags": [
+      "budget",
+      "fun",
+      "hungry"
+    ],
+    "company_tags": [
+      "friends",
+      "solo"
+    ],
+    "time_needed": "1 hour",
+    "rating": 4.0,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Street+Food+Lane+Madhapur+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Street+Food+Lane+Madhapur+Hyderabad+review"
+  },
+  {
+    "name": "Roastery Coffee House Madhapur",
+    "area": "Madhapur",
+    "category": "cafe",
+    "subcategory": "premium cafe",
+    "price_range": 700,
+    "best_time": "evening",
+    "mood_tags": [
+      "relaxed",
+      "premium",
+      "romantic"
+    ],
+    "company_tags": [
+      "couple",
+      "solo",
+      "friends"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.6,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Roastery+Coffee+House+Madhapur+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Roastery+Coffee+House+Madhapur+Hyderabad+review"
+  },
+  {
+    "name": "Minerva Coffee Shop Madhapur",
+    "area": "Madhapur",
+    "category": "cafe",
+    "subcategory": "casual cafe",
+    "price_range": 350,
+    "best_time": "morning",
+    "mood_tags": [
+      "casual",
+      "calm",
+      "solo"
+    ],
+    "company_tags": [
+      "solo",
+      "friends"
+    ],
+    "time_needed": "1.5 hours",
+    "rating": 4.1,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Minerva+Coffee+Shop+Madhapur+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Minerva+Coffee+Shop+Madhapur+Hyderabad+review"
+  },
+  {
+    "name": "Third Wave Coffee Madhapur",
+    "area": "Madhapur",
+    "category": "cafe",
+    "subcategory": "modern cafe",
+    "price_range": 500,
+    "best_time": "afternoon",
+    "mood_tags": [
+      "work",
+      "calm",
+      "modern"
+    ],
+    "company_tags": [
+      "solo",
+      "friends",
+      "couple"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.4,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Third+Wave+Coffee+Madhapur+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Third+Wave+Coffee+Madhapur+Hyderabad+review"
+  },
+  {
+    "name": "Durgam Cheruvu Walk Zone Madhapur",
+    "area": "Madhapur",
+    "category": "nature",
+    "subcategory": "lake walk",
+    "price_range": 0,
+    "best_time": "evening",
+    "mood_tags": [
+      "fresh",
+      "romantic",
+      "relaxed"
+    ],
+    "company_tags": [
+      "couple",
+      "friends",
+      "solo"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.5,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Durgam+Cheruvu+Walk+Zone+Madhapur+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Durgam+Cheruvu+Walk+Zone+Madhapur+Hyderabad+review"
+  },
+  {
+    "name": "Madhapur Gaming Arena",
+    "area": "Madhapur",
+    "category": "entertainment",
+    "subcategory": "gaming zone",
+    "price_range": 600,
+    "best_time": "evening",
+    "mood_tags": [
+      "energetic",
+      "fun",
+      "competitive"
+    ],
+    "company_tags": [
+      "friends"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.3,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Madhapur+Gaming+Arena+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Madhapur+Gaming+Arena+Hyderabad+review"
+  },
+  {
+    "name": "Snow World Mini Zone Madhapur",
+    "area": "Madhapur",
+    "category": "entertainment",
+    "subcategory": "activity zone",
+    "price_range": 800,
+    "best_time": "afternoon",
+    "mood_tags": [
+      "fun",
+      "family",
+      "active"
+    ],
+    "company_tags": [
+      "family",
+      "friends"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.1,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Snow+World+Mini+Zone+Madhapur+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Snow+World+Mini+Zone+Madhapur+Hyderabad+review"
+  },
+  {
+    "name": "Inorbit Mall Nearby Madhapur",
+    "area": "Madhapur",
+    "category": "shopping",
+    "subcategory": "mall",
+    "price_range": 1500,
+    "best_time": "afternoon",
+    "mood_tags": [
+      "shopping",
+      "fun",
+      "cool"
+    ],
+    "company_tags": [
+      "friends",
+      "family",
+      "couple"
+    ],
+    "time_needed": "3 hours",
+    "rating": 4.5,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Inorbit+Mall+Nearby+Madhapur+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Inorbit+Mall+Nearby+Madhapur+Hyderabad+review"
+  },
+  {
+    "name": "Lifestyle Store Hub Madhapur",
+    "area": "Madhapur",
+    "category": "shopping",
+    "subcategory": "fashion store",
+    "price_range": 2000,
+    "best_time": "evening",
+    "mood_tags": [
+      "shopping",
+      "premium",
+      "style"
+    ],
+    "company_tags": [
+      "friends",
+      "couple"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.2,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Lifestyle+Store+Hub+Madhapur+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Lifestyle+Store+Hub+Madhapur+Hyderabad+review"
+  },
+  {
+    "name": "Open Air Rooftop Cafe Madhapur",
+    "area": "Madhapur",
+    "category": "premium",
+    "subcategory": "rooftop dining",
+    "price_range": 1200,
+    "best_time": "night",
+    "mood_tags": [
+      "romantic",
+      "premium",
+      "relaxed"
+    ],
+    "company_tags": [
+      "couple",
+      "friends"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.5,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Open+Air+Rooftop+Cafe+Madhapur+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Open+Air+Rooftop+Cafe+Madhapur+Hyderabad+review"
+  },
+  {
+    "name": "Skyline Lounge Madhapur",
+    "area": "Madhapur",
+    "category": "premium",
+    "subcategory": "lounge",
+    "price_range": 1800,
+    "best_time": "night",
+    "mood_tags": [
+      "luxury",
+      "fun",
+      "party"
+    ],
+    "company_tags": [
+      "friends",
+      "couple"
+    ],
+    "time_needed": "3 hours",
+    "rating": 4.4,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Skyline+Lounge+Madhapur+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Skyline+Lounge+Madhapur+Hyderabad+review"
+  },
+  {
+    "name": "Book Lounge Madhapur",
+    "area": "Madhapur",
+    "category": "relax",
+    "subcategory": "book cafe",
+    "price_range": 300,
+    "best_time": "afternoon",
+    "mood_tags": [
+      "peaceful",
+      "calm",
+      "solo"
+    ],
+    "company_tags": [
+      "solo",
+      "couple"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.3,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Book+Lounge+Madhapur+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Book+Lounge+Madhapur+Hyderabad+review"
+  },
+  {
+    "name": "Art Studio Corner Madhapur",
+    "area": "Madhapur",
+    "category": "hidden_gem",
+    "subcategory": "creative studio",
+    "price_range": 500,
+    "best_time": "afternoon",
+    "mood_tags": [
+      "creative",
+      "calm",
+      "different"
+    ],
+    "company_tags": [
+      "solo",
+      "friends"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.0,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Art+Studio+Corner+Madhapur+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Art+Studio+Corner+Madhapur+Hyderabad+review"
+  },
+  {
+    "name": "Weekend Flea Market Madhapur",
+    "area": "Madhapur",
+    "category": "hidden_gem",
+    "subcategory": "market",
+    "price_range": 400,
+    "best_time": "morning",
+    "mood_tags": [
+      "explore",
+      "shopping",
+      "fun"
+    ],
+    "company_tags": [
+      "friends",
+      "family"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.1,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Weekend+Flea+Market+Madhapur+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Weekend+Flea+Market+Madhapur+Hyderabad+review"
+  },
+  {
+    "name": "Night Dessert Hub Madhapur",
+    "area": "Madhapur",
+    "category": "food",
+    "subcategory": "dessert cafe",
+    "price_range": 450,
+    "best_time": "night",
+    "mood_tags": [
+      "sweet",
+      "late-night",
+      "fun"
+    ],
+    "company_tags": [
+      "friends",
+      "couple",
+      "family"
+    ],
+    "time_needed": "1 hour",
+    "rating": 4.2,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Night+Dessert+Hub+Madhapur+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Night+Dessert+Hub+Madhapur+Hyderabad+review"
+  },
+  {
+    "name": "Roastery Coffee House Jubilee Hills",
+    "area": "Jubilee Hills",
+    "category": "cafe",
+    "subcategory": "premium cafe",
+    "price_range": 800,
+    "best_time": "evening",
+    "mood_tags": [
+      "relaxed",
+      "premium",
+      "romantic"
+    ],
+    "company_tags": [
+      "couple",
+      "friends",
+      "solo"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.7,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Roastery+Coffee+House+Jubilee+Hills+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Roastery+Coffee+House+Jubilee+Hills+Hyderabad+review"
+  },
+  {
+    "name": "Olive Bistro Jubilee Hills",
+    "area": "Jubilee Hills",
+    "category": "food",
+    "subcategory": "fine dining",
+    "price_range": 1800,
+    "best_time": "night",
+    "mood_tags": [
+      "romantic",
+      "luxury",
+      "calm"
+    ],
+    "company_tags": [
+      "couple",
+      "friends"
+    ],
+    "time_needed": "2.5 hours",
+    "rating": 4.6,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Olive+Bistro+Jubilee+Hills+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Olive+Bistro+Jubilee+Hills+Hyderabad+review"
+  },
+  {
+    "name": "Over The Moon Jubilee Hills",
+    "area": "Jubilee Hills",
+    "category": "premium",
+    "subcategory": "rooftop lounge",
+    "price_range": 2200,
+    "best_time": "night",
+    "mood_tags": [
+      "party",
+      "luxury",
+      "fun"
+    ],
+    "company_tags": [
+      "friends",
+      "couple"
+    ],
+    "time_needed": "3 hours",
+    "rating": 4.5,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Over+The+Moon+Jubilee+Hills+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Over+The+Moon+Jubilee+Hills+Hyderabad+review"
+  },
+  {
+    "name": "Heart Cup Coffee Jubilee Hills",
+    "area": "Jubilee Hills",
+    "category": "cafe",
+    "subcategory": "casual cafe",
+    "price_range": 600,
+    "best_time": "afternoon",
+    "mood_tags": [
+      "fun",
+      "casual",
+      "friends"
+    ],
+    "company_tags": [
+      "friends",
+      "solo",
+      "couple"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.3,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Heart+Cup+Coffee+Jubilee+Hills+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Heart+Cup+Coffee+Jubilee+Hills+Hyderabad+review"
+  },
+  {
+    "name": "Karachi Bakery Lounge Jubilee Hills",
+    "area": "Jubilee Hills",
+    "category": "food",
+    "subcategory": "bakery cafe",
+    "price_range": 400,
+    "best_time": "evening",
+    "mood_tags": [
+      "sweet",
+      "relaxed",
+      "family"
+    ],
+    "company_tags": [
+      "family",
+      "friends",
+      "couple"
+    ],
+    "time_needed": "1 hour",
+    "rating": 4.4,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Karachi+Bakery+Lounge+Jubilee+Hills+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Karachi+Bakery+Lounge+Jubilee+Hills+Hyderabad+review"
+  },
+  {
+    "name": "KBR National Park Entrance Jubilee Hills",
+    "area": "Jubilee Hills",
+    "category": "nature",
+    "subcategory": "park",
+    "price_range": 20,
+    "best_time": "morning",
+    "mood_tags": [
+      "fresh",
+      "fitness",
+      "peaceful"
+    ],
+    "company_tags": [
+      "solo",
+      "friends",
+      "family"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.6,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=KBR+National+Park+Entrance+Jubilee+Hills+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=KBR+National+Park+Entrance+Jubilee+Hills+Hyderabad+review"
+  },
+  {
+    "name": "PVR RK Cineplex Jubilee Hills",
+    "area": "Jubilee Hills",
+    "category": "entertainment",
+    "subcategory": "cinema",
+    "price_range": 500,
+    "best_time": "night",
+    "mood_tags": [
+      "fun",
+      "relaxed",
+      "date"
+    ],
+    "company_tags": [
+      "couple",
+      "friends",
+      "family"
+    ],
+    "time_needed": "3 hours",
+    "rating": 4.4,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=PVR+RK+Cineplex+Jubilee+Hills+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=PVR+RK+Cineplex+Jubilee+Hills+Hyderabad+review"
+  },
+  {
+    "name": "Designer Street Jubilee Hills",
+    "area": "Jubilee Hills",
+    "category": "shopping",
+    "subcategory": "fashion street",
+    "price_range": 2500,
+    "best_time": "evening",
+    "mood_tags": [
+      "style",
+      "shopping",
+      "premium"
+    ],
+    "company_tags": [
+      "friends",
+      "couple"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.2,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Designer+Street+Jubilee+Hills+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Designer+Street+Jubilee+Hills+Hyderabad+review"
+  },
+  {
+    "name": "Third Wave Coffee Jubilee Hills",
+    "area": "Jubilee Hills",
+    "category": "cafe",
+    "subcategory": "modern cafe",
+    "price_range": 550,
+    "best_time": "afternoon",
+    "mood_tags": [
+      "work",
+      "calm",
+      "modern"
+    ],
+    "company_tags": [
+      "solo",
+      "friends"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.5,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Third+Wave+Coffee+Jubilee+Hills+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Third+Wave+Coffee+Jubilee+Hills+Hyderabad+review"
+  },
+  {
+    "name": "The Moonshine Project Jubilee Hills",
+    "area": "Jubilee Hills",
+    "category": "premium",
+    "subcategory": "nightlife lounge",
+    "price_range": 2400,
+    "best_time": "night",
+    "mood_tags": [
+      "party",
+      "energetic",
+      "luxury"
+    ],
+    "company_tags": [
+      "friends",
+      "couple"
+    ],
+    "time_needed": "3 hours",
+    "rating": 4.5,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=The+Moonshine+Project+Jubilee+Hills+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=The+Moonshine+Project+Jubilee+Hills+Hyderabad+review"
+  },
+  {
+    "name": "Chutneys Jubilee Hills",
+    "area": "Jubilee Hills",
+    "category": "food",
+    "subcategory": "south indian restaurant",
+    "price_range": 500,
+    "best_time": "morning",
+    "mood_tags": [
+      "family",
+      "comfort",
+      "casual"
+    ],
+    "company_tags": [
+      "family",
+      "friends"
+    ],
+    "time_needed": "1 hour",
+    "rating": 4.5,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Chutneys+Jubilee+Hills+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Chutneys+Jubilee+Hills+Hyderabad+review"
+  },
+  {
+    "name": "Tatva Restaurant Jubilee Hills",
+    "area": "Jubilee Hills",
+    "category": "food",
+    "subcategory": "vegetarian dining",
+    "price_range": 900,
+    "best_time": "night",
+    "mood_tags": [
+      "calm",
+      "premium",
+      "family"
+    ],
+    "company_tags": [
+      "family",
+      "couple"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.4,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Tatva+Restaurant+Jubilee+Hills+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Tatva+Restaurant+Jubilee+Hills+Hyderabad+review"
+  },
+  {
+    "name": "Luxury Spa Retreat Jubilee Hills",
+    "area": "Jubilee Hills",
+    "category": "relax",
+    "subcategory": "spa",
+    "price_range": 3000,
+    "best_time": "afternoon",
+    "mood_tags": [
+      "peaceful",
+      "premium",
+      "selfcare"
+    ],
+    "company_tags": [
+      "solo",
+      "couple"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.6,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Luxury+Spa+Retreat+Jubilee+Hills+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Luxury+Spa+Retreat+Jubilee+Hills+Hyderabad+review"
+  },
+  {
+    "name": "Art Gallery Walk Jubilee Hills",
+    "area": "Jubilee Hills",
+    "category": "hidden_gem",
+    "subcategory": "art gallery",
+    "price_range": 200,
+    "best_time": "afternoon",
+    "mood_tags": [
+      "creative",
+      "calm",
+      "different"
+    ],
+    "company_tags": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "time_needed": "1.5 hours",
+    "rating": 4.3,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Art+Gallery+Walk+Jubilee+Hills+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Art+Gallery+Walk+Jubilee+Hills+Hyderabad+review"
+  },
+  {
+    "name": "Pet Friendly Cafe Spot Jubilee Hills",
+    "area": "Jubilee Hills",
+    "category": "cafe",
+    "subcategory": "pet cafe",
+    "price_range": 700,
+    "best_time": "evening",
+    "mood_tags": [
+      "cute",
+      "fun",
+      "relaxed"
+    ],
+    "company_tags": [
+      "friends",
+      "couple",
+      "family"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.2,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Pet+Friendly+Cafe+Spot+Jubilee+Hills+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Pet+Friendly+Cafe+Spot+Jubilee+Hills+Hyderabad+review"
+  },
+  {
+    "name": "Skyline View Point Jubilee Hills",
+    "area": "Jubilee Hills",
+    "category": "hidden_gem",
+    "subcategory": "city viewpoint",
+    "price_range": 0,
+    "best_time": "night",
+    "mood_tags": [
+      "romantic",
+      "peaceful",
+      "fresh"
+    ],
+    "company_tags": [
+      "couple",
+      "friends",
+      "solo"
+    ],
+    "time_needed": "1 hour",
+    "rating": 4.1,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Skyline+View+Point+Jubilee+Hills+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Skyline+View+Point+Jubilee+Hills+Hyderabad+review"
+  },
+  {
+    "name": "Premium Dessert Studio Jubilee Hills",
+    "area": "Jubilee Hills",
+    "category": "food",
+    "subcategory": "dessert cafe",
+    "price_range": 650,
+    "best_time": "night",
+    "mood_tags": [
+      "sweet",
+      "romantic",
+      "premium"
+    ],
+    "company_tags": [
+      "couple",
+      "friends"
+    ],
+    "time_needed": "1 hour",
+    "rating": 4.4,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Premium+Dessert+Studio+Jubilee+Hills+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Premium+Dessert+Studio+Jubilee+Hills+Hyderabad+review"
+  },
+  {
+    "name": "Weekend Flea Boutique Jubilee Hills",
+    "area": "Jubilee Hills",
+    "category": "shopping",
+    "subcategory": "boutique market",
+    "price_range": 1800,
+    "best_time": "morning",
+    "mood_tags": [
+      "shopping",
+      "creative",
+      "fun"
+    ],
+    "company_tags": [
+      "friends",
+      "family"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.1,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Weekend+Flea+Boutique+Jubilee+Hills+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Weekend+Flea+Boutique+Jubilee+Hills+Hyderabad+review"
+  },
+  {
+    "name": "Board Game Cafe Jubilee Hills",
+    "area": "Jubilee Hills",
+    "category": "entertainment",
+    "subcategory": "game cafe",
+    "price_range": 600,
+    "best_time": "evening",
+    "mood_tags": [
+      "fun",
+      "interactive",
+      "friends"
+    ],
+    "company_tags": [
+      "friends",
+      "couple"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.3,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Board+Game+Cafe+Jubilee+Hills+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Board+Game+Cafe+Jubilee+Hills+Hyderabad+review"
+  },
+  {
+    "name": "Luxury Rooftop Dining Deck Jubilee Hills",
+    "area": "Jubilee Hills",
+    "category": "premium",
+    "subcategory": "rooftop dining",
+    "price_range": 2600,
+    "best_time": "night",
+    "mood_tags": [
+      "luxury",
+      "romantic",
+      "premium"
+    ],
+    "company_tags": [
+      "couple",
+      "friends"
+    ],
+    "time_needed": "2.5 hours",
+    "rating": 4.6,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Luxury+Rooftop+Dining+Deck+Jubilee+Hills+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Luxury+Rooftop+Dining+Deck+Jubilee+Hills+Hyderabad+review"
+  },
+  {
+    "name": "Cafe Niloufer Banjara Hills",
+    "area": "Banjara Hills",
+    "category": "cafe",
+    "subcategory": "tea cafe",
+    "price_range": 300,
+    "best_time": "morning",
+    "mood_tags": [
+      "comfort",
+      "casual",
+      "fresh"
+    ],
+    "company_tags": [
+      "friends",
+      "family",
+      "solo"
+    ],
+    "time_needed": "1 hour",
+    "rating": 4.6,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Cafe+Niloufer+Banjara+Hills+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Cafe+Niloufer+Banjara+Hills+Hyderabad+review"
+  },
+  {
+    "name": "The Glass Onion Banjara Hills",
+    "area": "Banjara Hills",
+    "category": "food",
+    "subcategory": "fine dining",
+    "price_range": 1600,
+    "best_time": "night",
+    "mood_tags": [
+      "premium",
+      "romantic",
+      "calm"
+    ],
+    "company_tags": [
+      "couple",
+      "friends"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.5,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=The+Glass+Onion+Banjara+Hills+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=The+Glass+Onion+Banjara+Hills+Hyderabad+review"
+  },
+  {
+    "name": "Hard Rock Cafe Hyderabad Banjara Hills",
+    "area": "Banjara Hills",
+    "category": "premium",
+    "subcategory": "music lounge",
+    "price_range": 2200,
+    "best_time": "night",
+    "mood_tags": [
+      "party",
+      "energetic",
+      "fun"
+    ],
+    "company_tags": [
+      "friends",
+      "couple"
+    ],
+    "time_needed": "3 hours",
+    "rating": 4.4,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Hard+Rock+Cafe+Hyderabad+Banjara+Hills+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Hard+Rock+Cafe+Hyderabad+Banjara+Hills+Hyderabad+review"
+  },
+  {
+    "name": "GVK One Mall Banjara Hills",
+    "area": "Banjara Hills",
+    "category": "shopping",
+    "subcategory": "mall",
+    "price_range": 2500,
+    "best_time": "afternoon",
+    "mood_tags": [
+      "shopping",
+      "premium",
+      "cool"
+    ],
+    "company_tags": [
+      "family",
+      "friends",
+      "couple"
+    ],
+    "time_needed": "3 hours",
+    "rating": 4.5,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=GVK+One+Mall+Banjara+Hills+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=GVK+One+Mall+Banjara+Hills+Hyderabad+review"
+  },
+  {
+    "name": "Lumbini Jewel Street Banjara Hills",
+    "area": "Banjara Hills",
+    "category": "shopping",
+    "subcategory": "luxury stores",
+    "price_range": 5000,
+    "best_time": "evening",
+    "mood_tags": [
+      "luxury",
+      "style",
+      "premium"
+    ],
+    "company_tags": [
+      "couple",
+      "family"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.2,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Lumbini+Jewel+Street+Banjara+Hills+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Lumbini+Jewel+Street+Banjara+Hills+Hyderabad+review"
+  },
+  {
+    "name": "KBR Park Side Walk Banjara Hills",
+    "area": "Banjara Hills",
+    "category": "nature",
+    "subcategory": "walking zone",
+    "price_range": 20,
+    "best_time": "morning",
+    "mood_tags": [
+      "fresh",
+      "fitness",
+      "peaceful"
+    ],
+    "company_tags": [
+      "solo",
+      "friends",
+      "family"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.6,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=KBR+Park+Side+Walk+Banjara+Hills+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=KBR+Park+Side+Walk+Banjara+Hills+Hyderabad+review"
+  },
+  {
+    "name": "Cream Stone Banjara Hills",
+    "area": "Banjara Hills",
+    "category": "food",
+    "subcategory": "dessert cafe",
+    "price_range": 400,
+    "best_time": "night",
+    "mood_tags": [
+      "sweet",
+      "fun",
+      "casual"
+    ],
+    "company_tags": [
+      "friends",
+      "couple",
+      "family"
+    ],
+    "time_needed": "1 hour",
+    "rating": 4.4,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Cream+Stone+Banjara+Hills+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Cream+Stone+Banjara+Hills+Hyderabad+review"
+  },
+  {
+    "name": "PVR Cinemas GVK Banjara Hills",
+    "area": "Banjara Hills",
+    "category": "entertainment",
+    "subcategory": "cinema",
+    "price_range": 500,
+    "best_time": "night",
+    "mood_tags": [
+      "fun",
+      "date",
+      "relaxed"
+    ],
+    "company_tags": [
+      "couple",
+      "friends",
+      "family"
+    ],
+    "time_needed": "3 hours",
+    "rating": 4.5,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=PVR+Cinemas+GVK+Banjara+Hills+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=PVR+Cinemas+GVK+Banjara+Hills+Hyderabad+review"
+  },
+  {
+    "name": "The Coffee Cup Banjara Hills",
+    "area": "Banjara Hills",
+    "category": "cafe",
+    "subcategory": "garden cafe",
+    "price_range": 700,
+    "best_time": "evening",
+    "mood_tags": [
+      "romantic",
+      "calm",
+      "relaxed"
+    ],
+    "company_tags": [
+      "couple",
+      "friends"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.5,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=The+Coffee+Cup+Banjara+Hills+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=The+Coffee+Cup+Banjara+Hills+Hyderabad+review"
+  },
+  {
+    "name": "Barbeque Nation Banjara Hills",
+    "area": "Banjara Hills",
+    "category": "food",
+    "subcategory": "buffet restaurant",
+    "price_range": 1400,
+    "best_time": "night",
+    "mood_tags": [
+      "group",
+      "fun",
+      "hungry"
+    ],
+    "company_tags": [
+      "family",
+      "friends"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.3,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Barbeque+Nation+Banjara+Hills+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Barbeque+Nation+Banjara+Hills+Hyderabad+review"
+  },
+  {
+    "name": "Luxury Spa Lounge Banjara Hills",
+    "area": "Banjara Hills",
+    "category": "relax",
+    "subcategory": "spa",
+    "price_range": 3200,
+    "best_time": "afternoon",
+    "mood_tags": [
+      "peaceful",
+      "selfcare",
+      "premium"
+    ],
+    "company_tags": [
+      "solo",
+      "couple"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.6,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Luxury+Spa+Lounge+Banjara+Hills+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Luxury+Spa+Lounge+Banjara+Hills+Hyderabad+review"
+  },
+  {
+    "name": "Designer Boutique Lane Banjara Hills",
+    "area": "Banjara Hills",
+    "category": "shopping",
+    "subcategory": "fashion street",
+    "price_range": 3000,
+    "best_time": "evening",
+    "mood_tags": [
+      "style",
+      "shopping",
+      "premium"
+    ],
+    "company_tags": [
+      "friends",
+      "couple"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.2,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Designer+Boutique+Lane+Banjara+Hills+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Designer+Boutique+Lane+Banjara+Hills+Hyderabad+review"
+  },
+  {
+    "name": "Sky Lounge Terrace Banjara Hills",
+    "area": "Banjara Hills",
+    "category": "premium",
+    "subcategory": "rooftop lounge",
+    "price_range": 2400,
+    "best_time": "night",
+    "mood_tags": [
+      "luxury",
+      "party",
+      "cityview"
+    ],
+    "company_tags": [
+      "friends",
+      "couple"
+    ],
+    "time_needed": "3 hours",
+    "rating": 4.4,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Sky+Lounge+Terrace+Banjara+Hills+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Sky+Lounge+Terrace+Banjara+Hills+Hyderabad+review"
+  },
+  {
+    "name": "Book Cafe Corner Banjara Hills",
+    "area": "Banjara Hills",
+    "category": "cafe",
+    "subcategory": "book cafe",
+    "price_range": 500,
+    "best_time": "afternoon",
+    "mood_tags": [
+      "peaceful",
+      "solo",
+      "calm"
+    ],
+    "company_tags": [
+      "solo",
+      "couple"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.3,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Book+Cafe+Corner+Banjara+Hills+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Book+Cafe+Corner+Banjara+Hills+Hyderabad+review"
+  },
+  {
+    "name": "Art Gallery Banjara Banjara Hills",
+    "area": "Banjara Hills",
+    "category": "hidden_gem",
+    "subcategory": "art gallery",
+    "price_range": 200,
+    "best_time": "afternoon",
+    "mood_tags": [
+      "creative",
+      "different",
+      "calm"
+    ],
+    "company_tags": [
+      "solo",
+      "friends",
+      "couple"
+    ],
+    "time_needed": "1.5 hours",
+    "rating": 4.2,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Art+Gallery+Banjara+Banjara+Hills+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Art+Gallery+Banjara+Banjara+Hills+Hyderabad+review"
+  },
+  {
+    "name": "Street Chaat Hub Banjara Hills",
+    "area": "Banjara Hills",
+    "category": "food",
+    "subcategory": "street food",
+    "price_range": 250,
+    "best_time": "evening",
+    "mood_tags": [
+      "budget",
+      "fun",
+      "snacks"
+    ],
+    "company_tags": [
+      "friends",
+      "family"
+    ],
+    "time_needed": "1 hour",
+    "rating": 4.1,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Street+Chaat+Hub+Banjara+Hills+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Street+Chaat+Hub+Banjara+Hills+Hyderabad+review"
+  },
+  {
+    "name": "Gaming Arena Banjara Banjara Hills",
+    "area": "Banjara Hills",
+    "category": "entertainment",
+    "subcategory": "gaming zone",
+    "price_range": 700,
+    "best_time": "evening",
+    "mood_tags": [
+      "fun",
+      "energetic",
+      "competitive"
+    ],
+    "company_tags": [
+      "friends"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.3,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Gaming+Arena+Banjara+Banjara+Hills+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Gaming+Arena+Banjara+Banjara+Hills+Hyderabad+review"
+  },
+  {
+    "name": "Luxury Dessert Studio Banjara Hills",
+    "area": "Banjara Hills",
+    "category": "food",
+    "subcategory": "dessert cafe",
+    "price_range": 650,
+    "best_time": "night",
+    "mood_tags": [
+      "sweet",
+      "premium",
+      "romantic"
+    ],
+    "company_tags": [
+      "couple",
+      "friends"
+    ],
+    "time_needed": "1 hour",
+    "rating": 4.4,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Luxury+Dessert+Studio+Banjara+Hills+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Luxury+Dessert+Studio+Banjara+Hills+Hyderabad+review"
+  },
+  {
+    "name": "Weekend Flea Plaza Banjara Hills",
+    "area": "Banjara Hills",
+    "category": "hidden_gem",
+    "subcategory": "market",
+    "price_range": 500,
+    "best_time": "morning",
+    "mood_tags": [
+      "explore",
+      "shopping",
+      "fun"
+    ],
+    "company_tags": [
+      "friends",
+      "family"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.1,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Weekend+Flea+Plaza+Banjara+Hills+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Weekend+Flea+Plaza+Banjara+Hills+Hyderabad+review"
+  },
+  {
+    "name": "Romantic Rooftop Dining Banjara Hills",
+    "area": "Banjara Hills",
+    "category": "premium",
+    "subcategory": "rooftop dining",
+    "price_range": 2600,
+    "best_time": "night",
+    "mood_tags": [
+      "romantic",
+      "luxury",
+      "premium"
+    ],
+    "company_tags": [
+      "couple"
+    ],
+    "time_needed": "2.5 hours",
+    "rating": 4.6,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Romantic+Rooftop+Dining+Banjara+Hills+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Romantic+Rooftop+Dining+Banjara+Hills+Hyderabad+review"
+  },
+  {
+    "name": "Charminar",
+    "area": "Charminar",
+    "category": "history",
+    "subcategory": "monument",
+    "price_range": 50,
+    "best_time": "morning",
+    "mood_tags": [
+      "explore",
+      "cultural",
+      "iconic"
+    ],
+    "company_tags": [
+      "family",
+      "friends",
+      "solo"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.7,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Charminar+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Charminar+Hyderabad+review"
+  },
+  {
+    "name": "Mecca Masjid Charminar",
+    "area": "Charminar",
+    "category": "history",
+    "subcategory": "heritage mosque",
+    "price_range": 0,
+    "best_time": "morning",
+    "mood_tags": [
+      "peaceful",
+      "cultural",
+      "historic"
+    ],
+    "company_tags": [
+      "family",
+      "solo",
+      "friends"
+    ],
+    "time_needed": "1.5 hours",
+    "rating": 4.8,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Mecca+Masjid+Charminar+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Mecca+Masjid+Charminar+Hyderabad+review"
+  },
+  {
+    "name": "Chowmahalla Palace Charminar",
+    "area": "Charminar",
+    "category": "history",
+    "subcategory": "palace museum",
+    "price_range": 100,
+    "best_time": "afternoon",
+    "mood_tags": [
+      "royal",
+      "explore",
+      "historic"
+    ],
+    "company_tags": [
+      "family",
+      "friends",
+      "couple"
+    ],
+    "time_needed": "2.5 hours",
+    "rating": 4.6,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Chowmahalla+Palace+Charminar+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Chowmahalla+Palace+Charminar+Hyderabad+review"
+  },
+  {
+    "name": "Salar Jung Museum Charminar",
+    "area": "Charminar",
+    "category": "history",
+    "subcategory": "museum",
+    "price_range": 50,
+    "best_time": "afternoon",
+    "mood_tags": [
+      "learning",
+      "explore",
+      "cultural"
+    ],
+    "company_tags": [
+      "family",
+      "friends",
+      "solo"
+    ],
+    "time_needed": "3 hours",
+    "rating": 4.6,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Salar+Jung+Museum+Charminar+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Salar+Jung+Museum+Charminar+Hyderabad+review"
+  },
+  {
+    "name": "Laad Bazaar Charminar",
+    "area": "Charminar",
+    "category": "shopping",
+    "subcategory": "traditional market",
+    "price_range": 1200,
+    "best_time": "evening",
+    "mood_tags": [
+      "shopping",
+      "cultural",
+      "fun"
+    ],
+    "company_tags": [
+      "family",
+      "friends",
+      "couple"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.5,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Laad+Bazaar+Charminar+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Laad+Bazaar+Charminar+Hyderabad+review"
+  },
+  {
+    "name": "Pista House Charminar",
+    "area": "Charminar",
+    "category": "food",
+    "subcategory": "restaurant",
+    "price_range": 450,
+    "best_time": "night",
+    "mood_tags": [
+      "hungry",
+      "festive",
+      "group"
+    ],
+    "company_tags": [
+      "family",
+      "friends"
+    ],
+    "time_needed": "1 hour",
+    "rating": 4.4,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Pista+House+Charminar+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Pista+House+Charminar+Hyderabad+review"
+  },
+  {
+    "name": "Shadab Hotel Charminar",
+    "area": "Charminar",
+    "category": "food",
+    "subcategory": "biryani restaurant",
+    "price_range": 500,
+    "best_time": "night",
+    "mood_tags": [
+      "hungry",
+      "local",
+      "fun"
+    ],
+    "company_tags": [
+      "friends",
+      "family"
+    ],
+    "time_needed": "1 hour",
+    "rating": 4.5,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Shadab+Hotel+Charminar+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Shadab+Hotel+Charminar+Hyderabad+review"
+  },
+  {
+    "name": "Nimrah Cafe Charminar",
+    "area": "Charminar",
+    "category": "cafe",
+    "subcategory": "tea cafe",
+    "price_range": 150,
+    "best_time": "morning",
+    "mood_tags": [
+      "comfort",
+      "casual",
+      "local"
+    ],
+    "company_tags": [
+      "solo",
+      "friends",
+      "family"
+    ],
+    "time_needed": "1 hour",
+    "rating": 4.6,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Nimrah+Cafe+Charminar+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Nimrah+Cafe+Charminar+Hyderabad+review"
+  },
+  {
+    "name": "Osmania Biscuit Corner Charminar",
+    "area": "Charminar",
+    "category": "food",
+    "subcategory": "bakery",
+    "price_range": 120,
+    "best_time": "evening",
+    "mood_tags": [
+      "snacks",
+      "budget",
+      "local"
+    ],
+    "company_tags": [
+      "family",
+      "friends"
+    ],
+    "time_needed": "45 mins",
+    "rating": 4.4,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Osmania+Biscuit+Corner+Charminar+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Osmania+Biscuit+Corner+Charminar+Hyderabad+review"
+  },
+  {
+    "name": "Pearl Market Lane Charminar",
+    "area": "Charminar",
+    "category": "shopping",
+    "subcategory": "pearls market",
+    "price_range": 2500,
+    "best_time": "evening",
+    "mood_tags": [
+      "shopping",
+      "luxury",
+      "traditional"
+    ],
+    "company_tags": [
+      "family",
+      "couple"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.3,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Pearl+Market+Lane+Charminar+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Pearl+Market+Lane+Charminar+Hyderabad+review"
+  },
+  {
+    "name": "Perfume Street Charminar",
+    "area": "Charminar",
+    "category": "shopping",
+    "subcategory": "attar market",
+    "price_range": 800,
+    "best_time": "evening",
+    "mood_tags": [
+      "different",
+      "shopping",
+      "cultural"
+    ],
+    "company_tags": [
+      "friends",
+      "family"
+    ],
+    "time_needed": "1 hour",
+    "rating": 4.2,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Perfume+Street+Charminar+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Perfume+Street+Charminar+Hyderabad+review"
+  },
+  {
+    "name": "Falooda House Charminar",
+    "area": "Charminar",
+    "category": "food",
+    "subcategory": "dessert cafe",
+    "price_range": 250,
+    "best_time": "night",
+    "mood_tags": [
+      "sweet",
+      "fun",
+      "cool"
+    ],
+    "company_tags": [
+      "friends",
+      "family",
+      "couple"
+    ],
+    "time_needed": "45 mins",
+    "rating": 4.3,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Falooda+House+Charminar+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Falooda+House+Charminar+Hyderabad+review"
+  },
+  {
+    "name": "Heritage Rooftop View Cafe Charminar",
+    "area": "Charminar",
+    "category": "premium",
+    "subcategory": "view cafe",
+    "price_range": 900,
+    "best_time": "night",
+    "mood_tags": [
+      "romantic",
+      "heritage",
+      "premium"
+    ],
+    "company_tags": [
+      "couple",
+      "friends"
+    ],
+    "time_needed": "1.5 hours",
+    "rating": 4.4,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Heritage+Rooftop+View+Cafe+Charminar+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Heritage+Rooftop+View+Cafe+Charminar+Hyderabad+review"
+  },
+  {
+    "name": "Traditional Bangles Street Charminar",
+    "area": "Charminar",
+    "category": "shopping",
+    "subcategory": "bangles market",
+    "price_range": 700,
+    "best_time": "evening",
+    "mood_tags": [
+      "shopping",
+      "fun",
+      "cultural"
+    ],
+    "company_tags": [
+      "family",
+      "friends"
+    ],
+    "time_needed": "1.5 hours",
+    "rating": 4.5,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Traditional+Bangles+Street+Charminar+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Traditional+Bangles+Street+Charminar+Hyderabad+review"
+  },
+  {
+    "name": "Hidden Courtyard Cafe Charminar",
+    "area": "Charminar",
+    "category": "hidden_gem",
+    "subcategory": "heritage cafe",
+    "price_range": 400,
+    "best_time": "afternoon",
+    "mood_tags": [
+      "calm",
+      "different",
+      "relaxed"
+    ],
+    "company_tags": [
+      "couple",
+      "solo"
+    ],
+    "time_needed": "1.5 hours",
+    "rating": 4.1,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Hidden+Courtyard+Cafe+Charminar+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Hidden+Courtyard+Cafe+Charminar+Hyderabad+review"
+  },
+  {
+    "name": "Heritage Photo Walk Charminar",
+    "area": "Charminar",
+    "category": "entertainment",
+    "subcategory": "photo experience",
+    "price_range": 300,
+    "best_time": "morning",
+    "mood_tags": [
+      "creative",
+      "explore",
+      "fun"
+    ],
+    "company_tags": [
+      "friends",
+      "solo",
+      "couple"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.2,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Heritage+Photo+Walk+Charminar+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Heritage+Photo+Walk+Charminar+Hyderabad+review"
+  },
+  {
+    "name": "Old City Street Food Trail Charminar",
+    "area": "Charminar",
+    "category": "food",
+    "subcategory": "street food",
+    "price_range": 300,
+    "best_time": "night",
+    "mood_tags": [
+      "budget",
+      "hungry",
+      "fun"
+    ],
+    "company_tags": [
+      "friends",
+      "family"
+    ],
+    "time_needed": "1.5 hours",
+    "rating": 4.5,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Old+City+Street+Food+Trail+Charminar+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Old+City+Street+Food+Trail+Charminar+Hyderabad+review"
+  },
+  {
+    "name": "Mini Handicrafts Market Charminar",
+    "area": "Charminar",
+    "category": "shopping",
+    "subcategory": "craft market",
+    "price_range": 900,
+    "best_time": "afternoon",
+    "mood_tags": [
+      "shopping",
+      "creative",
+      "cultural"
+    ],
+    "company_tags": [
+      "family",
+      "friends"
+    ],
+    "time_needed": "1.5 hours",
+    "rating": 4.1,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Mini+Handicrafts+Market+Charminar+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Mini+Handicrafts+Market+Charminar+Hyderabad+review"
+  },
+  {
+    "name": "Evening Qawwali Courtyard Charminar",
+    "area": "Charminar",
+    "category": "hidden_gem",
+    "subcategory": "music experience",
+    "price_range": 200,
+    "best_time": "night",
+    "mood_tags": [
+      "cultural",
+      "peaceful",
+      "different"
+    ],
+    "company_tags": [
+      "friends",
+      "family",
+      "solo"
+    ],
+    "time_needed": "1 hour",
+    "rating": 4.0,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Evening+Qawwali+Courtyard+Charminar+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Evening+Qawwali+Courtyard+Charminar+Hyderabad+review"
+  },
+  {
+    "name": "Royal Hyderabadi Dining Hall Charminar",
+    "area": "Charminar",
+    "category": "premium",
+    "subcategory": "heritage dining",
+    "price_range": 1400,
+    "best_time": "night",
+    "mood_tags": [
+      "royal",
+      "premium",
+      "local"
+    ],
+    "company_tags": [
+      "family",
+      "couple",
+      "friends"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.4,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Royal+Hyderabadi+Dining+Hall+Charminar+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Royal+Hyderabadi+Dining+Hall+Charminar+Hyderabad+review"
+  },
+  {
+    "name": "IKEA Hyderabad Gachibowli",
+    "area": "Gachibowli",
+    "category": "shopping",
+    "subcategory": "furniture mall",
+    "price_range": 1500,
+    "best_time": "afternoon",
+    "mood_tags": [
+      "shopping",
+      "fun",
+      "family"
+    ],
+    "company_tags": [
+      "family",
+      "friends",
+      "couple"
+    ],
+    "time_needed": "3 hours",
+    "rating": 4.6,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=IKEA+Hyderabad+Gachibowli+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=IKEA+Hyderabad+Gachibowli+Hyderabad+review"
+  },
+  {
+    "name": "Sarath City Capital Mall Gachibowli",
+    "area": "Gachibowli",
+    "category": "shopping",
+    "subcategory": "mall",
+    "price_range": 2200,
+    "best_time": "evening",
+    "mood_tags": [
+      "shopping",
+      "premium",
+      "cool"
+    ],
+    "company_tags": [
+      "friends",
+      "family",
+      "couple"
+    ],
+    "time_needed": "3 hours",
+    "rating": 4.6,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Sarath+City+Capital+Mall+Gachibowli+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Sarath+City+Capital+Mall+Gachibowli+Hyderabad+review"
+  },
+  {
+    "name": "Zero40 Brewing Gachibowli",
+    "area": "Gachibowli",
+    "category": "premium",
+    "subcategory": "brewery lounge",
+    "price_range": 2200,
+    "best_time": "night",
+    "mood_tags": [
+      "party",
+      "fun",
+      "premium"
+    ],
+    "company_tags": [
+      "friends",
+      "couple"
+    ],
+    "time_needed": "3 hours",
+    "rating": 4.5,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Zero40+Brewing+Gachibowli+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Zero40+Brewing+Gachibowli+Hyderabad+review"
+  },
+  {
+    "name": "Roastery Coffee Gachibowli",
+    "area": "Gachibowli",
+    "category": "cafe",
+    "subcategory": "premium cafe",
+    "price_range": 750,
+    "best_time": "evening",
+    "mood_tags": [
+      "relaxed",
+      "work",
+      "premium"
+    ],
+    "company_tags": [
+      "solo",
+      "friends",
+      "couple"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.6,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Roastery+Coffee+Gachibowli+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Roastery+Coffee+Gachibowli+Hyderabad+review"
+  },
+  {
+    "name": "Heart Cup Coffee Gachibowli",
+    "area": "Gachibowli",
+    "category": "cafe",
+    "subcategory": "casual cafe",
+    "price_range": 550,
+    "best_time": "afternoon",
+    "mood_tags": [
+      "fun",
+      "casual",
+      "friends"
+    ],
+    "company_tags": [
+      "friends",
+      "solo"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.3,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Heart+Cup+Coffee+Gachibowli+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Heart+Cup+Coffee+Gachibowli+Hyderabad+review"
+  },
+  {
+    "name": "DLF Street Food Lane Gachibowli",
+    "area": "Gachibowli",
+    "category": "food",
+    "subcategory": "street food",
+    "price_range": 300,
+    "best_time": "night",
+    "mood_tags": [
+      "budget",
+      "hungry",
+      "fun"
+    ],
+    "company_tags": [
+      "friends",
+      "solo"
+    ],
+    "time_needed": "1 hour",
+    "rating": 4.5,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=DLF+Street+Food+Lane+Gachibowli+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=DLF+Street+Food+Lane+Gachibowli+Hyderabad+review"
+  },
+  {
+    "name": "Paradise Biryani Gachibowli",
+    "area": "Gachibowli",
+    "category": "food",
+    "subcategory": "restaurant",
+    "price_range": 450,
+    "best_time": "night",
+    "mood_tags": [
+      "hungry",
+      "group",
+      "fun"
+    ],
+    "company_tags": [
+      "family",
+      "friends",
+      "couple"
+    ],
+    "time_needed": "1 hour",
+    "rating": 4.3,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Paradise+Biryani+Gachibowli+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Paradise+Biryani+Gachibowli+Hyderabad+review"
+  },
+  {
+    "name": "The Fisherman's Wharf Gachibowli",
+    "area": "Gachibowli",
+    "category": "food",
+    "subcategory": "theme restaurant",
+    "price_range": 1800,
+    "best_time": "night",
+    "mood_tags": [
+      "premium",
+      "fun",
+      "group"
+    ],
+    "company_tags": [
+      "friends",
+      "family",
+      "couple"
+    ],
+    "time_needed": "2.5 hours",
+    "rating": 4.4,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=The+Fisherman%27s+Wharf+Gachibowli+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=The+Fisherman%27s+Wharf+Gachibowli+Hyderabad+review"
+  },
+  {
+    "name": "Botanical Garden Walk Gachibowli",
+    "area": "Gachibowli",
+    "category": "nature",
+    "subcategory": "park",
+    "price_range": 50,
+    "best_time": "morning",
+    "mood_tags": [
+      "fresh",
+      "peaceful",
+      "fitness"
+    ],
+    "company_tags": [
+      "solo",
+      "friends",
+      "family"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.5,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Botanical+Garden+Walk+Gachibowli+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Botanical+Garden+Walk+Gachibowli+Hyderabad+review"
+  },
+  {
+    "name": "Gachibowli Stadium",
+    "area": "Gachibowli",
+    "category": "entertainment",
+    "subcategory": "sports arena",
+    "price_range": 300,
+    "best_time": "evening",
+    "mood_tags": [
+      "energetic",
+      "sports",
+      "fun"
+    ],
+    "company_tags": [
+      "friends",
+      "family"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.4,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Gachibowli+Stadium+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Gachibowli+Stadium+Hyderabad+review"
+  },
+  {
+    "name": "AMB Cinemas Gachibowli",
+    "area": "Gachibowli",
+    "category": "entertainment",
+    "subcategory": "cinema",
+    "price_range": 600,
+    "best_time": "night",
+    "mood_tags": [
+      "date",
+      "fun",
+      "relaxed"
+    ],
+    "company_tags": [
+      "couple",
+      "friends",
+      "family"
+    ],
+    "time_needed": "3 hours",
+    "rating": 4.7,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=AMB+Cinemas+Gachibowli+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=AMB+Cinemas+Gachibowli+Hyderabad+review"
+  },
+  {
+    "name": "Gaming Arena Gachibowli",
+    "area": "Gachibowli",
+    "category": "entertainment",
+    "subcategory": "gaming zone",
+    "price_range": 700,
+    "best_time": "evening",
+    "mood_tags": [
+      "competitive",
+      "fun",
+      "energetic"
+    ],
+    "company_tags": [
+      "friends"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.3,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Gaming+Arena+Gachibowli+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Gaming+Arena+Gachibowli+Hyderabad+review"
+  },
+  {
+    "name": "Luxury Spa Gachibowli",
+    "area": "Gachibowli",
+    "category": "relax",
+    "subcategory": "spa",
+    "price_range": 3200,
+    "best_time": "afternoon",
+    "mood_tags": [
+      "peaceful",
+      "selfcare",
+      "premium"
+    ],
+    "company_tags": [
+      "solo",
+      "couple"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.5,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Luxury+Spa+Gachibowli+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Luxury+Spa+Gachibowli+Hyderabad+review"
+  },
+  {
+    "name": "Third Wave Coffee Gachibowli",
+    "area": "Gachibowli",
+    "category": "cafe",
+    "subcategory": "modern cafe",
+    "price_range": 500,
+    "best_time": "morning",
+    "mood_tags": [
+      "work",
+      "calm",
+      "modern"
+    ],
+    "company_tags": [
+      "solo",
+      "friends"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.4,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Third+Wave+Coffee+Gachibowli+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Third+Wave+Coffee+Gachibowli+Hyderabad+review"
+  },
+  {
+    "name": "Skyline Rooftop Dining Gachibowli",
+    "area": "Gachibowli",
+    "category": "premium",
+    "subcategory": "rooftop dining",
+    "price_range": 2400,
+    "best_time": "night",
+    "mood_tags": [
+      "romantic",
+      "luxury",
+      "premium"
+    ],
+    "company_tags": [
+      "couple",
+      "friends"
+    ],
+    "time_needed": "2.5 hours",
+    "rating": 4.5,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Skyline+Rooftop+Dining+Gachibowli+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Skyline+Rooftop+Dining+Gachibowli+Hyderabad+review"
+  },
+  {
+    "name": "Book Cafe Workspace Gachibowli",
+    "area": "Gachibowli",
+    "category": "cafe",
+    "subcategory": "workspace cafe",
+    "price_range": 450,
+    "best_time": "afternoon",
+    "mood_tags": [
+      "work",
+      "peaceful",
+      "solo"
+    ],
+    "company_tags": [
+      "solo",
+      "friends"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.2,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Book+Cafe+Workspace+Gachibowli+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Book+Cafe+Workspace+Gachibowli+Hyderabad+review"
+  },
+  {
+    "name": "Pet Friendly Cafe Gachibowli",
+    "area": "Gachibowli",
+    "category": "cafe",
+    "subcategory": "pet cafe",
+    "price_range": 700,
+    "best_time": "evening",
+    "mood_tags": [
+      "cute",
+      "fun",
+      "relaxed"
+    ],
+    "company_tags": [
+      "friends",
+      "couple",
+      "family"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.3,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Pet+Friendly+Cafe+Gachibowli+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Pet+Friendly+Cafe+Gachibowli+Hyderabad+review"
+  },
+  {
+    "name": "Weekend Flea Market Gachibowli",
+    "area": "Gachibowli",
+    "category": "hidden_gem",
+    "subcategory": "market",
+    "price_range": 400,
+    "best_time": "morning",
+    "mood_tags": [
+      "explore",
+      "shopping",
+      "fun"
+    ],
+    "company_tags": [
+      "friends",
+      "family"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.1,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Weekend+Flea+Market+Gachibowli+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Weekend+Flea+Market+Gachibowli+Hyderabad+review"
+  },
+  {
+    "name": "Dessert Studio Gachibowli",
+    "area": "Gachibowli",
+    "category": "food",
+    "subcategory": "dessert cafe",
+    "price_range": 500,
+    "best_time": "night",
+    "mood_tags": [
+      "sweet",
+      "fun",
+      "late-night"
+    ],
+    "company_tags": [
+      "friends",
+      "couple"
+    ],
+    "time_needed": "1 hour",
+    "rating": 4.3,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Dessert+Studio+Gachibowli+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Dessert+Studio+Gachibowli+Hyderabad+review"
+  },
+  {
+    "name": "Hidden Lake View Spot Gachibowli",
+    "area": "Gachibowli",
+    "category": "hidden_gem",
+    "subcategory": "viewpoint",
+    "price_range": 0,
+    "best_time": "evening",
+    "mood_tags": [
+      "peaceful",
+      "romantic",
+      "fresh"
+    ],
+    "company_tags": [
+      "couple",
+      "solo",
+      "friends"
+    ],
+    "time_needed": "1 hour",
+    "rating": 4.0,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Hidden+Lake+View+Spot+Gachibowli+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Hidden+Lake+View+Spot+Gachibowli+Hyderabad+review"
+  },
+  {
+    "name": "Inorbit Mall Hitech City",
+    "area": "Hitech City",
+    "category": "shopping",
+    "subcategory": "mall",
+    "price_range": 1800,
+    "best_time": "afternoon",
+    "mood_tags": [
+      "shopping",
+      "fun",
+      "cool"
+    ],
+    "company_tags": [
+      "family",
+      "friends",
+      "couple"
+    ],
+    "time_needed": "3 hours",
+    "rating": 4.6,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Inorbit+Mall+Hitech+City+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Inorbit+Mall+Hitech+City+Hyderabad+review"
+  },
+  {
+    "name": "Durgam Cheruvu Cable Bridge Hitech City",
+    "area": "Hitech City",
+    "category": "nature",
+    "subcategory": "landmark viewpoint",
+    "price_range": 0,
+    "best_time": "evening",
+    "mood_tags": [
+      "fresh",
+      "romantic",
+      "explore"
+    ],
+    "company_tags": [
+      "couple",
+      "friends",
+      "solo"
+    ],
+    "time_needed": "1.5 hours",
+    "rating": 4.7,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Durgam+Cheruvu+Cable+Bridge+Hitech+City+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Durgam+Cheruvu+Cable+Bridge+Hitech+City+Hyderabad+review"
+  },
+  {
+    "name": "Durgam Cheruvu Lake Park Hitech City",
+    "area": "Hitech City",
+    "category": "nature",
+    "subcategory": "lake park",
+    "price_range": 50,
+    "best_time": "evening",
+    "mood_tags": [
+      "peaceful",
+      "fresh",
+      "relaxed"
+    ],
+    "company_tags": [
+      "family",
+      "couple",
+      "friends"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.5,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Durgam+Cheruvu+Lake+Park+Hitech+City+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Durgam+Cheruvu+Lake+Park+Hitech+City+Hyderabad+review"
+  },
+  {
+    "name": "Trident Hotel Dining Hitech City",
+    "area": "Hitech City",
+    "category": "premium",
+    "subcategory": "luxury dining",
+    "price_range": 2800,
+    "best_time": "night",
+    "mood_tags": [
+      "luxury",
+      "premium",
+      "romantic"
+    ],
+    "company_tags": [
+      "couple",
+      "business",
+      "friends"
+    ],
+    "time_needed": "2.5 hours",
+    "rating": 4.7,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Trident+Hotel+Dining+Hitech+City+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Trident+Hotel+Dining+Hitech+City+Hyderabad+review"
+  },
+  {
+    "name": "Novotel Rooftop Lounge Hitech City",
+    "area": "Hitech City",
+    "category": "premium",
+    "subcategory": "rooftop lounge",
+    "price_range": 2400,
+    "best_time": "night",
+    "mood_tags": [
+      "party",
+      "luxury",
+      "cityview"
+    ],
+    "company_tags": [
+      "friends",
+      "couple"
+    ],
+    "time_needed": "3 hours",
+    "rating": 4.5,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Novotel+Rooftop+Lounge+Hitech+City+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Novotel+Rooftop+Lounge+Hitech+City+Hyderabad+review"
+  },
+  {
+    "name": "Paradise Biryani Hitech City",
+    "area": "Hitech City",
+    "category": "food",
+    "subcategory": "restaurant",
+    "price_range": 450,
+    "best_time": "night",
+    "mood_tags": [
+      "hungry",
+      "group",
+      "fun"
+    ],
+    "company_tags": [
+      "family",
+      "friends",
+      "couple"
+    ],
+    "time_needed": "1 hour",
+    "rating": 4.3,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Paradise+Biryani+Hitech+City+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Paradise+Biryani+Hitech+City+Hyderabad+review"
+  },
+  {
+    "name": "Chutneys Hitech City",
+    "area": "Hitech City",
+    "category": "food",
+    "subcategory": "south indian restaurant",
+    "price_range": 500,
+    "best_time": "morning",
+    "mood_tags": [
+      "comfort",
+      "family",
+      "casual"
+    ],
+    "company_tags": [
+      "family",
+      "friends"
+    ],
+    "time_needed": "1 hour",
+    "rating": 4.5,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Chutneys+Hitech+City+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Chutneys+Hitech+City+Hyderabad+review"
+  },
+  {
+    "name": "Third Wave Coffee Hitech City",
+    "area": "Hitech City",
+    "category": "cafe",
+    "subcategory": "modern cafe",
+    "price_range": 550,
+    "best_time": "afternoon",
+    "mood_tags": [
+      "work",
+      "calm",
+      "modern"
+    ],
+    "company_tags": [
+      "solo",
+      "friends"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.4,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Third+Wave+Coffee+Hitech+City+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Third+Wave+Coffee+Hitech+City+Hyderabad+review"
+  },
+  {
+    "name": "Starbucks Hitech City",
+    "area": "Hitech City",
+    "category": "cafe",
+    "subcategory": "global cafe",
+    "price_range": 650,
+    "best_time": "evening",
+    "mood_tags": [
+      "casual",
+      "work",
+      "social"
+    ],
+    "company_tags": [
+      "solo",
+      "friends",
+      "couple"
+    ],
+    "time_needed": "1.5 hours",
+    "rating": 4.3,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Starbucks+Hitech+City+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Starbucks+Hitech+City+Hyderabad+review"
+  },
+  {
+    "name": "Gaming Arena Hitech City",
+    "area": "Hitech City",
+    "category": "entertainment",
+    "subcategory": "gaming zone",
+    "price_range": 700,
+    "best_time": "evening",
+    "mood_tags": [
+      "fun",
+      "competitive",
+      "energetic"
+    ],
+    "company_tags": [
+      "friends"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.3,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Gaming+Arena+Hitech+City+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Gaming+Arena+Hitech+City+Hyderabad+review"
+  },
+  {
+    "name": "PVR Inorbit Cinemas Hitech City",
+    "area": "Hitech City",
+    "category": "entertainment",
+    "subcategory": "cinema",
+    "price_range": 550,
+    "best_time": "night",
+    "mood_tags": [
+      "date",
+      "fun",
+      "relaxed"
+    ],
+    "company_tags": [
+      "couple",
+      "friends",
+      "family"
+    ],
+    "time_needed": "3 hours",
+    "rating": 4.5,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=PVR+Inorbit+Cinemas+Hitech+City+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=PVR+Inorbit+Cinemas+Hitech+City+Hyderabad+review"
+  },
+  {
+    "name": "Street Food Hub Hitech Hitech City",
+    "area": "Hitech City",
+    "category": "food",
+    "subcategory": "street food",
+    "price_range": 300,
+    "best_time": "night",
+    "mood_tags": [
+      "budget",
+      "hungry",
+      "fun"
+    ],
+    "company_tags": [
+      "friends",
+      "solo"
+    ],
+    "time_needed": "1 hour",
+    "rating": 4.2,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Street+Food+Hub+Hitech+Hitech+City+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Street+Food+Hub+Hitech+Hitech+City+Hyderabad+review"
+  },
+  {
+    "name": "Sky Deck View Cafe Hitech City",
+    "area": "Hitech City",
+    "category": "premium",
+    "subcategory": "view cafe",
+    "price_range": 1100,
+    "best_time": "night",
+    "mood_tags": [
+      "romantic",
+      "premium",
+      "cityview"
+    ],
+    "company_tags": [
+      "couple",
+      "friends"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.4,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Sky+Deck+View+Cafe+Hitech+City+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Sky+Deck+View+Cafe+Hitech+City+Hyderabad+review"
+  },
+  {
+    "name": "Work Lounge Cafe Hitech City",
+    "area": "Hitech City",
+    "category": "cafe",
+    "subcategory": "workspace cafe",
+    "price_range": 500,
+    "best_time": "morning",
+    "mood_tags": [
+      "focus",
+      "work",
+      "peaceful"
+    ],
+    "company_tags": [
+      "solo",
+      "business"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.2,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Work+Lounge+Cafe+Hitech+City+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Work+Lounge+Cafe+Hitech+City+Hyderabad+review"
+  },
+  {
+    "name": "Luxury Spa Hitech Hitech City",
+    "area": "Hitech City",
+    "category": "relax",
+    "subcategory": "spa",
+    "price_range": 3200,
+    "best_time": "afternoon",
+    "mood_tags": [
+      "selfcare",
+      "peaceful",
+      "premium"
+    ],
+    "company_tags": [
+      "solo",
+      "couple"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.5,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Luxury+Spa+Hitech+Hitech+City+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Luxury+Spa+Hitech+Hitech+City+Hyderabad+review"
+  },
+  {
+    "name": "Pet Friendly Cafe Hitech Hitech City",
+    "area": "Hitech City",
+    "category": "cafe",
+    "subcategory": "pet cafe",
+    "price_range": 700,
+    "best_time": "evening",
+    "mood_tags": [
+      "cute",
+      "fun",
+      "relaxed"
+    ],
+    "company_tags": [
+      "friends",
+      "couple",
+      "family"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.3,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Pet+Friendly+Cafe+Hitech+Hitech+City+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Pet+Friendly+Cafe+Hitech+Hitech+City+Hyderabad+review"
+  },
+  {
+    "name": "Weekend Flea Plaza Hitech Hitech City",
+    "area": "Hitech City",
+    "category": "hidden_gem",
+    "subcategory": "market",
+    "price_range": 400,
+    "best_time": "morning",
+    "mood_tags": [
+      "explore",
+      "shopping",
+      "fun"
+    ],
+    "company_tags": [
+      "friends",
+      "family"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.1,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Weekend+Flea+Plaza+Hitech+Hitech+City+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Weekend+Flea+Plaza+Hitech+Hitech+City+Hyderabad+review"
+  },
+  {
+    "name": "Dessert Studio Hitech Hitech City",
+    "area": "Hitech City",
+    "category": "food",
+    "subcategory": "dessert cafe",
+    "price_range": 500,
+    "best_time": "night",
+    "mood_tags": [
+      "sweet",
+      "late-night",
+      "fun"
+    ],
+    "company_tags": [
+      "friends",
+      "couple"
+    ],
+    "time_needed": "1 hour",
+    "rating": 4.3,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Dessert+Studio+Hitech+Hitech+City+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Dessert+Studio+Hitech+Hitech+City+Hyderabad+review"
+  },
+  {
+    "name": "Corporate Chill Lounge Hitech City",
+    "area": "Hitech City",
+    "category": "premium",
+    "subcategory": "business lounge",
+    "price_range": 1900,
+    "best_time": "evening",
+    "mood_tags": [
+      "networking",
+      "premium",
+      "relaxed"
+    ],
+    "company_tags": [
+      "business",
+      "friends"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.2,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Corporate+Chill+Lounge+Hitech+City+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Corporate+Chill+Lounge+Hitech+City+Hyderabad+review"
+  },
+  {
+    "name": "Hidden Terrace Viewpoint Hitech City",
+    "area": "Hitech City",
+    "category": "hidden_gem",
+    "subcategory": "city viewpoint",
+    "price_range": 0,
+    "best_time": "night",
+    "mood_tags": [
+      "peaceful",
+      "romantic",
+      "different"
+    ],
+    "company_tags": [
+      "couple",
+      "solo",
+      "friends"
+    ],
+    "time_needed": "1 hour",
+    "rating": 4.0,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Hidden+Terrace+Viewpoint+Hitech+City+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Hidden+Terrace+Viewpoint+Hitech+City+Hyderabad+review"
+  },
+  {
+    "name": "Botanical Garden Kondapur",
+    "area": "Kondapur",
+    "category": "nature",
+    "subcategory": "park",
+    "price_range": 40,
+    "best_time": "morning",
+    "mood_tags": [
+      "fresh",
+      "peaceful",
+      "fitness"
+    ],
+    "company_tags": [
+      "solo",
+      "family",
+      "friends"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.6,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Botanical+Garden+Kondapur+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Botanical+Garden+Kondapur+Hyderabad+review"
+  },
+  {
+    "name": "Sarath City Capital Mall Kondapur",
+    "area": "Kondapur",
+    "category": "shopping",
+    "subcategory": "mall",
+    "price_range": 2200,
+    "best_time": "evening",
+    "mood_tags": [
+      "shopping",
+      "fun",
+      "cool"
+    ],
+    "company_tags": [
+      "family",
+      "friends",
+      "couple"
+    ],
+    "time_needed": "3 hours",
+    "rating": 4.6,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Sarath+City+Capital+Mall+Kondapur+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Sarath+City+Capital+Mall+Kondapur+Hyderabad+review"
+  },
+  {
+    "name": "AMB Cinemas Kondapur",
+    "area": "Kondapur",
+    "category": "entertainment",
+    "subcategory": "cinema",
+    "price_range": 600,
+    "best_time": "night",
+    "mood_tags": [
+      "date",
+      "fun",
+      "relaxed"
+    ],
+    "company_tags": [
+      "couple",
+      "friends",
+      "family"
+    ],
+    "time_needed": "3 hours",
+    "rating": 4.7,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=AMB+Cinemas+Kondapur+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=AMB+Cinemas+Kondapur+Hyderabad+review"
+  },
+  {
+    "name": "The Street Kondapur",
+    "area": "Kondapur",
+    "category": "food",
+    "subcategory": "food street",
+    "price_range": 400,
+    "best_time": "night",
+    "mood_tags": [
+      "budget",
+      "hungry",
+      "fun"
+    ],
+    "company_tags": [
+      "friends",
+      "family"
+    ],
+    "time_needed": "1.5 hours",
+    "rating": 4.4,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=The+Street+Kondapur+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=The+Street+Kondapur+Hyderabad+review"
+  },
+  {
+    "name": "Roastery Coffee Kondapur",
+    "area": "Kondapur",
+    "category": "cafe",
+    "subcategory": "premium cafe",
+    "price_range": 750,
+    "best_time": "afternoon",
+    "mood_tags": [
+      "relaxed",
+      "work",
+      "premium"
+    ],
+    "company_tags": [
+      "solo",
+      "friends",
+      "couple"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.5,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Roastery+Coffee+Kondapur+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Roastery+Coffee+Kondapur+Hyderabad+review"
+  },
+  {
+    "name": "Third Wave Coffee Kondapur",
+    "area": "Kondapur",
+    "category": "cafe",
+    "subcategory": "modern cafe",
+    "price_range": 550,
+    "best_time": "morning",
+    "mood_tags": [
+      "focus",
+      "calm",
+      "modern"
+    ],
+    "company_tags": [
+      "solo",
+      "friends"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.4,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Third+Wave+Coffee+Kondapur+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Third+Wave+Coffee+Kondapur+Hyderabad+review"
+  },
+  {
+    "name": "Paradise Biryani Kondapur",
+    "area": "Kondapur",
+    "category": "food",
+    "subcategory": "restaurant",
+    "price_range": 450,
+    "best_time": "night",
+    "mood_tags": [
+      "hungry",
+      "group",
+      "fun"
+    ],
+    "company_tags": [
+      "family",
+      "friends",
+      "couple"
+    ],
+    "time_needed": "1 hour",
+    "rating": 4.3,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Paradise+Biryani+Kondapur+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Paradise+Biryani+Kondapur+Hyderabad+review"
+  },
+  {
+    "name": "Barbeque Nation Kondapur",
+    "area": "Kondapur",
+    "category": "food",
+    "subcategory": "buffet restaurant",
+    "price_range": 1500,
+    "best_time": "night",
+    "mood_tags": [
+      "group",
+      "fun",
+      "celebration"
+    ],
+    "company_tags": [
+      "family",
+      "friends"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.4,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Barbeque+Nation+Kondapur+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Barbeque+Nation+Kondapur+Hyderabad+review"
+  },
+  {
+    "name": "Heart Cup Coffee Kondapur",
+    "area": "Kondapur",
+    "category": "cafe",
+    "subcategory": "casual cafe",
+    "price_range": 600,
+    "best_time": "evening",
+    "mood_tags": [
+      "fun",
+      "casual",
+      "friends"
+    ],
+    "company_tags": [
+      "friends",
+      "couple"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.3,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Heart+Cup+Coffee+Kondapur+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Heart+Cup+Coffee+Kondapur+Hyderabad+review"
+  },
+  {
+    "name": "Luxury Spa Kondapur",
+    "area": "Kondapur",
+    "category": "relax",
+    "subcategory": "spa",
+    "price_range": 3200,
+    "best_time": "afternoon",
+    "mood_tags": [
+      "selfcare",
+      "peaceful",
+      "premium"
+    ],
+    "company_tags": [
+      "solo",
+      "couple"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.5,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Luxury+Spa+Kondapur+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Luxury+Spa+Kondapur+Hyderabad+review"
+  },
+  {
+    "name": "Gaming Arena Kondapur",
+    "area": "Kondapur",
+    "category": "entertainment",
+    "subcategory": "gaming zone",
+    "price_range": 700,
+    "best_time": "evening",
+    "mood_tags": [
+      "competitive",
+      "fun",
+      "energetic"
+    ],
+    "company_tags": [
+      "friends"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.3,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Gaming+Arena+Kondapur+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Gaming+Arena+Kondapur+Hyderabad+review"
+  },
+  {
+    "name": "Skyline Rooftop Kondapur",
+    "area": "Kondapur",
+    "category": "premium",
+    "subcategory": "rooftop dining",
+    "price_range": 2300,
+    "best_time": "night",
+    "mood_tags": [
+      "romantic",
+      "luxury",
+      "cityview"
+    ],
+    "company_tags": [
+      "couple",
+      "friends"
+    ],
+    "time_needed": "2.5 hours",
+    "rating": 4.4,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Skyline+Rooftop+Kondapur+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Skyline+Rooftop+Kondapur+Hyderabad+review"
+  },
+  {
+    "name": "Pet Friendly Cafe Kondapur",
+    "area": "Kondapur",
+    "category": "cafe",
+    "subcategory": "pet cafe",
+    "price_range": 700,
+    "best_time": "evening",
+    "mood_tags": [
+      "cute",
+      "fun",
+      "relaxed"
+    ],
+    "company_tags": [
+      "friends",
+      "couple",
+      "family"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.2,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Pet+Friendly+Cafe+Kondapur+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Pet+Friendly+Cafe+Kondapur+Hyderabad+review"
+  },
+  {
+    "name": "Book Cafe Kondapur",
+    "area": "Kondapur",
+    "category": "cafe",
+    "subcategory": "book cafe",
+    "price_range": 500,
+    "best_time": "afternoon",
+    "mood_tags": [
+      "peaceful",
+      "solo",
+      "calm"
+    ],
+    "company_tags": [
+      "solo",
+      "couple"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.2,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Book+Cafe+Kondapur+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Book+Cafe+Kondapur+Hyderabad+review"
+  },
+  {
+    "name": "Dessert Studio Kondapur",
+    "area": "Kondapur",
+    "category": "food",
+    "subcategory": "dessert cafe",
+    "price_range": 500,
+    "best_time": "night",
+    "mood_tags": [
+      "sweet",
+      "late-night",
+      "fun"
+    ],
+    "company_tags": [
+      "friends",
+      "couple"
+    ],
+    "time_needed": "1 hour",
+    "rating": 4.3,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Dessert+Studio+Kondapur+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Dessert+Studio+Kondapur+Hyderabad+review"
+  },
+  {
+    "name": "Weekend Flea Market Kondapur",
+    "area": "Kondapur",
+    "category": "hidden_gem",
+    "subcategory": "market",
+    "price_range": 400,
+    "best_time": "morning",
+    "mood_tags": [
+      "explore",
+      "shopping",
+      "fun"
+    ],
+    "company_tags": [
+      "friends",
+      "family"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.1,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Weekend+Flea+Market+Kondapur+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Weekend+Flea+Market+Kondapur+Hyderabad+review"
+  },
+  {
+    "name": "Local Chaat Point Kondapur",
+    "area": "Kondapur",
+    "category": "food",
+    "subcategory": "street snacks",
+    "price_range": 250,
+    "best_time": "evening",
+    "mood_tags": [
+      "budget",
+      "snacks",
+      "casual"
+    ],
+    "company_tags": [
+      "friends",
+      "family"
+    ],
+    "time_needed": "45 mins",
+    "rating": 4.1,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Local+Chaat+Point+Kondapur+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Local+Chaat+Point+Kondapur+Hyderabad+review"
+  },
+  {
+    "name": "Corporate Lounge Kondapur",
+    "area": "Kondapur",
+    "category": "premium",
+    "subcategory": "business lounge",
+    "price_range": 1800,
+    "best_time": "evening",
+    "mood_tags": [
+      "networking",
+      "premium",
+      "relaxed"
+    ],
+    "company_tags": [
+      "business",
+      "friends"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.2,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Corporate+Lounge+Kondapur+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Corporate+Lounge+Kondapur+Hyderabad+review"
+  },
+  {
+    "name": "Hidden Terrace Cafe Kondapur",
+    "area": "Kondapur",
+    "category": "hidden_gem",
+    "subcategory": "terrace cafe",
+    "price_range": 650,
+    "best_time": "night",
+    "mood_tags": [
+      "romantic",
+      "different",
+      "calm"
+    ],
+    "company_tags": [
+      "couple",
+      "friends"
+    ],
+    "time_needed": "1.5 hours",
+    "rating": 4.0,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Hidden+Terrace+Cafe+Kondapur+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Hidden+Terrace+Cafe+Kondapur+Hyderabad+review"
+  },
+  {
+    "name": "Mini Lake View Spot Kondapur",
+    "area": "Kondapur",
+    "category": "hidden_gem",
+    "subcategory": "viewpoint",
+    "price_range": 0,
+    "best_time": "evening",
+    "mood_tags": [
+      "peaceful",
+      "fresh",
+      "quiet"
+    ],
+    "company_tags": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "time_needed": "1 hour",
+    "rating": 3.9,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Mini+Lake+View+Spot+Kondapur+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Mini+Lake+View+Spot+Kondapur+Hyderabad+review"
+  },
+  {
+    "name": "Golconda Fort",
+    "area": "Golconda",
+    "category": "history",
+    "subcategory": "fort",
+    "price_range": 50,
+    "best_time": "morning",
+    "mood_tags": [
+      "explore",
+      "historic",
+      "iconic"
+    ],
+    "company_tags": [
+      "family",
+      "friends",
+      "solo"
+    ],
+    "time_needed": "3 hours",
+    "rating": 4.7,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Golconda+Fort+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Golconda+Fort+Hyderabad+review"
+  },
+  {
+    "name": "Golconda Sound and Light Show",
+    "area": "Golconda",
+    "category": "entertainment",
+    "subcategory": "heritage show",
+    "price_range": 200,
+    "best_time": "night",
+    "mood_tags": [
+      "cultural",
+      "fun",
+      "historic"
+    ],
+    "company_tags": [
+      "family",
+      "friends",
+      "couple"
+    ],
+    "time_needed": "1.5 hours",
+    "rating": 4.5,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Golconda+Sound+and+Light+Show+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Golconda+Sound+and+Light+Show+Hyderabad+review"
+  },
+  {
+    "name": "Qutb Shahi Tombs Golconda",
+    "area": "Golconda",
+    "category": "history",
+    "subcategory": "heritage complex",
+    "price_range": 30,
+    "best_time": "morning",
+    "mood_tags": [
+      "peaceful",
+      "historic",
+      "explore"
+    ],
+    "company_tags": [
+      "family",
+      "friends",
+      "solo"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.6,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Qutb+Shahi+Tombs+Golconda+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Qutb+Shahi+Tombs+Golconda+Hyderabad+review"
+  },
+  {
+    "name": "Taramati Baradari Golconda",
+    "area": "Golconda",
+    "category": "history",
+    "subcategory": "heritage palace",
+    "price_range": 100,
+    "best_time": "evening",
+    "mood_tags": [
+      "royal",
+      "calm",
+      "cultural"
+    ],
+    "company_tags": [
+      "couple",
+      "family",
+      "friends"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.4,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Taramati+Baradari+Golconda+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Taramati+Baradari+Golconda+Hyderabad+review"
+  },
+  {
+    "name": "Fort View Point Golconda",
+    "area": "Golconda",
+    "category": "nature",
+    "subcategory": "viewpoint",
+    "price_range": 0,
+    "best_time": "evening",
+    "mood_tags": [
+      "fresh",
+      "romantic",
+      "explore"
+    ],
+    "company_tags": [
+      "couple",
+      "friends",
+      "solo"
+    ],
+    "time_needed": "1 hour",
+    "rating": 4.5,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Fort+View+Point+Golconda+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Fort+View+Point+Golconda+Hyderabad+review"
+  },
+  {
+    "name": "Heritage Walk Golconda",
+    "area": "Golconda",
+    "category": "entertainment",
+    "subcategory": "guided walk",
+    "price_range": 300,
+    "best_time": "morning",
+    "mood_tags": [
+      "learning",
+      "explore",
+      "active"
+    ],
+    "company_tags": [
+      "friends",
+      "family",
+      "solo"
+    ],
+    "time_needed": "2.5 hours",
+    "rating": 4.3,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Heritage+Walk+Golconda+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Heritage+Walk+Golconda+Hyderabad+review"
+  },
+  {
+    "name": "Local Tea Point Fort Road Golconda",
+    "area": "Golconda",
+    "category": "cafe",
+    "subcategory": "tea stall",
+    "price_range": 80,
+    "best_time": "morning",
+    "mood_tags": [
+      "casual",
+      "budget",
+      "local"
+    ],
+    "company_tags": [
+      "solo",
+      "friends"
+    ],
+    "time_needed": "30 mins",
+    "rating": 4.1,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Local+Tea+Point+Fort+Road+Golconda+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Local+Tea+Point+Fort+Road+Golconda+Hyderabad+review"
+  },
+  {
+    "name": "Old City Biryani House Golconda",
+    "area": "Golconda",
+    "category": "food",
+    "subcategory": "restaurant",
+    "price_range": 450,
+    "best_time": "night",
+    "mood_tags": [
+      "hungry",
+      "local",
+      "group"
+    ],
+    "company_tags": [
+      "family",
+      "friends"
+    ],
+    "time_needed": "1 hour",
+    "rating": 4.3,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Old+City+Biryani+House+Golconda+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Old+City+Biryani+House+Golconda+Hyderabad+review"
+  },
+  {
+    "name": "Stone Courtyard Cafe Golconda",
+    "area": "Golconda",
+    "category": "cafe",
+    "subcategory": "heritage cafe",
+    "price_range": 500,
+    "best_time": "afternoon",
+    "mood_tags": [
+      "calm",
+      "different",
+      "relaxed"
+    ],
+    "company_tags": [
+      "couple",
+      "solo",
+      "friends"
+    ],
+    "time_needed": "1.5 hours",
+    "rating": 4.2,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Stone+Courtyard+Cafe+Golconda+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Stone+Courtyard+Cafe+Golconda+Hyderabad+review"
+  },
+  {
+    "name": "Mini Crafts Bazaar Golconda",
+    "area": "Golconda",
+    "category": "shopping",
+    "subcategory": "souvenir market",
+    "price_range": 600,
+    "best_time": "evening",
+    "mood_tags": [
+      "shopping",
+      "cultural",
+      "fun"
+    ],
+    "company_tags": [
+      "family",
+      "friends"
+    ],
+    "time_needed": "1 hour",
+    "rating": 4.0,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Mini+Crafts+Bazaar+Golconda+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Mini+Crafts+Bazaar+Golconda+Hyderabad+review"
+  },
+  {
+    "name": "Royal Rooftop Dining Golconda",
+    "area": "Golconda",
+    "category": "premium",
+    "subcategory": "view restaurant",
+    "price_range": 1800,
+    "best_time": "night",
+    "mood_tags": [
+      "romantic",
+      "premium",
+      "cityview"
+    ],
+    "company_tags": [
+      "couple",
+      "friends"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.4,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Royal+Rooftop+Dining+Golconda+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Royal+Rooftop+Dining+Golconda+Hyderabad+review"
+  },
+  {
+    "name": "Photography Hill Trail Golconda",
+    "area": "Golconda",
+    "category": "nature",
+    "subcategory": "photo trail",
+    "price_range": 100,
+    "best_time": "morning",
+    "mood_tags": [
+      "creative",
+      "active",
+      "explore"
+    ],
+    "company_tags": [
+      "friends",
+      "solo"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.2,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Photography+Hill+Trail+Golconda+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Photography+Hill+Trail+Golconda+Hyderabad+review"
+  },
+  {
+    "name": "Traditional Snack House Golconda",
+    "area": "Golconda",
+    "category": "food",
+    "subcategory": "snacks shop",
+    "price_range": 200,
+    "best_time": "evening",
+    "mood_tags": [
+      "budget",
+      "snacks",
+      "casual"
+    ],
+    "company_tags": [
+      "family",
+      "friends"
+    ],
+    "time_needed": "45 mins",
+    "rating": 4.1,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Traditional+Snack+House+Golconda+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Traditional+Snack+House+Golconda+Hyderabad+review"
+  },
+  {
+    "name": "Luxury Spa Retreat Golconda",
+    "area": "Golconda",
+    "category": "relax",
+    "subcategory": "spa",
+    "price_range": 2800,
+    "best_time": "afternoon",
+    "mood_tags": [
+      "peaceful",
+      "selfcare",
+      "premium"
+    ],
+    "company_tags": [
+      "solo",
+      "couple"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.3,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Luxury+Spa+Retreat+Golconda+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Luxury+Spa+Retreat+Golconda+Hyderabad+review"
+  },
+  {
+    "name": "Hidden Stepwell Spot Golconda",
+    "area": "Golconda",
+    "category": "hidden_gem",
+    "subcategory": "historic site",
+    "price_range": 0,
+    "best_time": "morning",
+    "mood_tags": [
+      "different",
+      "historic",
+      "quiet"
+    ],
+    "company_tags": [
+      "solo",
+      "friends"
+    ],
+    "time_needed": "1 hour",
+    "rating": 4.0,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Hidden+Stepwell+Spot+Golconda+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Hidden+Stepwell+Spot+Golconda+Hyderabad+review"
+  },
+  {
+    "name": "Evening Folk Music Court Golconda",
+    "area": "Golconda",
+    "category": "hidden_gem",
+    "subcategory": "music experience",
+    "price_range": 250,
+    "best_time": "night",
+    "mood_tags": [
+      "cultural",
+      "peaceful",
+      "different"
+    ],
+    "company_tags": [
+      "family",
+      "friends",
+      "couple"
+    ],
+    "time_needed": "1 hour",
+    "rating": 4.1,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Evening+Folk+Music+Court+Golconda+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Evening+Folk+Music+Court+Golconda+Hyderabad+review"
+  },
+  {
+    "name": "Fortside Chaat Corner Golconda",
+    "area": "Golconda",
+    "category": "food",
+    "subcategory": "street food",
+    "price_range": 220,
+    "best_time": "evening",
+    "mood_tags": [
+      "budget",
+      "fun",
+      "snacks"
+    ],
+    "company_tags": [
+      "friends",
+      "family"
+    ],
+    "time_needed": "45 mins",
+    "rating": 4.1,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Fortside+Chaat+Corner+Golconda+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Fortside+Chaat+Corner+Golconda+Hyderabad+review"
+  },
+  {
+    "name": "Adventure Climb Zone Golconda",
+    "area": "Golconda",
+    "category": "entertainment",
+    "subcategory": "activity zone",
+    "price_range": 400,
+    "best_time": "morning",
+    "mood_tags": [
+      "energetic",
+      "fun",
+      "active"
+    ],
+    "company_tags": [
+      "friends"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.0,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Adventure+Climb+Zone+Golconda+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Adventure+Climb+Zone+Golconda+Hyderabad+review"
+  },
+  {
+    "name": "Heritage Book Cafe Golconda",
+    "area": "Golconda",
+    "category": "cafe",
+    "subcategory": "book cafe",
+    "price_range": 450,
+    "best_time": "afternoon",
+    "mood_tags": [
+      "peaceful",
+      "solo",
+      "calm"
+    ],
+    "company_tags": [
+      "solo",
+      "couple"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.1,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Heritage+Book+Cafe+Golconda+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Heritage+Book+Cafe+Golconda+Hyderabad+review"
+  },
+  {
+    "name": "Sunset Ridge View Golconda",
+    "area": "Golconda",
+    "category": "nature",
+    "subcategory": "sunset point",
+    "price_range": 0,
+    "best_time": "evening",
+    "mood_tags": [
+      "romantic",
+      "fresh",
+      "peaceful"
+    ],
+    "company_tags": [
+      "couple",
+      "friends",
+      "solo"
+    ],
+    "time_needed": "1 hour",
+    "rating": 4.3,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Sunset+Ridge+View+Golconda+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Sunset+Ridge+View+Golconda+Hyderabad+review"
+  },
+  {
+    "name": "Hussain Sagar Lake View Tank Bund",
+    "area": "Tank Bund",
+    "category": "nature",
+    "subcategory": "lakefront",
+    "price_range": 0,
+    "best_time": "evening",
+    "mood_tags": [
+      "fresh",
+      "peaceful",
+      "romantic"
+    ],
+    "company_tags": [
+      "couple",
+      "family",
+      "friends",
+      "solo"
+    ],
+    "time_needed": "1.5 hours",
+    "rating": 4.7,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Hussain+Sagar+Lake+View+Tank+Bund+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Hussain+Sagar+Lake+View+Tank+Bund+Hyderabad+review"
+  },
+  {
+    "name": "Buddha Statue Boat Ride Tank Bund",
+    "area": "Tank Bund",
+    "category": "entertainment",
+    "subcategory": "boat ride",
+    "price_range": 150,
+    "best_time": "evening",
+    "mood_tags": [
+      "fun",
+      "explore",
+      "relaxed"
+    ],
+    "company_tags": [
+      "family",
+      "friends",
+      "couple"
+    ],
+    "time_needed": "1.5 hours",
+    "rating": 4.6,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Buddha+Statue+Boat+Ride+Tank+Bund+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Buddha+Statue+Boat+Ride+Tank+Bund+Hyderabad+review"
+  },
+  {
+    "name": "Lumbini Park Tank Bund",
+    "area": "Tank Bund",
+    "category": "nature",
+    "subcategory": "park",
+    "price_range": 80,
+    "best_time": "evening",
+    "mood_tags": [
+      "family",
+      "fresh",
+      "fun"
+    ],
+    "company_tags": [
+      "family",
+      "friends",
+      "couple"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.5,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Lumbini+Park+Tank+Bund+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Lumbini+Park+Tank+Bund+Hyderabad+review"
+  },
+  {
+    "name": "Laser Show Lumbini Park Tank Bund",
+    "area": "Tank Bund",
+    "category": "entertainment",
+    "subcategory": "laser show",
+    "price_range": 120,
+    "best_time": "night",
+    "mood_tags": [
+      "fun",
+      "colorful",
+      "family"
+    ],
+    "company_tags": [
+      "family",
+      "friends",
+      "couple"
+    ],
+    "time_needed": "1 hour",
+    "rating": 4.4,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Laser+Show+Lumbini+Park+Tank+Bund+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Laser+Show+Lumbini+Park+Tank+Bund+Hyderabad+review"
+  },
+  {
+    "name": "NTR Gardens Tank Bund",
+    "area": "Tank Bund",
+    "category": "nature",
+    "subcategory": "theme garden",
+    "price_range": 60,
+    "best_time": "evening",
+    "mood_tags": [
+      "fresh",
+      "family",
+      "relaxed"
+    ],
+    "company_tags": [
+      "family",
+      "friends",
+      "couple"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.5,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=NTR+Gardens+Tank+Bund+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=NTR+Gardens+Tank+Bund+Hyderabad+review"
+  },
+  {
+    "name": "Necklace Road Walk Tank Bund",
+    "area": "Tank Bund",
+    "category": "nature",
+    "subcategory": "lake walk",
+    "price_range": 0,
+    "best_time": "morning",
+    "mood_tags": [
+      "fitness",
+      "peaceful",
+      "fresh"
+    ],
+    "company_tags": [
+      "solo",
+      "friends",
+      "couple"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.6,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Necklace+Road+Walk+Tank+Bund+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Necklace+Road+Walk+Tank+Bund+Hyderabad+review"
+  },
+  {
+    "name": "Eat Street Tank Bund",
+    "area": "Tank Bund",
+    "category": "food",
+    "subcategory": "food court",
+    "price_range": 500,
+    "best_time": "night",
+    "mood_tags": [
+      "hungry",
+      "fun",
+      "lakeview"
+    ],
+    "company_tags": [
+      "family",
+      "friends",
+      "couple"
+    ],
+    "time_needed": "1.5 hours",
+    "rating": 4.3,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Eat+Street+Tank+Bund+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Eat+Street+Tank+Bund+Hyderabad+review"
+  },
+  {
+    "name": "Street Food Tank Bund",
+    "area": "Tank Bund",
+    "category": "food",
+    "subcategory": "street food",
+    "price_range": 250,
+    "best_time": "night",
+    "mood_tags": [
+      "budget",
+      "snacks",
+      "fun"
+    ],
+    "company_tags": [
+      "friends",
+      "family"
+    ],
+    "time_needed": "1 hour",
+    "rating": 4.4,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Street+Food+Tank+Bund+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Street+Food+Tank+Bund+Hyderabad+review"
+  },
+  {
+    "name": "Snow World Hyderabad Tank Bund",
+    "area": "Tank Bund",
+    "category": "entertainment",
+    "subcategory": "snow park",
+    "price_range": 600,
+    "best_time": "afternoon",
+    "mood_tags": [
+      "fun",
+      "cool",
+      "family"
+    ],
+    "company_tags": [
+      "family",
+      "friends"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.2,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Snow+World+Hyderabad+Tank+Bund+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Snow+World+Hyderabad+Tank+Bund+Hyderabad+review"
+  },
+  {
+    "name": "Sanjeevaiah Park Tank Bund",
+    "area": "Tank Bund",
+    "category": "nature",
+    "subcategory": "eco park",
+    "price_range": 40,
+    "best_time": "morning",
+    "mood_tags": [
+      "peaceful",
+      "fitness",
+      "fresh"
+    ],
+    "company_tags": [
+      "solo",
+      "family",
+      "friends"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.5,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Sanjeevaiah+Park+Tank+Bund+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Sanjeevaiah+Park+Tank+Bund+Hyderabad+review"
+  },
+  {
+    "name": "Prasads Multiplex Tank Bund",
+    "area": "Tank Bund",
+    "category": "entertainment",
+    "subcategory": "cinema",
+    "price_range": 500,
+    "best_time": "night",
+    "mood_tags": [
+      "date",
+      "fun",
+      "relaxed"
+    ],
+    "company_tags": [
+      "couple",
+      "friends",
+      "family"
+    ],
+    "time_needed": "3 hours",
+    "rating": 4.6,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Prasads+Multiplex+Tank+Bund+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Prasads+Multiplex+Tank+Bund+Hyderabad+review"
+  },
+  {
+    "name": "Sky Lounge Lake View Tank Bund",
+    "area": "Tank Bund",
+    "category": "premium",
+    "subcategory": "rooftop lounge",
+    "price_range": 2200,
+    "best_time": "night",
+    "mood_tags": [
+      "romantic",
+      "luxury",
+      "cityview"
+    ],
+    "company_tags": [
+      "couple",
+      "friends"
+    ],
+    "time_needed": "2.5 hours",
+    "rating": 4.4,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Sky+Lounge+Lake+View+Tank+Bund+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Sky+Lounge+Lake+View+Tank+Bund+Hyderabad+review"
+  },
+  {
+    "name": "Boat Club Cafe Tank Bund",
+    "area": "Tank Bund",
+    "category": "cafe",
+    "subcategory": "lake cafe",
+    "price_range": 650,
+    "best_time": "evening",
+    "mood_tags": [
+      "calm",
+      "romantic",
+      "lakeview"
+    ],
+    "company_tags": [
+      "couple",
+      "friends",
+      "solo"
+    ],
+    "time_needed": "1.5 hours",
+    "rating": 4.3,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Boat+Club+Cafe+Tank+Bund+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Boat+Club+Cafe+Tank+Bund+Hyderabad+review"
+  },
+  {
+    "name": "Cycling Track Necklace Road Tank Bund",
+    "area": "Tank Bund",
+    "category": "entertainment",
+    "subcategory": "cycling activity",
+    "price_range": 200,
+    "best_time": "morning",
+    "mood_tags": [
+      "fitness",
+      "active",
+      "fun"
+    ],
+    "company_tags": [
+      "friends",
+      "solo"
+    ],
+    "time_needed": "1.5 hours",
+    "rating": 4.3,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Cycling+Track+Necklace+Road+Tank+Bund+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Cycling+Track+Necklace+Road+Tank+Bund+Hyderabad+review"
+  },
+  {
+    "name": "Luxury Spa Lake Side Tank Bund",
+    "area": "Tank Bund",
+    "category": "relax",
+    "subcategory": "spa",
+    "price_range": 3000,
+    "best_time": "afternoon",
+    "mood_tags": [
+      "selfcare",
+      "peaceful",
+      "premium"
+    ],
+    "company_tags": [
+      "solo",
+      "couple"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.3,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Luxury+Spa+Lake+Side+Tank+Bund+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Luxury+Spa+Lake+Side+Tank+Bund+Hyderabad+review"
+  },
+  {
+    "name": "Ice Cream Cart Walk Tank Bund",
+    "area": "Tank Bund",
+    "category": "food",
+    "subcategory": "dessert stall",
+    "price_range": 180,
+    "best_time": "night",
+    "mood_tags": [
+      "sweet",
+      "fun",
+      "casual"
+    ],
+    "company_tags": [
+      "family",
+      "friends",
+      "couple"
+    ],
+    "time_needed": "30 mins",
+    "rating": 4.1,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Ice+Cream+Cart+Walk+Tank+Bund+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Ice+Cream+Cart+Walk+Tank+Bund+Hyderabad+review"
+  },
+  {
+    "name": "Hidden Sunset Deck Tank Bund",
+    "area": "Tank Bund",
+    "category": "hidden_gem",
+    "subcategory": "viewpoint",
+    "price_range": 0,
+    "best_time": "evening",
+    "mood_tags": [
+      "peaceful",
+      "romantic",
+      "different"
+    ],
+    "company_tags": [
+      "couple",
+      "solo",
+      "friends"
+    ],
+    "time_needed": "1 hour",
+    "rating": 4.2,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Hidden+Sunset+Deck+Tank+Bund+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Hidden+Sunset+Deck+Tank+Bund+Hyderabad+review"
+  },
+  {
+    "name": "Weekend Flea Market Necklace Road Tank Bund",
+    "area": "Tank Bund",
+    "category": "shopping",
+    "subcategory": "open market",
+    "price_range": 500,
+    "best_time": "morning",
+    "mood_tags": [
+      "shopping",
+      "fun",
+      "explore"
+    ],
+    "company_tags": [
+      "family",
+      "friends"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.0,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Weekend+Flea+Market+Necklace+Road+Tank+Bund+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Weekend+Flea+Market+Necklace+Road+Tank+Bund+Hyderabad+review"
+  },
+  {
+    "name": "Photo Point Tank Bund",
+    "area": "Tank Bund",
+    "category": "hidden_gem",
+    "subcategory": "photo spot",
+    "price_range": 0,
+    "best_time": "night",
+    "mood_tags": [
+      "creative",
+      "citylights",
+      "fun"
+    ],
+    "company_tags": [
+      "friends",
+      "couple",
+      "solo"
+    ],
+    "time_needed": "45 mins",
+    "rating": 4.1,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Photo+Point+Tank+Bund+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Photo+Point+Tank+Bund+Hyderabad+review"
+  },
+  {
+    "name": "Royal Lake Dining Tank Bund",
+    "area": "Tank Bund",
+    "category": "premium",
+    "subcategory": "fine dining",
+    "price_range": 2600,
+    "best_time": "night",
+    "mood_tags": [
+      "luxury",
+      "romantic",
+      "premium"
+    ],
+    "company_tags": [
+      "couple",
+      "family"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.4,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Royal+Lake+Dining+Tank+Bund+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Royal+Lake+Dining+Tank+Bund+Hyderabad+review"
+  },
+  {
+    "name": "Secunderabad Clock Tower",
+    "area": "Secunderabad",
+    "category": "history",
+    "subcategory": "landmark",
+    "price_range": 0,
+    "best_time": "evening",
+    "mood_tags": [
+      "explore",
+      "historic",
+      "citywalk"
+    ],
+    "company_tags": [
+      "friends",
+      "solo",
+      "family"
+    ],
+    "time_needed": "45 mins",
+    "rating": 4.2,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Secunderabad+Clock+Tower+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Secunderabad+Clock+Tower+Hyderabad+review"
+  },
+  {
+    "name": "Sanjeevaiah Park Secunderabad",
+    "area": "Secunderabad",
+    "category": "nature",
+    "subcategory": "urban park",
+    "price_range": 40,
+    "best_time": "morning",
+    "mood_tags": [
+      "fresh",
+      "peaceful",
+      "fitness"
+    ],
+    "company_tags": [
+      "solo",
+      "family",
+      "friends"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.6,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Sanjeevaiah+Park+Secunderabad+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Sanjeevaiah+Park+Secunderabad+Hyderabad+review"
+  },
+  {
+    "name": "Hussain Sagar North Walk Secunderabad",
+    "area": "Secunderabad",
+    "category": "nature",
+    "subcategory": "lake promenade",
+    "price_range": 0,
+    "best_time": "evening",
+    "mood_tags": [
+      "romantic",
+      "fresh",
+      "relaxed"
+    ],
+    "company_tags": [
+      "couple",
+      "friends",
+      "solo"
+    ],
+    "time_needed": "1.5 hours",
+    "rating": 4.5,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Hussain+Sagar+North+Walk+Secunderabad+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Hussain+Sagar+North+Walk+Secunderabad+Hyderabad+review"
+  },
+  {
+    "name": "Paradise Restaurant Secunderabad",
+    "area": "Secunderabad",
+    "category": "food",
+    "subcategory": "biryani restaurant",
+    "price_range": 500,
+    "best_time": "night",
+    "mood_tags": [
+      "hungry",
+      "group",
+      "iconic"
+    ],
+    "company_tags": [
+      "family",
+      "friends",
+      "couple"
+    ],
+    "time_needed": "1 hour",
+    "rating": 4.5,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Paradise+Restaurant+Secunderabad+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Paradise+Restaurant+Secunderabad+Hyderabad+review"
+  },
+  {
+    "name": "Alpha Hotel Secunderabad",
+    "area": "Secunderabad",
+    "category": "food",
+    "subcategory": "local restaurant",
+    "price_range": 350,
+    "best_time": "morning",
+    "mood_tags": [
+      "comfort",
+      "local",
+      "casual"
+    ],
+    "company_tags": [
+      "friends",
+      "family",
+      "solo"
+    ],
+    "time_needed": "1 hour",
+    "rating": 4.3,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Alpha+Hotel+Secunderabad+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Alpha+Hotel+Secunderabad+Hyderabad+review"
+  },
+  {
+    "name": "Tivoli Cinemas Secunderabad",
+    "area": "Secunderabad",
+    "category": "entertainment",
+    "subcategory": "cinema",
+    "price_range": 350,
+    "best_time": "night",
+    "mood_tags": [
+      "fun",
+      "date",
+      "relaxed"
+    ],
+    "company_tags": [
+      "couple",
+      "friends",
+      "family"
+    ],
+    "time_needed": "3 hours",
+    "rating": 4.1,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Tivoli+Cinemas+Secunderabad+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Tivoli+Cinemas+Secunderabad+Hyderabad+review"
+  },
+  {
+    "name": "Monda Market Secunderabad",
+    "area": "Secunderabad",
+    "category": "shopping",
+    "subcategory": "traditional market",
+    "price_range": 700,
+    "best_time": "morning",
+    "mood_tags": [
+      "shopping",
+      "local",
+      "explore"
+    ],
+    "company_tags": [
+      "family",
+      "friends"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.3,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Monda+Market+Secunderabad+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Monda+Market+Secunderabad+Hyderabad+review"
+  },
+  {
+    "name": "General Bazaar Secunderabad",
+    "area": "Secunderabad",
+    "category": "shopping",
+    "subcategory": "street market",
+    "price_range": 1200,
+    "best_time": "evening",
+    "mood_tags": [
+      "shopping",
+      "budget",
+      "fun"
+    ],
+    "company_tags": [
+      "friends",
+      "family"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.2,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=General+Bazaar+Secunderabad+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=General+Bazaar+Secunderabad+Hyderabad+review"
+  },
+  {
+    "name": "Cafe Niloufer Secunderabad",
+    "area": "Secunderabad",
+    "category": "cafe",
+    "subcategory": "tea cafe",
+    "price_range": 250,
+    "best_time": "morning",
+    "mood_tags": [
+      "comfort",
+      "casual",
+      "local"
+    ],
+    "company_tags": [
+      "solo",
+      "friends",
+      "family"
+    ],
+    "time_needed": "1 hour",
+    "rating": 4.6,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Cafe+Niloufer+Secunderabad+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Cafe+Niloufer+Secunderabad+Hyderabad+review"
+  },
+  {
+    "name": "Cream Stone Secunderabad",
+    "area": "Secunderabad",
+    "category": "food",
+    "subcategory": "dessert cafe",
+    "price_range": 350,
+    "best_time": "night",
+    "mood_tags": [
+      "sweet",
+      "fun",
+      "casual"
+    ],
+    "company_tags": [
+      "friends",
+      "couple",
+      "family"
+    ],
+    "time_needed": "45 mins",
+    "rating": 4.3,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Cream+Stone+Secunderabad+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Cream+Stone+Secunderabad+Hyderabad+review"
+  },
+  {
+    "name": "Bowenpally Food Street Secunderabad",
+    "area": "Secunderabad",
+    "category": "food",
+    "subcategory": "street food",
+    "price_range": 250,
+    "best_time": "night",
+    "mood_tags": [
+      "budget",
+      "hungry",
+      "fun"
+    ],
+    "company_tags": [
+      "friends",
+      "family"
+    ],
+    "time_needed": "1 hour",
+    "rating": 4.2,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Bowenpally+Food+Street+Secunderabad+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Bowenpally+Food+Street+Secunderabad+Hyderabad+review"
+  },
+  {
+    "name": "Trimulgherry Fort Area Secunderabad",
+    "area": "Secunderabad",
+    "category": "history",
+    "subcategory": "historic zone",
+    "price_range": 0,
+    "best_time": "morning",
+    "mood_tags": [
+      "explore",
+      "quiet",
+      "historic"
+    ],
+    "company_tags": [
+      "solo",
+      "friends"
+    ],
+    "time_needed": "1.5 hours",
+    "rating": 4.0,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Trimulgherry+Fort+Area+Secunderabad+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Trimulgherry+Fort+Area+Secunderabad+Hyderabad+review"
+  },
+  {
+    "name": "Lifestyle Mall Paradise Circle Secunderabad",
+    "area": "Secunderabad",
+    "category": "shopping",
+    "subcategory": "mall",
+    "price_range": 1800,
+    "best_time": "afternoon",
+    "mood_tags": [
+      "shopping",
+      "cool",
+      "fun"
+    ],
+    "company_tags": [
+      "family",
+      "friends",
+      "couple"
+    ],
+    "time_needed": "2.5 hours",
+    "rating": 4.2,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Lifestyle+Mall+Paradise+Circle+Secunderabad+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Lifestyle+Mall+Paradise+Circle+Secunderabad+Hyderabad+review"
+  },
+  {
+    "name": "Gaming Arena Secunderabad",
+    "area": "Secunderabad",
+    "category": "entertainment",
+    "subcategory": "gaming zone",
+    "price_range": 650,
+    "best_time": "evening",
+    "mood_tags": [
+      "competitive",
+      "fun",
+      "energetic"
+    ],
+    "company_tags": [
+      "friends"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.1,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Gaming+Arena+Secunderabad+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Gaming+Arena+Secunderabad+Hyderabad+review"
+  },
+  {
+    "name": "Luxury Spa Secunderabad",
+    "area": "Secunderabad",
+    "category": "relax",
+    "subcategory": "spa",
+    "price_range": 2800,
+    "best_time": "afternoon",
+    "mood_tags": [
+      "peaceful",
+      "selfcare",
+      "premium"
+    ],
+    "company_tags": [
+      "solo",
+      "couple"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.2,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Luxury+Spa+Secunderabad+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Luxury+Spa+Secunderabad+Hyderabad+review"
+  },
+  {
+    "name": "Sky Terrace Dining Secunderabad",
+    "area": "Secunderabad",
+    "category": "premium",
+    "subcategory": "rooftop dining",
+    "price_range": 2200,
+    "best_time": "night",
+    "mood_tags": [
+      "romantic",
+      "luxury",
+      "premium"
+    ],
+    "company_tags": [
+      "couple",
+      "friends"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.3,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Sky+Terrace+Dining+Secunderabad+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Sky+Terrace+Dining+Secunderabad+Hyderabad+review"
+  },
+  {
+    "name": "Book Cafe Clock Tower Secunderabad",
+    "area": "Secunderabad",
+    "category": "cafe",
+    "subcategory": "book cafe",
+    "price_range": 450,
+    "best_time": "afternoon",
+    "mood_tags": [
+      "peaceful",
+      "solo",
+      "calm"
+    ],
+    "company_tags": [
+      "solo",
+      "couple"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.1,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Book+Cafe+Clock+Tower+Secunderabad+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Book+Cafe+Clock+Tower+Secunderabad+Hyderabad+review"
+  },
+  {
+    "name": "Weekend Flea Market Secunderabad",
+    "area": "Secunderabad",
+    "category": "hidden_gem",
+    "subcategory": "market",
+    "price_range": 400,
+    "best_time": "morning",
+    "mood_tags": [
+      "explore",
+      "shopping",
+      "fun"
+    ],
+    "company_tags": [
+      "friends",
+      "family"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.0,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Weekend+Flea+Market+Secunderabad+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Weekend+Flea+Market+Secunderabad+Hyderabad+review"
+  },
+  {
+    "name": "Hidden Railway Heritage Spot Secunderabad",
+    "area": "Secunderabad",
+    "category": "hidden_gem",
+    "subcategory": "heritage point",
+    "price_range": 0,
+    "best_time": "evening",
+    "mood_tags": [
+      "different",
+      "historic",
+      "quiet"
+    ],
+    "company_tags": [
+      "solo",
+      "friends"
+    ],
+    "time_needed": "45 mins",
+    "rating": 3.9,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Hidden+Railway+Heritage+Spot+Secunderabad+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Hidden+Railway+Heritage+Spot+Secunderabad+Hyderabad+review"
+  },
+  {
+    "name": "Photo Walk Parade Grounds Secunderabad",
+    "area": "Secunderabad",
+    "category": "entertainment",
+    "subcategory": "photo experience",
+    "price_range": 100,
+    "best_time": "morning",
+    "mood_tags": [
+      "creative",
+      "fresh",
+      "active"
+    ],
+    "company_tags": [
+      "friends",
+      "solo",
+      "couple"
+    ],
+    "time_needed": "1.5 hours",
+    "rating": 4.1,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Photo+Walk+Parade+Grounds+Secunderabad+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Photo+Walk+Parade+Grounds+Secunderabad+Hyderabad+review"
+  },
+  {
+    "name": "Begumpet Airport Heritage View",
+    "area": "Begumpet",
+    "category": "history",
+    "subcategory": "aviation landmark",
+    "price_range": 0,
+    "best_time": "evening",
+    "mood_tags": [
+      "historic",
+      "different",
+      "citywalk"
+    ],
+    "company_tags": [
+      "solo",
+      "friends",
+      "family"
+    ],
+    "time_needed": "45 mins",
+    "rating": 4.1,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Begumpet+Airport+Heritage+View+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Begumpet+Airport+Heritage+View+Hyderabad+review"
+  },
+  {
+    "name": "Jalagam Vengal Rao Park Begumpet",
+    "area": "Begumpet",
+    "category": "nature",
+    "subcategory": "urban park",
+    "price_range": 20,
+    "best_time": "morning",
+    "mood_tags": [
+      "fresh",
+      "fitness",
+      "peaceful"
+    ],
+    "company_tags": [
+      "solo",
+      "family",
+      "friends"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.6,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Jalagam+Vengal+Rao+Park+Begumpet+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Jalagam+Vengal+Rao+Park+Begumpet+Hyderabad+review"
+  },
+  {
+    "name": "Begumpet Lake Walk",
+    "area": "Begumpet",
+    "category": "nature",
+    "subcategory": "lakefront walk",
+    "price_range": 0,
+    "best_time": "sunset",
+    "mood_tags": [
+      "romantic",
+      "fresh",
+      "relaxed"
+    ],
+    "company_tags": [
+      "couple",
+      "friends",
+      "solo"
+    ],
+    "time_needed": "1 hour",
+    "rating": 4.2,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Begumpet+Lake+Walk+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Begumpet+Lake+Walk+Hyderabad+review"
+  },
+  {
+    "name": "Hyderabad Central Mall Begumpet",
+    "area": "Begumpet",
+    "category": "shopping",
+    "subcategory": "mall",
+    "price_range": 2200,
+    "best_time": "afternoon",
+    "mood_tags": [
+      "shopping",
+      "fun",
+      "cool"
+    ],
+    "company_tags": [
+      "family",
+      "friends",
+      "couple"
+    ],
+    "time_needed": "3 hours",
+    "rating": 4.5,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Hyderabad+Central+Mall+Begumpet+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Hyderabad+Central+Mall+Begumpet+Hyderabad+review"
+  },
+  {
+    "name": "Lifestyle Begumpet",
+    "area": "Begumpet",
+    "category": "shopping",
+    "subcategory": "fashion store",
+    "price_range": 1800,
+    "best_time": "afternoon",
+    "mood_tags": [
+      "shopping",
+      "style",
+      "explore"
+    ],
+    "company_tags": [
+      "friends",
+      "family"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.3,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Lifestyle+Begumpet+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Lifestyle+Begumpet+Hyderabad+review"
+  },
+  {
+    "name": "Paradise Begumpet",
+    "area": "Begumpet",
+    "category": "food",
+    "subcategory": "biryani restaurant",
+    "price_range": 500,
+    "best_time": "night",
+    "mood_tags": [
+      "hungry",
+      "iconic",
+      "group"
+    ],
+    "company_tags": [
+      "family",
+      "friends",
+      "couple"
+    ],
+    "time_needed": "1 hour",
+    "rating": 4.4,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Paradise+Begumpet+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Paradise+Begumpet+Hyderabad+review"
+  },
+  {
+    "name": "Cafe Niloufer Begumpet",
+    "area": "Begumpet",
+    "category": "cafe",
+    "subcategory": "tea cafe",
+    "price_range": 250,
+    "best_time": "morning",
+    "mood_tags": [
+      "comfort",
+      "local",
+      "casual"
+    ],
+    "company_tags": [
+      "solo",
+      "friends",
+      "family"
+    ],
+    "time_needed": "1 hour",
+    "rating": 4.6,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Cafe+Niloufer+Begumpet+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Cafe+Niloufer+Begumpet+Hyderabad+review"
+  },
+  {
+    "name": "Cream Stone Begumpet",
+    "area": "Begumpet",
+    "category": "food",
+    "subcategory": "dessert cafe",
+    "price_range": 350,
+    "best_time": "night",
+    "mood_tags": [
+      "sweet",
+      "fun",
+      "casual"
+    ],
+    "company_tags": [
+      "friends",
+      "couple",
+      "family"
+    ],
+    "time_needed": "45 mins",
+    "rating": 4.3,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Cream+Stone+Begumpet+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Cream+Stone+Begumpet+Hyderabad+review"
+  },
+  {
+    "name": "Begumpet Multiplex",
+    "area": "Begumpet",
+    "category": "entertainment",
+    "subcategory": "cinema",
+    "price_range": 450,
+    "best_time": "night",
+    "mood_tags": [
+      "date",
+      "fun",
+      "relaxed"
+    ],
+    "company_tags": [
+      "couple",
+      "friends",
+      "family"
+    ],
+    "time_needed": "3 hours",
+    "rating": 4.2,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Begumpet+Multiplex+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Begumpet+Multiplex+Hyderabad+review"
+  },
+  {
+    "name": "Bowling Arena Begumpet",
+    "area": "Begumpet",
+    "category": "entertainment",
+    "subcategory": "gaming zone",
+    "price_range": 700,
+    "best_time": "evening",
+    "mood_tags": [
+      "fun",
+      "energetic",
+      "group"
+    ],
+    "company_tags": [
+      "friends"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.1,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Bowling+Arena+Begumpet+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Bowling+Arena+Begumpet+Hyderabad+review"
+  },
+  {
+    "name": "Skyline Rooftop Dining Begumpet",
+    "area": "Begumpet",
+    "category": "premium",
+    "subcategory": "rooftop restaurant",
+    "price_range": 2400,
+    "best_time": "night",
+    "mood_tags": [
+      "romantic",
+      "luxury",
+      "cityview"
+    ],
+    "company_tags": [
+      "couple",
+      "friends"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.4,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Skyline+Rooftop+Dining+Begumpet+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Skyline+Rooftop+Dining+Begumpet+Hyderabad+review"
+  },
+  {
+    "name": "Luxury Spa Begumpet",
+    "area": "Begumpet",
+    "category": "relax",
+    "subcategory": "spa",
+    "price_range": 3000,
+    "best_time": "afternoon",
+    "mood_tags": [
+      "selfcare",
+      "peaceful",
+      "premium"
+    ],
+    "company_tags": [
+      "solo",
+      "couple"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.3,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Luxury+Spa+Begumpet+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Luxury+Spa+Begumpet+Hyderabad+review"
+  },
+  {
+    "name": "Book Cafe Begumpet",
+    "area": "Begumpet",
+    "category": "cafe",
+    "subcategory": "book cafe",
+    "price_range": 450,
+    "best_time": "afternoon",
+    "mood_tags": [
+      "peaceful",
+      "solo",
+      "calm"
+    ],
+    "company_tags": [
+      "solo",
+      "couple"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.1,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Book+Cafe+Begumpet+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Book+Cafe+Begumpet+Hyderabad+review"
+  },
+  {
+    "name": "Street Food Lane Begumpet",
+    "area": "Begumpet",
+    "category": "food",
+    "subcategory": "street food",
+    "price_range": 300,
+    "best_time": "night",
+    "mood_tags": [
+      "budget",
+      "fun",
+      "hungry"
+    ],
+    "company_tags": [
+      "friends",
+      "family"
+    ],
+    "time_needed": "1 hour",
+    "rating": 4.2,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Street+Food+Lane+Begumpet+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Street+Food+Lane+Begumpet+Hyderabad+review"
+  },
+  {
+    "name": "Weekend Flea Market Begumpet",
+    "area": "Begumpet",
+    "category": "shopping",
+    "subcategory": "open market",
+    "price_range": 700,
+    "best_time": "morning",
+    "mood_tags": [
+      "shopping",
+      "explore",
+      "fun"
+    ],
+    "company_tags": [
+      "family",
+      "friends"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.0,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Weekend+Flea+Market+Begumpet+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Weekend+Flea+Market+Begumpet+Hyderabad+review"
+  },
+  {
+    "name": "Hidden Garden Cafe Begumpet",
+    "area": "Begumpet",
+    "category": "hidden_gem",
+    "subcategory": "garden cafe",
+    "price_range": 550,
+    "best_time": "evening",
+    "mood_tags": [
+      "calm",
+      "different",
+      "romantic"
+    ],
+    "company_tags": [
+      "couple",
+      "friends"
+    ],
+    "time_needed": "1.5 hours",
+    "rating": 4.1,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Hidden+Garden+Cafe+Begumpet+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Hidden+Garden+Cafe+Begumpet+Hyderabad+review"
+  },
+  {
+    "name": "Photo Walk Begumpet Streets",
+    "area": "Begumpet",
+    "category": "hidden_gem",
+    "subcategory": "photo experience",
+    "price_range": 0,
+    "best_time": "morning",
+    "mood_tags": [
+      "creative",
+      "active",
+      "fresh"
+    ],
+    "company_tags": [
+      "friends",
+      "solo"
+    ],
+    "time_needed": "1.5 hours",
+    "rating": 4.0,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Photo+Walk+Begumpet+Streets+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Photo+Walk+Begumpet+Streets+Hyderabad+review"
+  },
+  {
+    "name": "Pet Friendly Cafe Begumpet",
+    "area": "Begumpet",
+    "category": "cafe",
+    "subcategory": "pet cafe",
+    "price_range": 650,
+    "best_time": "evening",
+    "mood_tags": [
+      "cute",
+      "fun",
+      "relaxed"
+    ],
+    "company_tags": [
+      "friends",
+      "couple",
+      "family"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.2,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Pet+Friendly+Cafe+Begumpet+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Pet+Friendly+Cafe+Begumpet+Hyderabad+review"
+  },
+  {
+    "name": "Mini Art Studio Begumpet",
+    "area": "Begumpet",
+    "category": "entertainment",
+    "subcategory": "art workshop",
+    "price_range": 500,
+    "best_time": "afternoon",
+    "mood_tags": [
+      "creative",
+      "different",
+      "fun"
+    ],
+    "company_tags": [
+      "friends",
+      "couple",
+      "solo"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.0,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Mini+Art+Studio+Begumpet+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Mini+Art+Studio+Begumpet+Hyderabad+review"
+  },
+  {
+    "name": "Royal Fine Dining Begumpet",
+    "area": "Begumpet",
+    "category": "premium",
+    "subcategory": "fine dining",
+    "price_range": 2800,
+    "best_time": "night",
+    "mood_tags": [
+      "luxury",
+      "romantic",
+      "premium"
+    ],
+    "company_tags": [
+      "couple",
+      "family"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.4,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Royal+Fine+Dining+Begumpet+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Royal+Fine+Dining+Begumpet+Hyderabad+review"
+  },
+  {
+    "name": "Forum Sujana Mall Kukatpally",
+    "area": "Kukatpally",
+    "category": "shopping",
+    "subcategory": "mall",
+    "price_range": 2200,
+    "best_time": "afternoon",
+    "mood_tags": [
+      "shopping",
+      "fun",
+      "cool"
+    ],
+    "company_tags": [
+      "family",
+      "friends",
+      "couple"
+    ],
+    "time_needed": "3 hours",
+    "rating": 4.6,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Forum+Sujana+Mall+Kukatpally+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Forum+Sujana+Mall+Kukatpally+Hyderabad+review"
+  },
+  {
+    "name": "JNTU Lake Park Kukatpally",
+    "area": "Kukatpally",
+    "category": "nature",
+    "subcategory": "park",
+    "price_range": 20,
+    "best_time": "morning",
+    "mood_tags": [
+      "fresh",
+      "fitness",
+      "peaceful"
+    ],
+    "company_tags": [
+      "solo",
+      "family",
+      "friends"
+    ],
+    "time_needed": "1.5 hours",
+    "rating": 4.2,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=JNTU+Lake+Park+Kukatpally+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=JNTU+Lake+Park+Kukatpally+Hyderabad+review"
+  },
+  {
+    "name": "KPHB Food Street Kukatpally",
+    "area": "Kukatpally",
+    "category": "food",
+    "subcategory": "street food hub",
+    "price_range": 300,
+    "best_time": "night",
+    "mood_tags": [
+      "budget",
+      "hungry",
+      "fun"
+    ],
+    "company_tags": [
+      "friends",
+      "family"
+    ],
+    "time_needed": "1 hour",
+    "rating": 4.4,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=KPHB+Food+Street+Kukatpally+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=KPHB+Food+Street+Kukatpally+Hyderabad+review"
+  },
+  {
+    "name": "Kukatpally Multiplex",
+    "area": "Kukatpally",
+    "category": "entertainment",
+    "subcategory": "cinema",
+    "price_range": 450,
+    "best_time": "night",
+    "mood_tags": [
+      "date",
+      "fun",
+      "relaxed"
+    ],
+    "company_tags": [
+      "couple",
+      "friends",
+      "family"
+    ],
+    "time_needed": "3 hours",
+    "rating": 4.3,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Kukatpally+Multiplex+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Kukatpally+Multiplex+Hyderabad+review"
+  },
+  {
+    "name": "KPHB Metro Shopping Lane Kukatpally",
+    "area": "Kukatpally",
+    "category": "shopping",
+    "subcategory": "market street",
+    "price_range": 1000,
+    "best_time": "evening",
+    "mood_tags": [
+      "shopping",
+      "budget",
+      "explore"
+    ],
+    "company_tags": [
+      "friends",
+      "family"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.1,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=KPHB+Metro+Shopping+Lane+Kukatpally+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=KPHB+Metro+Shopping+Lane+Kukatpally+Hyderabad+review"
+  },
+  {
+    "name": "Miyapur Border Lake Walk Kukatpally",
+    "area": "Kukatpally",
+    "category": "nature",
+    "subcategory": "lake walk",
+    "price_range": 0,
+    "best_time": "sunset",
+    "mood_tags": [
+      "fresh",
+      "peaceful",
+      "romantic"
+    ],
+    "company_tags": [
+      "couple",
+      "solo",
+      "friends"
+    ],
+    "time_needed": "1 hour",
+    "rating": 4.0,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Miyapur+Border+Lake+Walk+Kukatpally+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Miyapur+Border+Lake+Walk+Kukatpally+Hyderabad+review"
+  },
+  {
+    "name": "Cafe Niloufer KPHB Kukatpally",
+    "area": "Kukatpally",
+    "category": "cafe",
+    "subcategory": "tea cafe",
+    "price_range": 250,
+    "best_time": "morning",
+    "mood_tags": [
+      "comfort",
+      "casual",
+      "local"
+    ],
+    "company_tags": [
+      "solo",
+      "friends",
+      "family"
+    ],
+    "time_needed": "1 hour",
+    "rating": 4.5,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Cafe+Niloufer+KPHB+Kukatpally+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Cafe+Niloufer+KPHB+Kukatpally+Hyderabad+review"
+  },
+  {
+    "name": "Cream Stone KPHB Kukatpally",
+    "area": "Kukatpally",
+    "category": "food",
+    "subcategory": "dessert cafe",
+    "price_range": 350,
+    "best_time": "night",
+    "mood_tags": [
+      "sweet",
+      "fun",
+      "casual"
+    ],
+    "company_tags": [
+      "friends",
+      "couple",
+      "family"
+    ],
+    "time_needed": "45 mins",
+    "rating": 4.2,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Cream+Stone+KPHB+Kukatpally+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Cream+Stone+KPHB+Kukatpally+Hyderabad+review"
+  },
+  {
+    "name": "Bowling Arena Kukatpally",
+    "area": "Kukatpally",
+    "category": "entertainment",
+    "subcategory": "gaming zone",
+    "price_range": 700,
+    "best_time": "evening",
+    "mood_tags": [
+      "energetic",
+      "fun",
+      "group"
+    ],
+    "company_tags": [
+      "friends"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.1,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Bowling+Arena+Kukatpally+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Bowling+Arena+Kukatpally+Hyderabad+review"
+  },
+  {
+    "name": "KPHB Rooftop Dining Kukatpally",
+    "area": "Kukatpally",
+    "category": "premium",
+    "subcategory": "rooftop restaurant",
+    "price_range": 2200,
+    "best_time": "night",
+    "mood_tags": [
+      "romantic",
+      "luxury",
+      "cityview"
+    ],
+    "company_tags": [
+      "couple",
+      "friends"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.3,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=KPHB+Rooftop+Dining+Kukatpally+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=KPHB+Rooftop+Dining+Kukatpally+Hyderabad+review"
+  },
+  {
+    "name": "Luxury Spa Kukatpally",
+    "area": "Kukatpally",
+    "category": "relax",
+    "subcategory": "spa",
+    "price_range": 2800,
+    "best_time": "afternoon",
+    "mood_tags": [
+      "selfcare",
+      "peaceful",
+      "premium"
+    ],
+    "company_tags": [
+      "solo",
+      "couple"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.2,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Luxury+Spa+Kukatpally+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Luxury+Spa+Kukatpally+Hyderabad+review"
+  },
+  {
+    "name": "Pragathi Nagar Sports Arena Kukatpally",
+    "area": "Kukatpally",
+    "category": "entertainment",
+    "subcategory": "sports zone",
+    "price_range": 400,
+    "best_time": "evening",
+    "mood_tags": [
+      "active",
+      "competitive",
+      "fun"
+    ],
+    "company_tags": [
+      "friends"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.0,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Pragathi+Nagar+Sports+Arena+Kukatpally+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Pragathi+Nagar+Sports+Arena+Kukatpally+Hyderabad+review"
+  },
+  {
+    "name": "Book Cafe KPHB Kukatpally",
+    "area": "Kukatpally",
+    "category": "cafe",
+    "subcategory": "book cafe",
+    "price_range": 450,
+    "best_time": "afternoon",
+    "mood_tags": [
+      "peaceful",
+      "solo",
+      "calm"
+    ],
+    "company_tags": [
+      "solo",
+      "couple"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.1,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Book+Cafe+KPHB+Kukatpally+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Book+Cafe+KPHB+Kukatpally+Hyderabad+review"
+  },
+  {
+    "name": "Weekend Flea Market KPHB Kukatpally",
+    "area": "Kukatpally",
+    "category": "shopping",
+    "subcategory": "open market",
+    "price_range": 600,
+    "best_time": "morning",
+    "mood_tags": [
+      "shopping",
+      "fun",
+      "explore"
+    ],
+    "company_tags": [
+      "family",
+      "friends"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.0,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Weekend+Flea+Market+KPHB+Kukatpally+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Weekend+Flea+Market+KPHB+Kukatpally+Hyderabad+review"
+  },
+  {
+    "name": "Street Chaat Corner Kukatpally",
+    "area": "Kukatpally",
+    "category": "food",
+    "subcategory": "snack stall",
+    "price_range": 200,
+    "best_time": "evening",
+    "mood_tags": [
+      "budget",
+      "snacks",
+      "fun"
+    ],
+    "company_tags": [
+      "friends",
+      "family"
+    ],
+    "time_needed": "45 mins",
+    "rating": 4.2,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Street+Chaat+Corner+Kukatpally+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Street+Chaat+Corner+Kukatpally+Hyderabad+review"
+  },
+  {
+    "name": "Hidden Terrace Cafe KPHB Kukatpally",
+    "area": "Kukatpally",
+    "category": "hidden_gem",
+    "subcategory": "terrace cafe",
+    "price_range": 550,
+    "best_time": "night",
+    "mood_tags": [
+      "calm",
+      "different",
+      "romantic"
+    ],
+    "company_tags": [
+      "couple",
+      "friends"
+    ],
+    "time_needed": "1.5 hours",
+    "rating": 4.0,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Hidden+Terrace+Cafe+KPHB+Kukatpally+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Hidden+Terrace+Cafe+KPHB+Kukatpally+Hyderabad+review"
+  },
+  {
+    "name": "Pet Friendly Cafe Kukatpally",
+    "area": "Kukatpally",
+    "category": "cafe",
+    "subcategory": "pet cafe",
+    "price_range": 650,
+    "best_time": "evening",
+    "mood_tags": [
+      "cute",
+      "fun",
+      "relaxed"
+    ],
+    "company_tags": [
+      "friends",
+      "couple",
+      "family"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.1,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Pet+Friendly+Cafe+Kukatpally+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Pet+Friendly+Cafe+Kukatpally+Hyderabad+review"
+  },
+  {
+    "name": "Photo Walk JNTU Campus Side Kukatpally",
+    "area": "Kukatpally",
+    "category": "hidden_gem",
+    "subcategory": "photo experience",
+    "price_range": 0,
+    "best_time": "morning",
+    "mood_tags": [
+      "creative",
+      "fresh",
+      "active"
+    ],
+    "company_tags": [
+      "friends",
+      "solo"
+    ],
+    "time_needed": "1 hour",
+    "rating": 3.9,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Photo+Walk+JNTU+Campus+Side+Kukatpally+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Photo+Walk+JNTU+Campus+Side+Kukatpally+Hyderabad+review"
+  },
+  {
+    "name": "Gaming Cafe Kukatpally",
+    "area": "Kukatpally",
+    "category": "entertainment",
+    "subcategory": "gaming cafe",
+    "price_range": 500,
+    "best_time": "night",
+    "mood_tags": [
+      "fun",
+      "competitive",
+      "group"
+    ],
+    "company_tags": [
+      "friends"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.0,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Gaming+Cafe+Kukatpally+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Gaming+Cafe+Kukatpally+Hyderabad+review"
+  },
+  {
+    "name": "Royal Fine Dining Kukatpally",
+    "area": "Kukatpally",
+    "category": "premium",
+    "subcategory": "fine dining",
+    "price_range": 2600,
+    "best_time": "night",
+    "mood_tags": [
+      "luxury",
+      "romantic",
+      "premium"
+    ],
+    "company_tags": [
+      "couple",
+      "family"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.3,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Royal+Fine+Dining+Kukatpally+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Royal+Fine+Dining+Kukatpally+Hyderabad+review"
+  },
+  {
+    "name": "Ameerpet Shopping Street",
+    "area": "Ameerpet",
+    "category": "shopping",
+    "subcategory": "market street",
+    "price_range": 1200,
+    "best_time": "evening",
+    "mood_tags": [
+      "shopping",
+      "budget",
+      "explore"
+    ],
+    "company_tags": [
+      "friends",
+      "family",
+      "solo"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.3,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Ameerpet+Shopping+Street+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Ameerpet+Shopping+Street+Hyderabad+review"
+  },
+  {
+    "name": "Ameerpet Tech Book Market",
+    "area": "Ameerpet",
+    "category": "shopping",
+    "subcategory": "book market",
+    "price_range": 800,
+    "best_time": "afternoon",
+    "mood_tags": [
+      "learning",
+      "explore",
+      "budget"
+    ],
+    "company_tags": [
+      "solo",
+      "friends"
+    ],
+    "time_needed": "1.5 hours",
+    "rating": 4.2,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Ameerpet+Tech+Book+Market+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Ameerpet+Tech+Book+Market+Hyderabad+review"
+  },
+  {
+    "name": "Satyam Theatre Zone Ameerpet",
+    "area": "Ameerpet",
+    "category": "entertainment",
+    "subcategory": "cinema",
+    "price_range": 350,
+    "best_time": "night",
+    "mood_tags": [
+      "fun",
+      "date",
+      "relaxed"
+    ],
+    "company_tags": [
+      "couple",
+      "friends",
+      "family"
+    ],
+    "time_needed": "3 hours",
+    "rating": 4.0,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Satyam+Theatre+Zone+Ameerpet+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Satyam+Theatre+Zone+Ameerpet+Hyderabad+review"
+  },
+  {
+    "name": "Ameerpet Street Food Lane",
+    "area": "Ameerpet",
+    "category": "food",
+    "subcategory": "street food hub",
+    "price_range": 250,
+    "best_time": "night",
+    "mood_tags": [
+      "budget",
+      "hungry",
+      "fun"
+    ],
+    "company_tags": [
+      "friends",
+      "family"
+    ],
+    "time_needed": "1 hour",
+    "rating": 4.4,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Ameerpet+Street+Food+Lane+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Ameerpet+Street+Food+Lane+Hyderabad+review"
+  },
+  {
+    "name": "Paradise Ameerpet",
+    "area": "Ameerpet",
+    "category": "food",
+    "subcategory": "biryani restaurant",
+    "price_range": 500,
+    "best_time": "night",
+    "mood_tags": [
+      "hungry",
+      "iconic",
+      "group"
+    ],
+    "company_tags": [
+      "family",
+      "friends",
+      "couple"
+    ],
+    "time_needed": "1 hour",
+    "rating": 4.3,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Paradise+Ameerpet+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Paradise+Ameerpet+Hyderabad+review"
+  },
+  {
+    "name": "Cafe Niloufer Ameerpet",
+    "area": "Ameerpet",
+    "category": "cafe",
+    "subcategory": "tea cafe",
+    "price_range": 250,
+    "best_time": "morning",
+    "mood_tags": [
+      "comfort",
+      "casual",
+      "local"
+    ],
+    "company_tags": [
+      "solo",
+      "friends",
+      "family"
+    ],
+    "time_needed": "1 hour",
+    "rating": 4.5,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Cafe+Niloufer+Ameerpet+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Cafe+Niloufer+Ameerpet+Hyderabad+review"
+  },
+  {
+    "name": "Cream Stone Ameerpet",
+    "area": "Ameerpet",
+    "category": "food",
+    "subcategory": "dessert cafe",
+    "price_range": 350,
+    "best_time": "night",
+    "mood_tags": [
+      "sweet",
+      "fun",
+      "casual"
+    ],
+    "company_tags": [
+      "friends",
+      "couple",
+      "family"
+    ],
+    "time_needed": "45 mins",
+    "rating": 4.2,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Cream+Stone+Ameerpet+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Cream+Stone+Ameerpet+Hyderabad+review"
+  },
+  {
+    "name": "Ameerpet Metro Sky View",
+    "area": "Ameerpet",
+    "category": "hidden_gem",
+    "subcategory": "city viewpoint",
+    "price_range": 0,
+    "best_time": "sunset",
+    "mood_tags": [
+      "creative",
+      "citywalk",
+      "different"
+    ],
+    "company_tags": [
+      "solo",
+      "friends",
+      "couple"
+    ],
+    "time_needed": "30 mins",
+    "rating": 4.0,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Ameerpet+Metro+Sky+View+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Ameerpet+Metro+Sky+View+Hyderabad+review"
+  },
+  {
+    "name": "Book Cafe Ameerpet",
+    "area": "Ameerpet",
+    "category": "cafe",
+    "subcategory": "book cafe",
+    "price_range": 450,
+    "best_time": "afternoon",
+    "mood_tags": [
+      "peaceful",
+      "solo",
+      "calm"
+    ],
+    "company_tags": [
+      "solo",
+      "couple"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.1,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Book+Cafe+Ameerpet+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Book+Cafe+Ameerpet+Hyderabad+review"
+  },
+  {
+    "name": "Ameerpet Gaming Arena",
+    "area": "Ameerpet",
+    "category": "entertainment",
+    "subcategory": "gaming zone",
+    "price_range": 500,
+    "best_time": "evening",
+    "mood_tags": [
+      "fun",
+      "competitive",
+      "energetic"
+    ],
+    "company_tags": [
+      "friends"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.0,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Ameerpet+Gaming+Arena+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Ameerpet+Gaming+Arena+Hyderabad+review"
+  },
+  {
+    "name": "Ameerpet Bowling Lounge",
+    "area": "Ameerpet",
+    "category": "entertainment",
+    "subcategory": "bowling",
+    "price_range": 700,
+    "best_time": "night",
+    "mood_tags": [
+      "group",
+      "fun",
+      "energetic"
+    ],
+    "company_tags": [
+      "friends",
+      "couple"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.1,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Ameerpet+Bowling+Lounge+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Ameerpet+Bowling+Lounge+Hyderabad+review"
+  },
+  {
+    "name": "Ameerpet Rooftop Dining",
+    "area": "Ameerpet",
+    "category": "premium",
+    "subcategory": "rooftop restaurant",
+    "price_range": 2200,
+    "best_time": "night",
+    "mood_tags": [
+      "romantic",
+      "luxury",
+      "cityview"
+    ],
+    "company_tags": [
+      "couple",
+      "friends"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.3,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Ameerpet+Rooftop+Dining+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Ameerpet+Rooftop+Dining+Hyderabad+review"
+  },
+  {
+    "name": "Luxury Spa Ameerpet",
+    "area": "Ameerpet",
+    "category": "relax",
+    "subcategory": "spa",
+    "price_range": 2800,
+    "best_time": "afternoon",
+    "mood_tags": [
+      "selfcare",
+      "peaceful",
+      "premium"
+    ],
+    "company_tags": [
+      "solo",
+      "couple"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.2,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Luxury+Spa+Ameerpet+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Luxury+Spa+Ameerpet+Hyderabad+review"
+  },
+  {
+    "name": "Weekend Flea Market Ameerpet",
+    "area": "Ameerpet",
+    "category": "shopping",
+    "subcategory": "open market",
+    "price_range": 600,
+    "best_time": "morning",
+    "mood_tags": [
+      "shopping",
+      "fun",
+      "explore"
+    ],
+    "company_tags": [
+      "family",
+      "friends"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.0,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Weekend+Flea+Market+Ameerpet+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Weekend+Flea+Market+Ameerpet+Hyderabad+review"
+  },
+  {
+    "name": "Street Chaat Corner Ameerpet",
+    "area": "Ameerpet",
+    "category": "food",
+    "subcategory": "snack stall",
+    "price_range": 180,
+    "best_time": "evening",
+    "mood_tags": [
+      "budget",
+      "snacks",
+      "fun"
+    ],
+    "company_tags": [
+      "friends",
+      "family"
+    ],
+    "time_needed": "45 mins",
+    "rating": 4.2,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Street+Chaat+Corner+Ameerpet+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Street+Chaat+Corner+Ameerpet+Hyderabad+review"
+  },
+  {
+    "name": "Pet Friendly Cafe Ameerpet",
+    "area": "Ameerpet",
+    "category": "cafe",
+    "subcategory": "pet cafe",
+    "price_range": 650,
+    "best_time": "evening",
+    "mood_tags": [
+      "cute",
+      "fun",
+      "relaxed"
+    ],
+    "company_tags": [
+      "friends",
+      "couple",
+      "family"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.1,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Pet+Friendly+Cafe+Ameerpet+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Pet+Friendly+Cafe+Ameerpet+Hyderabad+review"
+  },
+  {
+    "name": "Hidden Terrace Cafe Ameerpet",
+    "area": "Ameerpet",
+    "category": "hidden_gem",
+    "subcategory": "terrace cafe",
+    "price_range": 550,
+    "best_time": "night",
+    "mood_tags": [
+      "calm",
+      "different",
+      "romantic"
+    ],
+    "company_tags": [
+      "couple",
+      "friends"
+    ],
+    "time_needed": "1.5 hours",
+    "rating": 4.0,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Hidden+Terrace+Cafe+Ameerpet+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Hidden+Terrace+Cafe+Ameerpet+Hyderabad+review"
+  },
+  {
+    "name": "Photo Walk Metro Streets Ameerpet",
+    "area": "Ameerpet",
+    "category": "hidden_gem",
+    "subcategory": "photo experience",
+    "price_range": 0,
+    "best_time": "morning",
+    "mood_tags": [
+      "creative",
+      "active",
+      "citywalk"
+    ],
+    "company_tags": [
+      "friends",
+      "solo"
+    ],
+    "time_needed": "1 hour",
+    "rating": 3.9,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Photo+Walk+Metro+Streets+Ameerpet+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Photo+Walk+Metro+Streets+Ameerpet+Hyderabad+review"
+  },
+  {
+    "name": "Mini Art Studio Ameerpet",
+    "area": "Ameerpet",
+    "category": "entertainment",
+    "subcategory": "art workshop",
+    "price_range": 500,
+    "best_time": "afternoon",
+    "mood_tags": [
+      "creative",
+      "different",
+      "fun"
+    ],
+    "company_tags": [
+      "friends",
+      "couple",
+      "solo"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.0,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Mini+Art+Studio+Ameerpet+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Mini+Art+Studio+Ameerpet+Hyderabad+review"
+  },
+  {
+    "name": "Royal Fine Dining Ameerpet",
+    "area": "Ameerpet",
+    "category": "premium",
+    "subcategory": "fine dining",
+    "price_range": 2600,
+    "best_time": "night",
+    "mood_tags": [
+      "luxury",
+      "romantic",
+      "premium"
+    ],
+    "company_tags": [
+      "couple",
+      "family"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.3,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Royal+Fine+Dining+Ameerpet+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Royal+Fine+Dining+Ameerpet+Hyderabad+review"
+  },
+  {
+    "name": "Uppal Stadium Tour Zone",
+    "area": "Uppal",
+    "category": "entertainment",
+    "subcategory": "sports landmark",
+    "price_range": 250,
+    "best_time": "afternoon",
+    "mood_tags": [
+      "sports",
+      "fun",
+      "explore"
+    ],
+    "company_tags": [
+      "friends",
+      "family",
+      "solo"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.5,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Uppal+Stadium+Tour+Zone+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Uppal+Stadium+Tour+Zone+Hyderabad+review"
+  },
+  {
+    "name": "Rajiv Gandhi Cricket Stadium View Point Uppal",
+    "area": "Uppal",
+    "category": "hidden_gem",
+    "subcategory": "viewpoint",
+    "price_range": 0,
+    "best_time": "evening",
+    "mood_tags": [
+      "sports",
+      "different",
+      "citywalk"
+    ],
+    "company_tags": [
+      "friends",
+      "solo"
+    ],
+    "time_needed": "45 mins",
+    "rating": 4.2,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Rajiv+Gandhi+Cricket+Stadium+View+Point+Uppal+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Rajiv+Gandhi+Cricket+Stadium+View+Point+Uppal+Hyderabad+review"
+  },
+  {
+    "name": "Uppal Lake Walk",
+    "area": "Uppal",
+    "category": "nature",
+    "subcategory": "lake walk",
+    "price_range": 0,
+    "best_time": "morning",
+    "mood_tags": [
+      "fresh",
+      "peaceful",
+      "fitness"
+    ],
+    "company_tags": [
+      "solo",
+      "couple",
+      "friends"
+    ],
+    "time_needed": "1.5 hours",
+    "rating": 4.1,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Uppal+Lake+Walk+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Uppal+Lake+Walk+Hyderabad+review"
+  },
+  {
+    "name": "Uppal Central Park",
+    "area": "Uppal",
+    "category": "nature",
+    "subcategory": "community park",
+    "price_range": 20,
+    "best_time": "evening",
+    "mood_tags": [
+      "family",
+      "fresh",
+      "relaxed"
+    ],
+    "company_tags": [
+      "family",
+      "friends",
+      "solo"
+    ],
+    "time_needed": "1.5 hours",
+    "rating": 4.0,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Uppal+Central+Park+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Uppal+Central+Park+Hyderabad+review"
+  },
+  {
+    "name": "Uppal Shopping Street",
+    "area": "Uppal",
+    "category": "shopping",
+    "subcategory": "market street",
+    "price_range": 1200,
+    "best_time": "evening",
+    "mood_tags": [
+      "shopping",
+      "budget",
+      "explore"
+    ],
+    "company_tags": [
+      "friends",
+      "family",
+      "solo"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.1,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Uppal+Shopping+Street+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Uppal+Shopping+Street+Hyderabad+review"
+  },
+  {
+    "name": "Uppal Street Food Hub",
+    "area": "Uppal",
+    "category": "food",
+    "subcategory": "street food",
+    "price_range": 250,
+    "best_time": "night",
+    "mood_tags": [
+      "budget",
+      "hungry",
+      "fun"
+    ],
+    "company_tags": [
+      "friends",
+      "family"
+    ],
+    "time_needed": "1 hour",
+    "rating": 4.3,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Uppal+Street+Food+Hub+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Uppal+Street+Food+Hub+Hyderabad+review"
+  },
+  {
+    "name": "Paradise Uppal",
+    "area": "Uppal",
+    "category": "food",
+    "subcategory": "biryani restaurant",
+    "price_range": 500,
+    "best_time": "night",
+    "mood_tags": [
+      "iconic",
+      "group",
+      "hungry"
+    ],
+    "company_tags": [
+      "family",
+      "friends",
+      "couple"
+    ],
+    "time_needed": "1 hour",
+    "rating": 4.2,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Paradise+Uppal+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Paradise+Uppal+Hyderabad+review"
+  },
+  {
+    "name": "Cafe Niloufer Uppal",
+    "area": "Uppal",
+    "category": "cafe",
+    "subcategory": "tea cafe",
+    "price_range": 250,
+    "best_time": "morning",
+    "mood_tags": [
+      "comfort",
+      "casual",
+      "local"
+    ],
+    "company_tags": [
+      "solo",
+      "friends",
+      "family"
+    ],
+    "time_needed": "1 hour",
+    "rating": 4.3,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Cafe+Niloufer+Uppal+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Cafe+Niloufer+Uppal+Hyderabad+review"
+  },
+  {
+    "name": "Cream Stone Uppal",
+    "area": "Uppal",
+    "category": "food",
+    "subcategory": "dessert cafe",
+    "price_range": 350,
+    "best_time": "night",
+    "mood_tags": [
+      "sweet",
+      "fun",
+      "casual"
+    ],
+    "company_tags": [
+      "friends",
+      "couple",
+      "family"
+    ],
+    "time_needed": "45 mins",
+    "rating": 4.1,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Cream+Stone+Uppal+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Cream+Stone+Uppal+Hyderabad+review"
+  },
+  {
+    "name": "Uppal Multiplex",
+    "area": "Uppal",
+    "category": "entertainment",
+    "subcategory": "cinema",
+    "price_range": 400,
+    "best_time": "night",
+    "mood_tags": [
+      "date",
+      "fun",
+      "relaxed"
+    ],
+    "company_tags": [
+      "couple",
+      "friends",
+      "family"
+    ],
+    "time_needed": "3 hours",
+    "rating": 4.1,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Uppal+Multiplex+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Uppal+Multiplex+Hyderabad+review"
+  },
+  {
+    "name": "Gaming Arena Uppal",
+    "area": "Uppal",
+    "category": "entertainment",
+    "subcategory": "gaming zone",
+    "price_range": 500,
+    "best_time": "evening",
+    "mood_tags": [
+      "fun",
+      "competitive",
+      "energetic"
+    ],
+    "company_tags": [
+      "friends"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.0,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Gaming+Arena+Uppal+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Gaming+Arena+Uppal+Hyderabad+review"
+  },
+  {
+    "name": "Bowling Lounge Uppal",
+    "area": "Uppal",
+    "category": "entertainment",
+    "subcategory": "bowling",
+    "price_range": 700,
+    "best_time": "night",
+    "mood_tags": [
+      "group",
+      "fun",
+      "energetic"
+    ],
+    "company_tags": [
+      "friends",
+      "couple"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.0,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Bowling+Lounge+Uppal+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Bowling+Lounge+Uppal+Hyderabad+review"
+  },
+  {
+    "name": "Uppal Rooftop Dining",
+    "area": "Uppal",
+    "category": "premium",
+    "subcategory": "rooftop restaurant",
+    "price_range": 2200,
+    "best_time": "night",
+    "mood_tags": [
+      "romantic",
+      "luxury",
+      "cityview"
+    ],
+    "company_tags": [
+      "couple",
+      "friends"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.2,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Uppal+Rooftop+Dining+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Uppal+Rooftop+Dining+Hyderabad+review"
+  },
+  {
+    "name": "Royal Fine Dining Uppal",
+    "area": "Uppal",
+    "category": "premium",
+    "subcategory": "fine dining",
+    "price_range": 2600,
+    "best_time": "night",
+    "mood_tags": [
+      "luxury",
+      "romantic",
+      "premium"
+    ],
+    "company_tags": [
+      "couple",
+      "family"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.2,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Royal+Fine+Dining+Uppal+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Royal+Fine+Dining+Uppal+Hyderabad+review"
+  },
+  {
+    "name": "Luxury Spa Uppal",
+    "area": "Uppal",
+    "category": "relax",
+    "subcategory": "spa",
+    "price_range": 2800,
+    "best_time": "afternoon",
+    "mood_tags": [
+      "selfcare",
+      "peaceful",
+      "premium"
+    ],
+    "company_tags": [
+      "solo",
+      "couple"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.1,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Luxury+Spa+Uppal+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Luxury+Spa+Uppal+Hyderabad+review"
+  },
+  {
+    "name": "Book Cafe Uppal",
+    "area": "Uppal",
+    "category": "cafe",
+    "subcategory": "book cafe",
+    "price_range": 450,
+    "best_time": "afternoon",
+    "mood_tags": [
+      "calm",
+      "peaceful",
+      "solo"
+    ],
+    "company_tags": [
+      "solo",
+      "couple"
+    ],
+    "time_needed": "2 hours",
+    "rating": 4.0,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Book+Cafe+Uppal+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Book+Cafe+Uppal+Hyderabad+review"
+  },
+  {
+    "name": "Weekend Flea Market Uppal",
+    "area": "Uppal",
+    "category": "shopping",
+    "subcategory": "open market",
+    "price_range": 600,
+    "best_time": "morning",
+    "mood_tags": [
+      "shopping",
+      "fun",
+      "explore"
+    ],
+    "company_tags": [
+      "family",
+      "friends"
+    ],
+    "time_needed": "2 hours",
+    "rating": 3.9,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Weekend+Flea+Market+Uppal+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Weekend+Flea+Market+Uppal+Hyderabad+review"
+  },
+  {
+    "name": "Street Chaat Corner Uppal",
+    "area": "Uppal",
+    "category": "food",
+    "subcategory": "snack stall",
+    "price_range": 180,
+    "best_time": "evening",
+    "mood_tags": [
+      "budget",
+      "snacks",
+      "fun"
+    ],
+    "company_tags": [
+      "friends",
+      "family"
+    ],
+    "time_needed": "45 mins",
+    "rating": 4.1,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Street+Chaat+Corner+Uppal+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Street+Chaat+Corner+Uppal+Hyderabad+review"
+  },
+  {
+    "name": "Hidden Terrace Cafe Uppal",
+    "area": "Uppal",
+    "category": "hidden_gem",
+    "subcategory": "terrace cafe",
+    "price_range": 550,
+    "best_time": "night",
+    "mood_tags": [
+      "calm",
+      "different",
+      "romantic"
+    ],
+    "company_tags": [
+      "couple",
+      "friends"
+    ],
+    "time_needed": "1.5 hours",
+    "rating": 4.0,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Hidden+Terrace+Cafe+Uppal+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Hidden+Terrace+Cafe+Uppal+Hyderabad+review"
+  },
+  {
+    "name": "Photo Walk Stadium Roads Uppal",
+    "area": "Uppal",
+    "category": "hidden_gem",
+    "subcategory": "photo experience",
+    "price_range": 0,
+    "best_time": "morning",
+    "mood_tags": [
+      "creative",
+      "active",
+      "citywalk"
+    ],
+    "company_tags": [
+      "friends",
+      "solo"
+    ],
+    "time_needed": "1 hour",
+    "rating": 3.9,
+    "maps_link": "https://www.google.com/maps/search/?api=1&query=Photo+Walk+Stadium+Roads+Uppal+Hyderabad",
+    "youtube_link": "https://www.youtube.com/results?search_query=Photo+Walk+Stadium+Roads+Uppal+Hyderabad+review"
+  }
+]
