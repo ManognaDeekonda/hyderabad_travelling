@@ -19,6 +19,20 @@ color:white;
 overflow-x:hidden;
 }
 
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+section, nav {
+  position: relative;
+  z-index: 10;
+}
+
 /* Navbar */
 nav{
 box-shadow:0 0 20px rgba(0,255,255,.08);
@@ -90,6 +104,7 @@ padding:14px 18px !important;
 </head>
 
 <body>
+<div id="particles-js"></div>
 
 <!-- Navbar -->
 <nav class="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-black/40 border-b border-white/10 px-6 py-4 flex justify-between items-center">
@@ -178,17 +193,30 @@ Start Planning 🚀
 
 <!-- Scripts -->
 
+<!-- Load library FIRST -->
+<script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+
 <script>
 // ✅ Mobile Menu Toggle
 const menuBtn = document.getElementById("menuBtn");
 const mobileMenu = document.getElementById("mobileMenu");
 
 menuBtn.addEventListener("click", () => {
-mobileMenu.classList.toggle("hidden");
+  mobileMenu.classList.toggle("hidden");
+});
+
+// ✅ Particles AFTER library loads
+tsParticles.load("particles-js", {
+  fullScreen: { enable: false },
+  particles: {
+    number: { value: 50 },
+    size: { value: { min: 4, max: 8 } },
+    move: { enable: true, speed: 1 },
+    opacity: { value: 0.8 }
+  }
 });
 </script>
 
-<script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
 <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 
 </body>

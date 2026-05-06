@@ -5,20 +5,26 @@ import os
 
 app = Flask(__name__)
 
-# Load data
-
-
+# ---------------------------
+# LOAD DATA SAFELY
+# ---------------------------
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 json_path = os.path.join(BASE_DIR, "places.json")
 
 with open(json_path, "r", encoding="utf-8") as file:
     places = json.load(file)
 
+# ---------------------------
+# HOME PAGE
+# ---------------------------
 @app.route("/")
 def home():
     return render_template("index.html")
 
 
+# ---------------------------
+# PLANNER PAGE
+# ---------------------------
 @app.route("/planner")
 def planner():
 
@@ -32,19 +38,26 @@ def planner():
     )
 
 
+# ---------------------------
+# MAIN PLANNER LOGIC
+# ---------------------------
 @app.route("/plan", methods=["POST"])
 def plan():
 
-    # Inputs
+    # ---------------------------
+    # USER INPUTS
+    # ---------------------------
     current_location = request.form.get("current_location", "")
-    destination = request.form.get("destination", "Anywhere").strip()
+    destination = request.form.get("destination", "Anywhere").strip().lower()
     interest = request.form.get("interest", "").strip().lower()
     company = request.form.get("company", "").strip().lower()
     mood = request.form.get("mood", "").strip().lower()
     budget = int(request.form.get("budget", 2000))
-    duration = request.form.get("duration", "1 Day").lower()
+    duration = request.form.get("duration", "1 day").lower()
 
-    # Slots
+    # ---------------------------
+    # TIME SLOTS
+    # ---------------------------
     if duration == "weekend":
         slots = [
             "Day 1 Morning",
@@ -62,7 +75,7 @@ def plan():
         slots = ["Morning", "Brunch", "Afternoon", "Evening", "Dinner"]
 
     # ---------------------------
-    # SMART RECOMMENDATION ENGINE
+    # SMART MATCHING ENGINE
     # ---------------------------
     matched_places = []
 
@@ -79,30 +92,30 @@ def plan():
         mood_tags = [x.lower() for x in place.get("mood_tags", [])]
 
         # Destination match
-        if destination.lower() == "anywhere":
+        if destination == "anywhere":
             score += 1
-        elif area == destination.lower():
+        elif area == destination:
             score += 5
 
         # Interest match
-        if category == interest:
+        if interest and category == interest:
             score += 5
 
         # Company match
-        if company in company_tags:
+        if company and company in company_tags:
             score += 4
 
         # Mood match
-        if mood in mood_tags:
+        if mood and mood in mood_tags:
             score += 4
 
-        # Budget score
+        # Budget scoring
         if price <= budget:
             score += 5
         elif price <= budget + 300:
             score += 2
 
-        # Rating score
+        # Rating scoring
         if rating >= 4.5:
             score += 3
         elif rating >= 4.0:
@@ -118,55 +131,80 @@ def plan():
             matched_places.append(new_place)
 
     # Sort best first
-    matched_places = sorted(
-        matched_places,
-        key=lambda x: x["score"],
-        reverse=True
-    )
+    matched_places.sort(key=lambda x: x["score"], reverse=True)
 
     # ---------------------------
-    # BUDGET GROUPS
+    # REMOVE DUPLICATES (GLOBAL)
+    # ---------------------------
+    unique_places = []
+    seen = set()
+
+    for place in matched_places:
+        name = place["name"]
+        if name not in seen:
+            seen.add(name)
+            unique_places.append(place)
+
+    matched_places = unique_places
+
+    # ---------------------------
+    # BUDGET GROUPING
     # ---------------------------
     within_budget = []
     above_budget = []
     premium = []
 
     for place in matched_places:
-
         cost = place["price_range"]
 
         if cost <= budget:
             within_budget.append(place)
-
         elif cost <= budget + 500:
             above_budget.append(place)
-
         else:
             premium.append(place)
 
+    # Limit results
     within_budget = within_budget[:5]
     above_budget = above_budget[:5]
     premium = premium[:5]
 
     # ---------------------------
-    # SMART DIVERSE ITINERARY
+    # SMART ITINERARY (NO DUPLICATES)
     # ---------------------------
     source = within_budget if within_budget else matched_places
 
+    # Shuffle for variety
+    random.shuffle(source)
+
     itinerary = []
     used_categories = []
+    used_places = set()
 
     for slot in slots:
 
         selected = None
 
+        # Priority 1: new category + new place
         for place in source:
-            if place["category"] not in used_categories:
+            if (
+                place["category"] not in used_categories
+                and place["name"] not in used_places
+            ):
                 selected = place
                 used_categories.append(place["category"])
+                used_places.add(place["name"])
                 break
 
-        # If all categories repeated
+        # Priority 2: allow same category but not same place
+        if not selected:
+            for place in source:
+                if place["name"] not in used_places:
+                    selected = place
+                    used_places.add(place["name"])
+                    break
+
+        # Fallback (rare)
         if not selected and source:
             selected = random.choice(source)
 
@@ -176,12 +214,17 @@ def plan():
                 "place": selected
             })
 
-    # Total cost
+    # ---------------------------
+    # TOTAL COST
+    # ---------------------------
     total_cost = sum(
         item["place"]["price_range"]
         for item in itinerary
     )
 
+    # ---------------------------
+    # RENDER RESULT
+    # ---------------------------
     return render_template(
         "result.html",
         current_location=current_location,
@@ -199,5 +242,8 @@ def plan():
     )
 
 
+# ---------------------------
+# RUN APP
+# ---------------------------
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
