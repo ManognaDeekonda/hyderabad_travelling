@@ -77,60 +77,19 @@ box-shadow:
 0 0 36px rgba(217,70,239,.12);
 }
 
-/* reveal */
-.reveal{
-animation:fadeUp 1s ease;
-}
-
-/* animations */
-@keyframes fadeUp{
-from{
-opacity:0;
-transform:translateY(40px);
-}
-to{
-opacity:1;
-transform:translateY(0);
-}
-}
-
-@keyframes pulseGlow{
-0%{
-box-shadow:
-0 0 14px rgba(0,255,255,.25),
-0 0 22px rgba(217,70,239,.15);
-}
-50%{
-box-shadow:
-0 0 24px rgba(0,255,255,.55),
-0 0 38px rgba(217,70,239,.35);
-}
-100%{
-box-shadow:
-0 0 14px rgba(0,255,255,.25),
-0 0 22px rgba(217,70,239,.15);
-}
-}
-
 /* mobile */
 @media(max-width:768px){
-
 .heroTitle{
 font-size:42px !important;
 }
-
 nav{
 padding:14px 18px !important;
 }
 }
 </style>
-
 </head>
 
-<body class="bg-black text-white overflow-x-hidden">
-
-<!-- Background -->
-<div id="particles-js"></div>
+<body>
 
 <!-- Navbar -->
 <nav class="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-black/40 border-b border-white/10 px-6 py-4 flex justify-between items-center">
@@ -144,7 +103,7 @@ Hyderabad Planner
 <a href="#hero" class="hover:text-cyan-400 transition">Home</a>
 <a href="#about" class="hover:text-cyan-400 transition">About</a>
 
-<a href="#hero"
+<a href="/planner"
 class="px-5 py-2 rounded-full pulseBtn font-semibold transition">
 Start
 </a>
@@ -159,17 +118,21 @@ Start
 
 <!-- Mobile Menu -->
 <div id="mobileMenu" class="hidden fixed top-16 left-0 w-full bg-black/95 z-40 flex flex-col text-center py-6 gap-6 text-lg">
+
 <a href="#hero">Home</a>
 <a href="#about">About</a>
-<a href="#hero">Start Planning</a>
+
+<a href="/planner"
+class="text-cyan-400 font-semibold">
+Start Planning 🚀
+</a>
+
 </div>
 
 <!-- Hero -->
 <section id="hero" class="min-h-screen flex items-center justify-center text-center px-6 relative z-10">
 
-<div class="max-w-4xl reveal">
-
-<p id="greeting" class="text-cyan-300 text-lg mb-4 textGlow"></p>
+<div class="max-w-4xl">
 
 <h1 class="heroTitle text-4xl md:text-7xl font-bold mb-6">
 Discover <span class="text-cyan-400 textGlow">Hyderabad</span><br>
@@ -194,17 +157,17 @@ Start Planning 🚀
 
 <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
 
-<div class="glass reveal p-6 rounded-2xl">
+<div class="glass p-6 rounded-2xl">
 <h3 class="text-xl font-bold text-cyan-400 mb-3">💰 Budget Smart</h3>
 <p>Plans optimized for your spending limit.</p>
 </div>
 
-<div class="glass reveal p-6 rounded-2xl">
+<div class="glass p-6 rounded-2xl">
 <h3 class="text-xl font-bold text-cyan-400 mb-3">😊 Mood Based</h3>
 <p>Trips based on your vibe and energy.</p>
 </div>
 
-<div class="glass reveal p-6 rounded-2xl">
+<div class="glass p-6 rounded-2xl">
 <h3 class="text-xl font-bold text-cyan-400 mb-3">🗺️ Route Smart</h3>
 <p>Travel efficiently with better routes.</p>
 </div>
@@ -212,6 +175,18 @@ Start Planning 🚀
 </div>
 
 </section>
+
+<!-- Scripts -->
+
+<script>
+// ✅ Mobile Menu Toggle
+const menuBtn = document.getElementById("menuBtn");
+const mobileMenu = document.getElementById("mobileMenu");
+
+menuBtn.addEventListener("click", () => {
+mobileMenu.classList.toggle("hidden");
+});
+</script>
 
 <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
 <script src="{{ url_for('static', filename='js/main.js') }}"></script>

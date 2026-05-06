@@ -250,9 +250,21 @@ font-size:14px;
 <h2 class="text-3xl font-bold mb-6">Start Your Journey</h2>
 
 <label class="block mb-2">Current Location</label>
-<input type="text" name="current_location"
-placeholder="Ex: Kukatpally"
-class="w-full p-4 rounded-xl bg-white/10 outline-none mb-6">
+
+<div class="relative mb-6">
+  <input 
+    type="text" 
+    name="current_location"
+    id="locationInput"
+    placeholder="Ex: Kukatpally"
+    autocomplete="off"
+    class="w-full p-4 rounded-xl bg-white/10 outline-none">
+
+  <!-- Suggestions Box -->
+  <div id="suggestionsBox"
+    class="absolute top-full left-0 w-full bg-black border border-cyan-400 rounded-xl mt-1 hidden z-50 max-h-40 overflow-y-auto">
+  </div>
+</div>
 
 <label class="block mb-2">Destination Area</label>
 <select name="destination"
@@ -408,6 +420,57 @@ document.getElementById(inputId).value=btn.innerText;
 bindChoice(".choice:not(.company):not(.mood)","interestInput");
 bindChoice(".company","companyInput");
 bindChoice(".mood","moodInput");
+
+// 🔥 Hyderabad Areas (you can expand later from backend)
+const hyderabadAreas = [
+"Kukatpally","Ameerpet","Banjara Hills","Jubilee Hills","Madhapur",
+"Gachibowli","Hitech City","Uppal","Secunderabad","Begumpet",
+"LB Nagar","Dilsukhnagar","Mehdipatnam","Somajiguda","Kondapur","Gatkesar","Kphp"
+];
+
+const input = document.getElementById("locationInput");
+const box = document.getElementById("suggestionsBox");
+
+input.addEventListener("input", () => {
+  const value = input.value.toLowerCase();
+  box.innerHTML = "";
+
+  if (!value) {
+    box.classList.add("hidden");
+    return;
+  }
+
+  const filtered = hyderabadAreas.filter(place =>
+    place.toLowerCase().includes(value)
+  );
+
+  if (filtered.length === 0) {
+    box.classList.add("hidden");
+    return;
+  }
+
+  box.classList.remove("hidden");
+
+  filtered.forEach(place => {
+    const div = document.createElement("div");
+    div.textContent = place;
+    div.className = "p-3 hover:bg-cyan-500 cursor-pointer";
+
+    div.onclick = () => {
+      input.value = place;
+      box.classList.add("hidden");
+    };
+
+    box.appendChild(div);
+  });
+});
+
+// hide on outside click
+document.addEventListener("click", (e) => {
+  if (!input.contains(e.target) && !box.contains(e.target)) {
+    box.classList.add("hidden");
+  }
+});
 </script>
 
 </body>
