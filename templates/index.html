@@ -3,15 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Hyderabad Smart Planner</title>
 
 <script src="https://cdn.tailwindcss.com"></script>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-
 <style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
 body{
 font-family:'Poppins',sans-serif;
 background:#000;
@@ -19,44 +26,47 @@ color:white;
 overflow-x:hidden;
 }
 
-#particles-js {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
+/* PARTICLES */
+#particles-js{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+z-index:0;
 }
 
-section, nav {
-  position: relative;
-  z-index: 10;
+/* CONTENT */
+section,
+nav{
+position:relative;
+z-index:10;
 }
 
-/* Navbar */
+/* NAVBAR */
 nav{
 box-shadow:0 0 20px rgba(0,255,255,.08);
 }
 
-/* Logo */
+/* LOGO */
 .brandGlow{
 background:linear-gradient(90deg,#00eaff,#d946ef);
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
 }
 
-/* Hero Heading */
+/* HERO */
 .heroTitle{
-line-height:1.1;
+line-height:1.05;
 text-shadow:0 0 18px rgba(0,255,255,.08);
 }
 
-/* Cyan text glow */
+/* GLOW TEXT */
 .textGlow{
 text-shadow:0 0 14px rgba(0,255,255,.55);
 }
 
-/* CTA Button */
+/* BUTTON */
 .pulseBtn{
 background:linear-gradient(90deg,#00cfff,#d946ef);
 color:white;
@@ -64,160 +74,583 @@ box-shadow:
 0 0 18px rgba(0,255,255,.35),
 0 0 30px rgba(217,70,239,.25);
 animation:pulseGlow 2s infinite;
+transition:.3s ease;
 }
 
 .pulseBtn:hover{
-transform:scale(1.08);
+transform:translateY(-3px) scale(1.05);
 box-shadow:
 0 0 24px rgba(0,255,255,.55),
 0 0 40px rgba(217,70,239,.35);
 }
 
-/* Cards */
+/* CARDS */
 .glass{
 background:rgba(255,255,255,.05);
 backdrop-filter:blur(14px);
 border:1px solid rgba(255,255,255,.08);
+
 box-shadow:
 0 0 15px rgba(0,255,255,.08),
 0 0 24px rgba(217,70,239,.06);
+
 transition:.35s ease;
 }
 
 .glass:hover{
-transform:translateY(-8px);
+transform:translateY(-6px);
+
 box-shadow:
 0 0 20px rgba(0,255,255,.16),
 0 0 36px rgba(217,70,239,.12);
 }
 
-/* mobile */
-@media(max-width:768px){
-.heroTitle{
-font-size:42px !important;
+/* SECTION TITLE */
+.sectionTitle{
+font-size:42px;
+font-weight:800;
+line-height:1.2;
+margin-bottom:16px;
+
+background:linear-gradient(90deg,#ffffff,#38bdf8,#d946ef);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
 }
+
+.sectionSub{
+color:#cfcfcf;
+line-height:1.8;
+max-width:500px;
+}
+
+/* PROFILE */
+.profileWrapper{
+position:relative;
+cursor:pointer;
+}
+
+.profileBtn{
+display:flex;
+align-items:center;
+gap:10px;
+padding:8px 14px;
+border-radius:999px;
+background:rgba(255,255,255,.05);
+border:1px solid rgba(255,255,255,.08);
+transition:.3s ease;
+}
+
+.profileBtn:hover{
+background:rgba(255,255,255,.08);
+border-color:rgba(0,255,255,.4);
+}
+
+.profileCircle{
+width:40px;
+height:40px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-weight:700;
+font-size:18px;
+background:linear-gradient(135deg,#00cfff,#d946ef);
+}
+
+.profileName{
+font-size:15px;
+font-weight:600;
+}
+
+.dropdownIcon{
+font-size:12px;
+margin-top:2px;
+transition:.3s ease;
+}
+
+.profileWrapper.active .dropdownIcon{
+transform:rotate(180deg);
+}
+
+/* DROPDOWN */
+.profileDropdown{
+position:absolute;
+top:62px;
+right:0;
+width:230px;
+
+background:rgba(12,12,12,.96);
+border:1px solid rgba(255,255,255,.08);
+border-radius:18px;
+padding:10px;
+
+opacity:0;
+visibility:hidden;
+transform:translateY(10px);
+
+transition:.3s ease;
+
+box-shadow:
+0 0 20px rgba(0,255,255,.12),
+0 0 30px rgba(217,70,239,.10);
+}
+
+.profileWrapper.active .profileDropdown{
+opacity:1;
+visibility:visible;
+transform:translateY(0);
+}
+
+.dropdownItem{
+display:flex;
+align-items:center;
+gap:12px;
+padding:14px;
+border-radius:12px;
+transition:.25s ease;
+text-decoration:none;
+color:white;
+font-size:15px;
+font-weight:500;
+}
+
+.dropdownItem:hover{
+background:rgba(255,255,255,.06);
+color:#38bdf8;
+}
+
+/* MOBILE MENU LINKS */
+.mobileLink{
+padding:14px 18px;
+margin:0 18px;
+border-radius:14px;
+transition:.3s ease;
+font-weight:500;
+color:white;
+text-align:left;
+background:rgba(255,255,255,.02);
+border:1px solid transparent;
+}
+
+.mobileLink:hover{
+background:rgba(255,255,255,.06);
+color:#38bdf8;
+transform:translateX(3px);
+border-color:rgba(0,255,255,.15);
+}
+
+/* ANIMATION */
+@keyframes pulseGlow{
+
+0%{
+box-shadow:
+0 0 14px rgba(0,255,255,.25),
+0 0 22px rgba(217,70,239,.15);
+}
+
+50%{
+box-shadow:
+0 0 24px rgba(0,255,255,.55),
+0 0 38px rgba(217,70,239,.35);
+}
+
+100%{
+box-shadow:
+0 0 14px rgba(0,255,255,.25),
+0 0 22px rgba(217,70,239,.15);
+}
+}
+
+/* TABLET */
+@media(max-width:1024px){
+
+.aboutGrid{
+grid-template-columns:1fr !important;
+gap:12px;
+}
+
+#about{
+padding-top:20px !important;
+padding-bottom:20px !important;
+}
+
+.rightCards{
+grid-template-columns:1fr 1fr;
+gap:14px;
+}
+
+.sectionTitle{
+margin-bottom:8px;
+}
+
+.sectionSub{
+margin-bottom:10px;
+line-height:1.6;
+}
+
+.heroTitle{
+font-size:58px !important;
+line-height:1.1;
+}
+
+}
+/* MOBILE */
+@media(max-width:768px){
+
+.heroTitle{
+font-size:44px !important;
+line-height:1.15;
+}
+
+.heroSection{
+padding-top:110px;
+padding-bottom:50px;
+}
+
 nav{
 padding:14px 18px !important;
 }
+
+.sectionTitle{
+font-size:34px;
+text-align:center;
 }
+
+.sectionSub{
+text-align:center;
+margin:auto;
+}
+
+.rightCards{
+grid-template-columns:1fr;
+gap:18px;
+}
+
+.profileName{
+display:none;
+}
+
+.profileDropdown{
+width:210px;
+right:-10px;
+}
+
+.aboutSection{
+padding-top:10px !important;
+}
+
+}
+
 </style>
+
 </head>
 
 <body>
+
+<!-- PARTICLES -->
 <div id="particles-js"></div>
 
-<!-- Navbar -->
+<!-- NAVBAR -->
 <nav class="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-black/40 border-b border-white/10 px-6 py-4 flex justify-between items-center">
 
 <h1 class="text-xl md:text-2xl font-bold brandGlow">
 Hyderabad Planner
 </h1>
 
-<!-- Desktop Menu -->
-<div class="hidden md:flex gap-6 items-center">
-<a href="#hero" class="hover:text-cyan-400 transition">Home</a>
-<a href="#about" class="hover:text-cyan-400 transition">About</a>
+<!-- DESKTOP MENU -->
+<div class="hidden md:flex gap-8 items-center">
 
-<a href="/planner"
-class="px-5 py-2 rounded-full pulseBtn font-semibold transition">
-Start
+<a href="#hero" class="hover:text-cyan-400 transition font-medium">
+Home
 </a>
+
+<a href="#about" class="hover:text-cyan-400 transition font-medium">
+Features
+</a>
+
+<!-- PROFILE -->
+<div class="profileWrapper" id="profileWrapper">
+
+<div class="profileBtn">
+
+<div class="profileCircle">
+M
 </div>
 
-<!-- Mobile Hamburger -->
+<div class="profileName">
+Profile
+</div>
+
+<div class="dropdownIcon">
+⌄
+</div>
+
+</div>
+
+<!-- DROPDOWN -->
+<div class="profileDropdown">
+
+<a href="#" class="dropdownItem">
+👤 Personal Info
+</a>
+
+<a href="#" class="dropdownItem">
+🕘 Recent Search
+</a>
+
+<a href="#" class="dropdownItem">
+🚪 Logout
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- MOBILE BUTTON -->
 <button id="menuBtn" class="md:hidden text-3xl">
 ☰
 </button>
 
 </nav>
 
-<!-- Mobile Menu -->
-<div id="mobileMenu" class="hidden fixed top-16 left-0 w-full bg-black/95 z-40 flex flex-col text-center py-6 gap-6 text-lg">
+<!-- MOBILE MENU -->
+<div id="mobileMenu"
+class="hidden fixed top-16 left-0 w-full bg-black/95 backdrop-blur-xl z-40 flex flex-col py-6 gap-2 text-lg border-b border-white/10">
 
-<a href="#hero">Home</a>
-<a href="#about">About</a>
+<a href="#hero" class="mobileLink">
+🏠 Home
+</a>
 
-<a href="/planner"
-class="text-cyan-400 font-semibold">
-Start Planning 🚀
+<a href="#about" class="mobileLink">
+✨ Features
+</a>
+
+<a href="#" class="mobileLink">
+👤 Personal Info
+</a>
+
+<a href="#" class="mobileLink">
+🕘 Recent Search
+</a>
+
+<a href="#" class="mobileLink text-red-400">
+🚪 Logout
 </a>
 
 </div>
 
-<!-- Hero -->
-<section id="hero" class="min-h-screen flex items-center justify-center text-center px-6 relative z-10">
+<!-- HERO -->
+<section id="hero"
+class="heroSection min-h-[65vh] flex items-center justify-center text-center px-6 pt-32 pb-16">
 
-<div class="max-w-4xl">
+<div class="max-w-5xl mx-auto">
 
-<h1 class="heroTitle text-4xl md:text-7xl font-bold mb-6">
-Discover <span class="text-cyan-400 textGlow">Hyderabad</span><br>
+<h1 class="heroTitle text-5xl md:text-7xl font-bold mb-6">
+
+Discover
+<span class="text-cyan-400 textGlow">
+Hyderabad
+</span>
+
+<br>
+
 Your Way
+
 </h1>
 
-<p class="text-gray-300 text-lg md:text-xl mb-8">
+<p class="text-gray-300 text-lg md:text-2xl mb-8 max-w-3xl mx-auto">
+
 Personalized day, weekend & night plans based on your budget, mood and time.
+
 </p>
 
 <a href="/planner"
-class="inline-block px-8 py-4 rounded-full font-bold text-lg transition duration-300 pulseBtn">
+class="inline-block px-8 py-4 rounded-full font-bold text-lg pulseBtn">
+
 Start Planning 🚀
+
 </a>
 
 </div>
 
 </section>
 
-<!-- About -->
-<section id="about" class="py-24 px-6 relative z-10">
+<!-- FEATURES -->
+<section id="about"
+class="aboutSection py-8 md:py-12 px-6">
 
-<div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+<div class="max-w-6xl mx-auto">
 
-<div class="glass p-6 rounded-2xl">
-<h3 class="text-xl font-bold text-cyan-400 mb-3">💰 Budget Smart</h3>
-<p>Plans optimized for your spending limit.</p>
+<div class="aboutGrid grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-4 lg:gap-5 items-center">
+
+<!-- LEFT -->
+<div>
+
+<h2 class="sectionTitle">
+Why Use Hyderabad Planner?
+</h2>
+
+<p class="sectionSub">
+Plan smarter trips with personalized recommendations, optimized budgets and better travel experiences across Hyderabad.
+</p>
+
 </div>
 
-<div class="glass p-6 rounded-2xl">
-<h3 class="text-xl font-bold text-cyan-400 mb-3">😊 Mood Based</h3>
-<p>Trips based on your vibe and energy.</p>
+<!-- RIGHT -->
+<div class="rightCards grid grid-cols-2 gap-5">
+
+<div class="glass p-5 rounded-2xl">
+<h3 class="text-xl font-bold text-cyan-400 mb-2">
+💰 Budget Smart
+</h3>
+
+<p class="text-gray-300">
+Trips within your budget.
+</p>
 </div>
 
-<div class="glass p-6 rounded-2xl">
-<h3 class="text-xl font-bold text-cyan-400 mb-3">🗺️ Route Smart</h3>
-<p>Travel efficiently with better routes.</p>
+<div class="glass p-5 rounded-2xl">
+<h3 class="text-xl font-bold text-cyan-400 mb-2">
+😊 Mood Based
+</h3>
+
+<p class="text-gray-300">
+Plans based on your vibe.
+</p>
+</div>
+
+<div class="glass p-5 rounded-2xl">
+<h3 class="text-xl font-bold text-cyan-400 mb-2">
+🗺️ Route Smart
+</h3>
+
+<p class="text-gray-300">
+Optimized city routes.
+</p>
+</div>
+
+<div class="glass p-5 rounded-2xl">
+<h3 class="text-xl font-bold text-cyan-400 mb-2">
+⚡ Fast Planning
+</h3>
+
+<p class="text-gray-300">
+Instant AI travel plans.
+</p>
+</div>
+
+</div>
+
 </div>
 
 </div>
 
 </section>
 
-<!-- Scripts -->
-
-<!-- Load library FIRST -->
+<!-- SCRIPT -->
 <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
 
 <script>
-// ✅ Mobile Menu Toggle
+
+/* MOBILE MENU */
 const menuBtn = document.getElementById("menuBtn");
 const mobileMenu = document.getElementById("mobileMenu");
 
-menuBtn.addEventListener("click", () => {
-  mobileMenu.classList.toggle("hidden");
+menuBtn.addEventListener("click", (e) => {
+
+e.stopPropagation();
+
+mobileMenu.classList.toggle("hidden");
+
 });
 
-// ✅ Particles AFTER library loads
+// CLOSE MOBILE MENU WHEN CLICK OUTSIDE
+document.addEventListener("click", (e) => {
+
+if(
+!mobileMenu.contains(e.target) &&
+!menuBtn.contains(e.target)
+){
+mobileMenu.classList.add("hidden");
+}
+
+});
+
+// CLOSE MENU AFTER CLICKING LINK
+const mobileLinks = document.querySelectorAll(".mobileLink");
+
+mobileLinks.forEach(link => {
+
+link.addEventListener("click", () => {
+mobileMenu.classList.add("hidden");
+});
+
+});
+
+/* PROFILE */
+const profileWrapper = document.getElementById("profileWrapper");
+
+profileWrapper.addEventListener("click", () => {
+profileWrapper.classList.toggle("active");
+});
+
+/* CLOSE DROPDOWN */
+document.addEventListener("click", (e) => {
+
+if(!profileWrapper.contains(e.target)){
+profileWrapper.classList.remove("active");
+}
+
+});
+
+/* PARTICLES */
 tsParticles.load("particles-js", {
-  fullScreen: { enable: false },
-  particles: {
-    number: { value: 50 },
-    size: { value: { min: 4, max: 8 } },
-    move: { enable: true, speed: 1 },
-    opacity: { value: 0.8 }
-  }
-});
-</script>
 
-<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+fullScreen:{
+enable:false
+},
+
+particles:{
+
+number:{
+value:55
+},
+
+color:{
+value:["#00ffff","#ffffff","#d946ef"]
+},
+
+shape:{
+type:"circle"
+},
+
+opacity:{
+value:0.7
+},
+
+size:{
+value:{
+min:2,
+max:6
+}
+},
+
+move:{
+enable:true,
+speed:1
+},
+
+links:{
+enable:false
+}
+
+}
+
+});
+
+</script>
 
 </body>
 </html>
