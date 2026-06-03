@@ -91,6 +91,7 @@ Smart recommendations based on your mood, budget and vibe ✨
 </p>
 </div>
 
+
 <!-- Summary -->
 <div class="glass mb-10">
 <div class="grid md:grid-cols-3 gap-6 text-center">
@@ -146,12 +147,30 @@ Smart recommendations based on your mood, budget and vibe ✨
 <h3 class="text-cyan-400 font-bold">{{ item.slot }}</h3>
 
 <p class="text-2xl font-bold mt-2">
-{{ item.place.name }}
+{{ item.place.name.replace(item.place.area, "").strip() }}
+</p>
+
+<p class="text-gray-400 text-sm">
+📍 {{ item.place.area }}
+</p>
+
+<p class="text-yellow-400 mt-1">
+⭐ {{ item.place.rating }}
 </p>
 
 <p class="text-gray-400 mt-2">
 ₹{{ item.place.price_range }} • {{ item.place.time_needed }}
 </p>
+
+{% if item.place.source == "Geoapify" %}
+<span class="inline-block mt-2 px-3 py-1 rounded-full bg-green-500/20 text-green-300 text-sm">
+📍 Live Place
+</span>
+{% else %}
+<span class="inline-block mt-2 px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 text-sm">
+⭐ Curated Place
+</span>
+{% endif %}
 
 <!-- 📍 MAPS -->
 {% if item.place.maps_link %}
@@ -188,11 +207,26 @@ class="text-pink-400 underline block mt-1">
 <h3 class="text-2xl text-green-400 font-bold mb-5">Within Budget ✅</h3>
 
 {% if within_budget %}
-{% for place in within_budget[:5] %}
+{% for place in within_budget[:10] %}
 <div class="mb-4 border-b border-white/10 pb-3">
 
 <p class="font-semibold">{{ place.name }}</p>
-<p class="text-sm text-gray-400">₹{{ place.price_range }}</p>
+{% if place.source == "Geoapify" %}
+<span class="inline-block mt-1 px-2 py-1 rounded-full bg-green-500/20 text-green-300 text-xs">
+📍 Live
+</span>
+{% else %}
+<span class="inline-block mt-1 px-2 py-1 rounded-full bg-blue-500/20 text-blue-300 text-xs">
+⭐ Curated
+</span>
+{% endif %}
+<p class="text-sm text-yellow-400">
+⭐ {{ place.rating }}
+</p>
+
+<p class="text-sm text-gray-400">
+₹{{ place.price_range }}
+</p>
 
 {% if place.maps_link %}
 <a href="{{ place.maps_link }}" target="_blank" class="text-cyan-300 text-sm block mt-1">
@@ -218,11 +252,26 @@ class="text-pink-400 underline block mt-1">
 <h3 class="text-2xl text-yellow-400 font-bold mb-5">Upgrade Picks 💡</h3>
 
 {% if above_budget %}
-{% for place in above_budget[:5] %}
+{% for place in above_budget[:10] %}
 <div class="mb-4 border-b border-white/10 pb-3">
 
 <p class="font-semibold">{{ place.name }}</p>
-<p class="text-sm text-gray-400">₹{{ place.price_range }}</p>
+{% if place.source == "Geoapify" %}
+<span class="inline-block mt-1 px-2 py-1 rounded-full bg-green-500/20 text-green-300 text-xs">
+📍 Live
+</span>
+{% else %}
+<span class="inline-block mt-1 px-2 py-1 rounded-full bg-blue-500/20 text-blue-300 text-xs">
+⭐ Curated
+</span>
+{% endif %}
+<p class="text-sm text-yellow-400">
+⭐ {{ place.rating }}
+</p>
+
+<p class="text-sm text-gray-400">
+₹{{ place.price_range }}
+</p>
 
 {% if place.maps_link %}
 <a href="{{ place.maps_link }}" target="_blank" class="text-cyan-300 text-sm block mt-1">
@@ -248,12 +297,26 @@ class="text-pink-400 underline block mt-1">
 <h3 class="text-2xl text-pink-400 font-bold mb-5">Premium ✨</h3>
 
 {% if premium %}
-{% for place in premium[:5] %}
+{% for place in premium[:10] %}
 <div class="mb-4 border-b border-white/10 pb-3">
 
 <p class="font-semibold">{{ place.name }}</p>
-<p class="text-sm text-gray-400">₹{{ place.price_range }}</p>
+{% if place.source == "Geoapify" %}
+<span class="inline-block mt-1 px-2 py-1 rounded-full bg-green-500/20 text-green-300 text-xs">
+📍 Live
+</span>
+{% else %}
+<span class="inline-block mt-1 px-2 py-1 rounded-full bg-blue-500/20 text-blue-300 text-xs">
+⭐ Curated
+</span>
+{% endif %}
+<p class="text-sm text-yellow-400">
+⭐ {{ place.rating }}
+</p>
 
+<p class="text-sm text-gray-400">
+₹{{ place.price_range }}
+</p>
 {% if place.maps_link %}
 <a href="{{ place.maps_link }}" target="_blank" class="text-cyan-300 text-sm block mt-1">
 📍 Maps
@@ -292,6 +355,11 @@ Plan Again 🚀
 <a href="/"
 class="px-8 py-4 rounded-full border border-white/20 text-center">
 Back Home
+</a>
+
+<a href="/download-pdf"
+class="px-8 py-4 rounded-full bg-green-500 text-black font-bold text-center">
+📄 Download PDF
 </a>
 
 </div>

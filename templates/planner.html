@@ -110,14 +110,32 @@ animation:fadeStep .55s ease;
 
 /* OPTION BUTTONS */
 .choice{
-padding:14px;
+min-height:90px;
+padding:16px;
 border-radius:16px;
+
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+
+text-align:center;
+
 background:rgba(255,255,255,0.04);
 border:1px solid rgba(255,255,255,0.08);
+
 color:white;
 cursor:pointer;
 transition:.28s ease;
 font-weight:600;
+}
+
+.interest-btn,
+.company-btn,
+.mood-btn{
+    width:100%;
+    min-height:55px;
+    font-size:15px;
 }
 
 .choice:hover{
@@ -294,32 +312,65 @@ class="w-full p-3 rounded-xl bg-black text-white border border-cyan-400">
 <h2 class="text-3xl font-bold mb-6">Your Preferences</h2>
 
 <p class="mb-2">Interest</p>
-<div class="grid grid-cols-2 md:grid-cols-3 gap-3 mb-6">
-<button type="button" class="choice p-3 rounded-xl bg-white/10">Food</button>
-<button type="button" class="choice p-3 rounded-xl bg-white/10">Nature</button>
-<button type="button" class="choice p-3 rounded-xl bg-white/10">History</button>
-<button type="button" class="choice p-3 rounded-xl bg-white/10">Shopping</button>
-<button type="button" class="choice p-3 rounded-xl bg-white/10">Nightlife</button>
+
+<div class="grid grid-cols-2 md:grid-cols-3 gap-5 mb-8">
+
+<button type="button"
+        class="choice interest-btn"
+        data-value="food">
+🍴 Food
+</button>
+
+<button type="button"
+        class="choice interest-btn"
+        data-value="history">
+🏛️ History
+</button>
+
+<button type="button"
+        class="choice interest-btn"
+        data-value="nature">
+🌳 Nature
+</button>
+
+<button type="button"
+        class="choice interest-btn"
+        data-value="entertainment">
+🎡 Entertainment
+</button>
+
+<button type="button"
+        class="choice interest-btn"
+        data-value="shopping">
+🛍️ Shopping
+</button>
+
+<button type="button"
+        class="choice interest-btn"
+        data-value="nightlife">
+🌃 Nightlife
+</button>
+
 </div>
 
 <input type="hidden" name="interest" id="interestInput">
 
 <p class="mb-2">Who’s Coming?</p>
 <div class="grid grid-cols-2 gap-3 mb-6">
-<button type="button" class="company choice p-3 rounded-xl bg-white/10">Solo</button>
-<button type="button" class="company choice p-3 rounded-xl bg-white/10">Couple</button>
-<button type="button" class="company choice p-3 rounded-xl bg-white/10">Friends</button>
-<button type="button" class="company choice p-3 rounded-xl bg-white/10">Family</button>
+<button type="button" class="company choice company-btn">Solo</button>
+<button type="button" class="company choice company-btn">Couple</button>
+<button type="button" class="company choice company-btn">Friends</button>
+<button type="button" class="company choice company-btn">Family</button>
 </div>
 
 <input type="hidden" name="company" id="companyInput">
 
 <p class="mb-2">Mood</p>
 <div class="grid grid-cols-2 gap-3">
-<button type="button" class="mood choice p-3 rounded-xl bg-white/10">Relaxed</button>
-<button type="button" class="mood choice p-3 rounded-xl bg-white/10">Fun</button>
-<button type="button" class="mood choice p-3 rounded-xl bg-white/10">Romantic</button>
-<button type="button" class="mood choice p-3 rounded-xl bg-white/10">Adventure</button>
+<button type="button" class="mood choice mood-btn">Relaxed</button>
+<button type="button" class="mood choice mood-btn">Fun</button>
+<button type="button" class="mood choice mood-btn">Romantic</button>
+<button type="button" class="mood choice mood-btn">Adventure</button>
 </div>
 
 <input type="hidden" name="mood" id="moodInput">
@@ -420,7 +471,8 @@ document.querySelectorAll(selector).forEach(btn=>{
 btn.onclick=()=>{
 document.querySelectorAll(selector).forEach(x=>x.classList.remove("selected"));
 btn.classList.add("selected");
-document.getElementById(inputId).value=btn.innerText;
+document.getElementById(inputId).value =
+    btn.dataset.value || btn.innerText;
 }
 });
 }
