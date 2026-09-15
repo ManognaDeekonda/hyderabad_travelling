@@ -10,7 +10,10 @@ from reportlab.lib.pagesizes import A4
 from reportlab.lib.styles import ParagraphStyle
 
 app = Flask(__name__)
-app.secret_key = "hyderabad_trip_planner"
+app.secret_key = os.getenv(
+    "FLASK_SECRET_KEY",
+    "development-secret-key-change-this"
+)
 
 # ---------------------------
 # LOAD DATA SAFELY
@@ -46,7 +49,7 @@ from reportlab.lib.styles import getSampleStyleSheet
 # ---------------------------
 # GEOAPIFY CONFIG
 # ---------------------------
-GEOAPIFY_API_KEY = "b004f1e885d54804abfcbff89df66fb0"
+GEOAPIFY_API_KEY = os.getenv("b004f1e885d54804abfcbff89df66fb0")
 CATEGORY_MAP = {
     "food": "catering.restaurant,catering.cafe",
     "history": "heritage,religion",
@@ -169,7 +172,7 @@ def get_live_places(
                 "area": area,
                 "category": category,
                 "price_range": PRICE_BY_CATEGORY.get(category, 500),
-                "rating": round(random.uniform(3.8, 4.8), 1),
+                "rating": None,
                 "company_tags": ["friends", "family", "couple"],
                 "mood_tags": ["fun", "relaxed"],
                 "time_needed": "2 hours",
@@ -205,13 +208,23 @@ def get_live_places(
 @app.route("/test-api")
 def test_api():
 
-    url = "https://api.geoapify.com/v2/places?categories=catering.restaurant&filter=circle:78.4867,17.3850,5000&limit=5&apiKey=b004f1e885d54804abfcbff89df66fb0"
+    if not GEOAPIFY_API_KEY:
+        return {
+            "error": "Geoapify API key is not configured"
+        }, 500
+
+    url = (
+        "https://api.geoapify.com/v2/places?"
+        "categories=catering.restaurant"
+        "&filter=circle:78.4867,17.3850,5000"
+        "&limit=5"
+        f"&apiKey={GEOAPIFY_API_KEY}"
+    )
 
     response = requests.get(url, timeout=10)
-
     response.raise_for_status()
-    data = response.json()
-    return data
+
+    return response.json()
 
 # ---------------------------
 # HOME PAGE
@@ -298,6 +311,12 @@ def plan():
     app.logger.info(f"Live Places Found: {len(live_places)}")
 
     all_places = places + live_places
+    # ============================================================
+    # FILTER PLACES BY DESTINATION
+    # ============================================================
+
+    destination = destination.strip().lower()
+
     if destination != "anywhere":
 
         filtered_places = []
@@ -308,6 +327,7 @@ def plan():
                 "area",
                 ""
             ).strip().lower()
+
             print(
                 "CHECK:",
                 place["name"],
@@ -317,14 +337,21 @@ def plan():
                 place.get("source")
             )
 
-            if (
-                destination in area
-                or place.get("source") == "Geoapify"
-            ):
-               print("ADDED:", place["name"])
-               filtered_places.append(place)
+            if destination in area:
+                filtered_places.append(place)
 
-        print("\nFILTERED PLACES\n")
+        all_places = filtered_places
+
+        print("\nFILTERED PLACES:\n")
+
+        for place in all_places:
+            print(
+                place["name"],
+                "|",
+                place.get("area"),
+                "|",
+                place.get("source")
+            )
 
         for p in filtered_places[:20]:
 
@@ -352,7 +379,10 @@ def plan():
         area = place.get("area", "").lower()
         category = place.get("category", "").lower()
         price = place.get("price_range", 500)
-        rating = place.get("rating", 4.0)
+        rating = place.get("rating")
+
+        if not isinstance(rating, (int, float)):
+           rating = 0
 
         company_tags = [x.lower() for x in place.get("company_tags", [])]
         mood_tags = [x.lower() for x in place.get("mood_tags", [])]
@@ -922,24 +952,26 @@ def download_pdf():
         )
 
         upgrade_table_data = [
-    ["Place", "Area", "Rating", "Cost"]
-   ]
+            ["Place", "Area", "Rating", "Cost"]
+        ]
 
-    for place in data["above_budget"]:
-        upgrade_table_data.append([
-            place["name"],
-            place["area"],
-            f"{place['rating']}/5",
-            f"Rs. {place['cost']}"
-        ])
+        for place in data["above_budget"]:
 
-    upgrade_table = Table(
+            upgrade_table_data.append([
+                place["name"],
+                place["area"],
+                f"{place['rating']}/5",
+                f"Rs. {place['cost']}"
+            ])
+
+        upgrade_table = Table(
             upgrade_table_data,
             colWidths=[280, 120, 70, 90]
         )
-    upgrade_table.hAlign = "CENTER"
 
-    upgrade_table.setStyle(
+        upgrade_table.hAlign = "CENTER"
+
+        upgrade_table.setStyle(
             TableStyle([
                 ("BACKGROUND", (0, 0), (-1, 0), colors.lightyellow),
                 ("GRID", (0, 0), (-1, -1), 1, colors.black),
@@ -947,7 +979,8 @@ def download_pdf():
             ])
         )
 
-    content.append(upgrade_table)
+        content.append(upgrade_table)
+        
 
     # ---------------------------
     # PREMIUM
