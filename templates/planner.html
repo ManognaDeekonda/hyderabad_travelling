@@ -458,7 +458,41 @@ prev.style.display=i===0?"none":"block";
 next.style.display=i===2?"none":"block";
 }
 
-next.onclick=()=>{ if(step<2){step++;showStep(step);} }
+next.onclick = () => {
+
+    if (step === 0) {
+
+        const location =
+            document.getElementById("locationInput").value.trim();
+
+        if (!location) {
+            alert("Please enter your current location.");
+            return;
+        }
+    }
+
+    if (step === 1) {
+
+        const interest =
+            document.getElementById("interestInput").value;
+
+        const company =
+            document.getElementById("companyInput").value;
+
+        const mood =
+            document.getElementById("moodInput").value;
+
+        if (!interest || !company || !mood) {
+            alert("Please select interest, company, and mood.");
+            return;
+        }
+    }
+
+    if (step < 2) {
+        step++;
+        showStep(step);
+    }
+};
 prev.onclick=()=>{ if(step>0){step--;showStep(step);} }
 
 document.getElementById("budgetSlider").oninput=function(){
@@ -477,7 +511,7 @@ document.getElementById(inputId).value =
 });
 }
 
-bindChoice(".choice:not(.company):not(.mood)","interestInput");
+bindChoice(".interest-btn", "interestInput");
 bindChoice(".company","companyInput");
 bindChoice(".mood","moodInput");
 
@@ -485,7 +519,7 @@ bindChoice(".mood","moodInput");
 const hyderabadAreas = [
 "Kukatpally","Ameerpet","Banjara Hills","Jubilee Hills","Madhapur",
 "Gachibowli","Hitech City","Uppal","Secunderabad","Begumpet",
-"LB Nagar","Dilsukhnagar","Mehdipatnam","Somajiguda","Kondapur","Gatkesar","Kphp"
+"LB Nagar","Dilsukhnagar","Mehdipatnam","Somajiguda","Kondapur","Gatkesar","KPHB"
 ];
 
 const input = document.getElementById("locationInput");

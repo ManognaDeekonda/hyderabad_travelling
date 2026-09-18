@@ -1,385 +1,923 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Your Smart Travel Plan</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<script src="https://cdn.tailwindcss.com"></script>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <title>Your Smart Travel Plan</title>
 
-<style>
-body{
-font-family:'Poppins',sans-serif;
-background:#000;
-color:white;
-overflow-x:hidden;
-}
+    <script src="https://cdn.tailwindcss.com"></script>
 
-#particles-js{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-z-index:0;
-}
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
 
-.wrap{
-position:relative;
-z-index:10;
-max-width:1200px;
-margin:auto;
-padding:40px 20px;
-}
+    <style>
+        * {
+            box-sizing: border-box;
+        }
 
-.glass{
-background:rgba(255,255,255,.05);
-backdrop-filter:blur(14px);
-border:1px solid rgba(255,255,255,.08);
-box-shadow:0 0 18px rgba(0,255,255,.08);
-border-radius:20px;
-padding:20px;
-}
+        html {
+            scroll-behavior: smooth;
+        }
 
-.gradientText{
-background:linear-gradient(90deg,#00eaff,#d946ef);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
-}
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #000;
+            color: #f8fafc;
+            overflow-x: hidden;
+            font-size: 17px;
+            line-height: 1.6;
+            letter-spacing: 0.1px;
+        }
 
-.hoverUp{
-transition:.3s;
-}
+        #particles-js {
+            position: fixed;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            pointer-events: none;
+        }
 
-.hoverUp:hover{
-transform:translateY(-5px);
-}
+        .wrap {
+            position: relative;
+            z-index: 10;
+            width: 100%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 40px 20px;
+        }
 
-.line{
-position:absolute;
-left:17px;
-top:0;
-bottom:0;
-width:2px;
-background:linear-gradient(#00ffff,#d946ef);
-}
+        .glass {
+            background: rgba(255, 255, 255, 0.06);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 18px rgba(0, 255, 255, 0.08);
+            border-radius: 20px;
+            padding: 20px;
+        }
 
-.dot{
-width:14px;
-height:14px;
-border-radius:50%;
-background:#00ffff;
-margin-top:8px;
-}
-</style>
+        /* Trip Summary Styling */
+        .trip-summary {
+            font-family: 'Poppins', sans-serif;
+            /* Change font here */
+        }
+
+        .trip-summary h2 {
+            font-size: 36px;
+            font-weight: 800;
+        }
+
+        .trip-summary p {
+            font-size: 20px;
+            line-height: 1.8;
+        }
+
+        .trip-summary .text-sm {
+            font-size: 18px;
+        }
+
+        .trip-summary .font-semibold {
+            font-size: 22px;
+            font-weight: 700;
+        }
+
+        .summary-label {
+            color: #9699a1;
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .gradientText {
+            background: linear-gradient(90deg, #00eaff, #d946ef);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hoverUp {
+            transition:
+                transform 0.3s ease,
+                border-color 0.3s ease,
+                box-shadow 0.3s ease;
+        }
+
+        .hoverUp:hover {
+            transform: translateY(-5px);
+            border-color: rgba(0, 234, 255, 0.4);
+            box-shadow: 0 0 25px rgba(0, 234, 255, 0.12);
+        }
+
+        .timeline {
+            position: relative;
+        }
+
+        .timeline-line {
+            position: absolute;
+            left: 7px;
+            top: 12px;
+            bottom: 12px;
+            width: 2px;
+            background: linear-gradient(#00ffff, #d946ef);
+        }
+
+        .timeline-item {
+            position: relative;
+            display: flex;
+            gap: 18px;
+            align-items: flex-start;
+            margin-bottom: 28px;
+        }
+
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .timeline-dot {
+            position: relative;
+            z-index: 2;
+            flex: 0 0 16px;
+            width: 16px;
+            height: 16px;
+            margin-top: 8px;
+            border-radius: 50%;
+            background: #00ffff;
+            box-shadow: 0 0 12px rgba(0, 255, 255, 0.7);
+        }
+
+        .place-card {
+            min-width: 0;
+            width: 100%;
+        }
+
+        .place-name {
+            overflow-wrap: anywhere;
+            word-break: break-word;
+        }
+
+        .action-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 52px;
+            padding: 12px 24px;
+            border-radius: 999px;
+            font-weight: 700;
+            text-align: center;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        .action-button:hover {
+            transform: translateY(-3px);
+            opacity: 0.9;
+        }
+
+        .link-button {
+            display: block;
+            margin-top: 8px;
+            font-size: 14px;
+            text-decoration: underline;
+            overflow-wrap: anywhere;
+        }
+
+        @media (max-width: 640px) {
+            .wrap {
+                padding: 25px 14px;
+            }
+
+            .glass {
+                padding: 16px;
+                border-radius: 16px;
+            }
+
+            .timeline-item {
+                gap: 12px;
+            }
+
+            .action-button {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
+
 
 <body>
 
-<div id="particles-js"></div>
-
-<div class="wrap">
-
-<!-- Heading -->
-<div class="text-center mb-10">
-<h1 class="text-5xl font-extrabold mb-4">
-Your <span class="gradientText">Perfect Plan</span>
-</h1>
-<p class="text-gray-300">
-Smart recommendations based on your mood, budget and vibe ✨
-</p>
-</div>
+    <!-- Particle Background -->
+    <div id="particles-js"></div>
 
 
-<!-- Summary -->
-<div class="glass mb-10">
-<div class="grid md:grid-cols-3 gap-6 text-center">
+    <main class="wrap">
 
-<div>
-<p class="text-gray-400">Destination</p>
-<h3 class="text-2xl text-cyan-400 font-bold">{{ destination }}</h3>
-</div>
+        <!-- Page Heading -->
+        <header class="text-center mb-10">
 
-<div>
-<p class="text-gray-400">Budget</p>
-<h3 class="text-2xl text-cyan-400 font-bold">₹{{ budget }}</h3>
-</div>
+            <p class="text-cyan-300 text-sm uppercase tracking-widest mb-3">
+                Hyderabad Smart Travel Planner
+            </p>
 
-<div>
-<p class="text-gray-400">Duration</p>
-<h3 class="text-2xl text-cyan-400 font-bold">{{ duration }}</h3>
-</div>
+            <h1 class="text-4xl md:text-6xl font-extrabold gradientText">
+                Your Smart Travel Plan
+            </h1>
 
-<div>
-<p class="text-gray-400">Interest</p>
-<h3>{{ interest }}</h3>
-</div>
+            <p class="text-gray-400 mt-4">
+                Personalized recommendations based on your preferences.
+            </p>
 
-<div>
-<p class="text-gray-400">Company</p>
-<h3>{{ company }}</h3>
-</div>
+        </header>
 
-<div>
-<p class="text-gray-400">Mood</p>
-<h3>{{ mood }}</h3>
-</div>
 
-</div>
-</div>
+        <!-- Trip Summary -->
+        <section class="glass trip-summary mb-10" aria-labelledby="summary-heading">
+            <h2 id="summary-heading" class="text-2xl md:text-3xl font-bold text-cyan-300 mb-5">
+                Trip Summary
+            </h2>
 
-<!-- Itinerary -->
-<div class="glass mb-10">
-<h2 class="text-3xl font-bold mb-8 gradientText">Recommended Itinerary</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
 
-{% if itinerary %}
-<div class="relative pl-10">
-<div class="line"></div>
+                <div>
+                    <p class="summary-label text-sm">
+                        Destination
+                    </p>
 
-{% for item in itinerary %}
-<div class="flex gap-5 mb-8 items-start">
+                    <p class="font-semibold mt-1">
+                        {{ destination | default("Anywhere") | title }}
+                    </p>
+                </div>
 
-<div class="dot"></div>
+                <div>
+                    <p class="summary-label text-sm">
+                        Interest
+                    </p>
 
-<div class="glass hoverUp w-full">
+                    <p class="font-semibold mt-1">
+                        {{ interest | default("Not specified") | title }}
+                    </p>
+                </div>
 
-<h3 class="text-cyan-400 font-bold">{{ item.slot }}</h3>
+                <div>
+                    <p class="summary-label text-sm">
+                        Company
+                    </p>
 
-<p class="text-2xl font-bold mt-2">
-{{ item.place.name.replace(item.place.area, "").strip() }}
-</p>
+                    <p class="font-semibold mt-1">
+                        {{ company | default("Not specified") | title }}
+                    </p>
+                </div>
 
-<p class="text-gray-400 text-sm">
-📍 {{ item.place.area }}
-</p>
+                <div>
+                    <p class="summary-label text-sm">
+                        Mood
+                    </p>
 
-<p class="text-yellow-400 mt-1">
-⭐ {{ item.place.rating }}
-</p>
+                    <p class="font-semibold mt-1">
+                        {{ mood | default("Not specified") | title }}
+                    </p>
+                </div>
 
-<p class="text-gray-400 mt-2">
-₹{{ item.place.price_range }} • {{ item.place.time_needed }}
-</p>
+                <div>
+                    <p class="summary-label text-sm">
+                        Budget
+                    </p>
 
-{% if item.place.source == "Geoapify" %}
-<span class="inline-block mt-2 px-3 py-1 rounded-full bg-green-500/20 text-green-300 text-sm">
-📍 Live Place
-</span>
-{% else %}
-<span class="inline-block mt-2 px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 text-sm">
-⭐ Curated Place
-</span>
-{% endif %}
+                    <p class="font-semibold mt-1">
+                        ₹{{ budget | default("0") }}
+                    </p>
+                </div>
 
-<!-- 📍 MAPS -->
-{% if item.place.maps_link %}
-<a href="{{ item.place.maps_link }}" target="_blank"
-class="text-cyan-300 underline block mt-2">
-📍 Open in Google Maps
-</a>
-{% endif %}
+                <div>
+                    <p class="summary-label text-sm">
+                        Current Location
+                    </p>
 
-<!-- 🎥 YOUTUBE -->
-{% if item.place.youtube_link %}
-<a href="{{ item.place.youtube_link }}" target="_blank"
-class="text-pink-400 underline block mt-1">
-🎥 Watch Videos
-</a>
-{% endif %}
+                    <p class="font-semibold mt-1">
+                        {{ current_location | default("Not specified") }}
+                    </p>
+                </div>
 
-</div>
-</div>
-{% endfor %}
+            </div>
 
-</div>
+            <!-- {% if summary %}
 
-{% else %}
-<p>No itinerary found.</p>
-{% endif %}
-</div>
+            <div class="border-t border-white/10 mt-6 pt-5">
 
-<!-- Budget Sections -->
-<div class="grid md:grid-cols-3 gap-8 mb-10">
+                <p class="text-gray-300 leading-relaxed">
+                    {{ summary }}
+                </p>
 
-<!-- Within Budget -->
-<div class="glass">
-<h3 class="text-2xl text-green-400 font-bold mb-5">Within Budget ✅</h3>
+            </div>
 
-{% if within_budget %}
-{% for place in within_budget[:10] %}
-<div class="mb-4 border-b border-white/10 pb-3">
+            {% endif %} -->
 
-<p class="font-semibold">{{ place.name }}</p>
-{% if place.source == "Geoapify" %}
-<span class="inline-block mt-1 px-2 py-1 rounded-full bg-green-500/20 text-green-300 text-xs">
-📍 Live
-</span>
-{% else %}
-<span class="inline-block mt-1 px-2 py-1 rounded-full bg-blue-500/20 text-blue-300 text-xs">
-⭐ Curated
-</span>
-{% endif %}
-<p class="text-sm text-yellow-400">
-⭐ {{ place.rating }}
-</p>
+        </section>
 
-<p class="text-sm text-gray-400">
-₹{{ place.price_range }}
-</p>
 
-{% if place.maps_link %}
-<a href="{{ place.maps_link }}" target="_blank" class="text-cyan-300 text-sm block mt-1">
-📍 Maps
-</a>
-{% endif %}
+        <!-- Recommended Itinerary -->
+        <section class="mb-10" aria-labelledby="itinerary-heading">
 
-{% if place.youtube_link %}
-<a href="{{ place.youtube_link }}" target="_blank" class="text-pink-400 text-sm block">
-🎥 Video
-</a>
-{% endif %}
+            <h2 id="itinerary-heading" class="text-3xl md:text-4xl font-extrabold gradientText mb-6">
+                Recommended Itinerary
+            </h2>
 
-</div>
-{% endfor %}
-{% else %}
-<p class="text-gray-400">No places found</p>
-{% endif %}
-</div>
+            {% if itinerary %}
 
-<!-- Upgrade -->
-<div class="glass">
-<h3 class="text-2xl text-yellow-400 font-bold mb-5">Upgrade Picks 💡</h3>
+            <div class="timeline pl-1">
 
-{% if above_budget %}
-{% for place in above_budget[:10] %}
-<div class="mb-4 border-b border-white/10 pb-3">
+                <div class="timeline-line" aria-hidden="true"></div>
 
-<p class="font-semibold">{{ place.name }}</p>
-{% if place.source == "Geoapify" %}
-<span class="inline-block mt-1 px-2 py-1 rounded-full bg-green-500/20 text-green-300 text-xs">
-📍 Live
-</span>
-{% else %}
-<span class="inline-block mt-1 px-2 py-1 rounded-full bg-blue-500/20 text-blue-300 text-xs">
-⭐ Curated
-</span>
-{% endif %}
-<p class="text-sm text-yellow-400">
-⭐ {{ place.rating }}
-</p>
+                {% for item in itinerary %}
 
-<p class="text-sm text-gray-400">
-₹{{ place.price_range }}
-</p>
+                {# Supports both:
+                {"slot": "...", "place": {...}}
+                and direct place dictionaries
+                #}
 
-{% if place.maps_link %}
-<a href="{{ place.maps_link }}" target="_blank" class="text-cyan-300 text-sm block mt-1">
-📍 Maps
-</a>
-{% endif %}
+                {% set place = item.get("place", item) %}
 
-{% if place.youtube_link %}
-<a href="{{ place.youtube_link }}" target="_blank" class="text-pink-400 text-sm block">
-🎥 Video
-</a>
-{% endif %}
+                <article class="timeline-item">
 
-</div>
-{% endfor %}
-{% else %}
-<p class="text-gray-400">No places found</p>
-{% endif %}
-</div>
+                    <div class="timeline-dot" aria-hidden="true"></div>
 
-<!-- Premium -->
-<div class="glass">
-<h3 class="text-2xl text-pink-400 font-bold mb-5">Premium ✨</h3>
+                    <div class="glass place-card hoverUp">
 
-{% if premium %}
-{% for place in premium[:10] %}
-<div class="mb-4 border-b border-white/10 pb-3">
+                        <!-- Time Slot -->
+                        <h3 class="text-cyan-400 font-bold text-lg">
+                            {{ item.get("slot", "Recommended Stop") }}
+                        </h3>
 
-<p class="font-semibold">{{ place.name }}</p>
-{% if place.source == "Geoapify" %}
-<span class="inline-block mt-1 px-2 py-1 rounded-full bg-green-500/20 text-green-300 text-xs">
-📍 Live
-</span>
-{% else %}
-<span class="inline-block mt-1 px-2 py-1 rounded-full bg-blue-500/20 text-blue-300 text-xs">
-⭐ Curated
-</span>
-{% endif %}
-<p class="text-sm text-yellow-400">
-⭐ {{ place.rating }}
-</p>
+                        <!-- Place Name -->
+                        <p class="place-name text-xl md:text-2xl font-bold mt-2">
+                            {{ place.get("name", "Unknown place") }}
+                        </p>
 
-<p class="text-sm text-gray-400">
-₹{{ place.price_range }}
-</p>
-{% if place.maps_link %}
-<a href="{{ place.maps_link }}" target="_blank" class="text-cyan-300 text-sm block mt-1">
-📍 Maps
-</a>
-{% endif %}
+                        <!-- Area -->
+                        <p class="text-gray-400 text-sm mt-1">
+                            📍 {{ place.get("area", "Area unavailable") }}
+                        </p>
 
-{% if place.youtube_link %}
-<a href="{{ place.youtube_link }}" target="_blank" class="text-pink-400 text-sm block">
-🎥 Video
-</a>
-{% endif %}
+                        <!-- Cost and Time -->
+                        <p class="text-gray-300 mt-3">
 
-</div>
-{% endfor %}
-{% else %}
-<p class="text-gray-400">No places found</p>
-{% endif %}
-</div>
+                            ₹{{ place.get(
+                            "price_range",
+                            place.get("cost", "Price unavailable")
+                            ) }}
 
-</div>
+                            <span class="text-gray-500">
+                                •
+                            </span>
 
-<!-- Total Cost -->
-<div class="glass text-center mb-10">
-<p class="text-gray-400">Estimated Total Cost</p>
-<h2 class="text-5xl font-extrabold gradientText">₹{{ total_cost }}</h2>
-</div>
+                            {{ place.get("time_needed", "Time unavailable") }}
 
-<!-- Buttons -->
-<div class="flex flex-col md:flex-row gap-4 justify-center">
+                        </p>
 
-<a href="/planner"
-class="px-8 py-4 rounded-full bg-cyan-500 text-black font-bold text-center">
-Plan Again 🚀
-</a>
+                        <!-- Source -->
+                        {% if place.get("source", "")|lower == "geoapify" %}
 
-<a href="/"
-class="px-8 py-4 rounded-full border border-white/20 text-center">
-Back Home
-</a>
+                        <span class="inline-block mt-3 px-3 py-1 rounded-full bg-green-500/20 text-green-300 text-sm">
+                            📍 Geoapify Result
+                        </span>
 
-<a href="/download-pdf"
-class="px-8 py-4 rounded-full bg-green-500 text-black font-bold text-center">
-📄 Download PDF
-</a>
+                        {% else %}
 
-</div>
+                        <span class="inline-block mt-3 px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 text-sm">
+                            ⭐ Curated Place
+                        </span>
 
-</div>
+                        {% endif %}
 
-<script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
 
-<script>
-tsParticles.load("particles-js",{
-fullScreen:{enable:false},
-particles:{
-number:{value:40},
-color:{value:["#00ffff","#ffffff","#ffd700"]},
-size:{value:{min:3,max:8}},
-move:{enable:true,speed:1},
-opacity:{value:.8}
-}
-});
-</script>
+                        <!-- Rating -->
+                        {% set rating = place.get("rating") %}
+
+                        {% if rating is not none and rating|float > 0 %}
+
+                        <p class="text-yellow-400 mt-2">
+                            ⭐ {{ "%.1f"|format(rating|float) }}
+                        </p>
+
+                        {% else %}
+
+                        <p class="text-gray-500 mt-2">
+                            ⭐ Rating unavailable
+                        </p>
+
+                        {% endif %}
+
+
+                        <!-- Google Maps -->
+                        {% set maps_link = place.get("maps_link") %}
+
+                        {% if maps_link %}
+
+                        <a href="{{ maps_link }}" target="_blank" rel="noopener noreferrer"
+                            class="link-button text-cyan-300">
+                            📍 Open in Google Maps
+                        </a>
+
+                        {% else %}
+
+                        <a href="https://www.google.com/maps/search/?api=1&query={{ (place.get('name', '') ~ ' ' ~ place.get('area', '') ~ ' Hyderabad')|urlencode }}"
+                            target="_blank" rel="noopener noreferrer" class="link-button text-cyan-300">
+                            📍 Find on Google Maps
+                        </a>
+
+                        {% endif %}
+
+
+                        <!-- YouTube -->
+                        {% set youtube_link = place.get("youtube_link") %}
+
+                        {% if youtube_link %}
+
+                        <a href="{{ youtube_link }}" target="_blank" rel="noopener noreferrer"
+                            class="link-button text-pink-400">
+                            🎥 Watch Videos
+                        </a>
+
+                        {% else %}
+
+                        <a href="https://www.youtube.com/results?search_query={{ (place.get('name', '') ~ ' ' ~ place.get('area', '') ~ ' Hyderabad review')|urlencode }}"
+                            target="_blank" rel="noopener noreferrer" class="link-button text-pink-400">
+                            🎥 Search YouTube Videos
+                        </a>
+
+                        {% endif %}
+
+                    </div>
+
+                </article>
+
+                {% endfor %}
+
+            </div>
+
+            {% else %}
+
+            <div class="glass">
+
+                <p class="text-gray-400">
+                    No itinerary found for your selected preferences.
+                </p>
+
+            </div>
+
+            {% endif %}
+
+        </section>
+
+
+        <!-- Recommendation Categories -->
+        <section class="mb-10" aria-labelledby="recommendations-heading">
+
+            <h2 id="recommendations-heading" class="text-3xl md:text-4xl font-extrabold gradientText mb-6">
+                More Recommendations
+            </h2>
+
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+
+                <!-- Within Budget -->
+                <div class="glass">
+
+                    <h2 class="text-2xl text-green-400 font-bold mb-5">
+                        Within Budget 💰
+                    </h2>
+
+                    {% if within_budget %}
+
+                    {% for place in within_budget[:10] %}
+
+                    <article class="mb-5 border-b border-white/10 pb-4">
+
+                        <p class="place-name font-semibold text-lg">
+                            {{ place.get("name", "Unknown place") }}
+                        </p>
+
+                        <p class="text-sm text-gray-400 mt-1">
+                            📍 {{ place.get("area", "Area unavailable") }}
+                        </p>
+
+
+                        <!-- Source -->
+                        {% if place.get("source", "")|lower == "geoapify" %}
+
+                        <span class="inline-block mt-2 px-2 py-1 rounded-full bg-green-500/20 text-green-300 text-xs">
+                            📍 Geoapify Result
+                        </span>
+
+                        {% else %}
+
+                        <span class="inline-block mt-2 px-2 py-1 rounded-full bg-blue-500/20 text-blue-300 text-xs">
+                            ⭐ Curated Place
+                        </span>
+
+                        {% endif %}
+
+
+                        <!-- Rating -->
+                        {% set rating = place.get("rating") %}
+
+                        {% if rating is not none and rating|float > 0 %}
+
+                        <p class="text-yellow-400 mt-2">
+                            ⭐ {{ "%.1f"|format(rating|float) }}
+                        </p>
+
+                        {% else %}
+
+                        <p class="text-gray-500 mt-2">
+                            ⭐ Rating unavailable
+                        </p>
+
+                        {% endif %}
+
+
+                        <!-- Price -->
+                        <p class="text-sm text-gray-400 mt-1">
+                            ₹{{ place.get("price_range", place.get("cost", "Price unavailable")) }}
+                        </p>
+
+
+                        <!-- Google Maps -->
+                        {% set maps_link = place.get("maps_link") %}
+
+                        {% if maps_link %}
+
+                        <a href="{{ maps_link }}" target="_blank" rel="noopener noreferrer"
+                            class="link-button text-cyan-300">
+                            📍 Get Directions
+                        </a>
+
+                        {% else %}
+
+                        <a href="https://www.google.com/maps/search/?api=1&query={{ (place.get('name', '') ~ ' ' ~ place.get('area', '') ~ ' Hyderabad')|urlencode }}"
+                            target="_blank" rel="noopener noreferrer" class="link-button text-cyan-300">
+                            📍 Find on Google Maps
+                        </a>
+
+                        {% endif %}
+
+
+                        <!-- YouTube -->
+                        {% set youtube_link = place.get("youtube_link") %}
+
+                        {% if youtube_link %}
+
+                        <a href="{{ youtube_link }}" target="_blank" rel="noopener noreferrer"
+                            class="link-button text-pink-400">
+                            🎥 Search YouTube Videos
+                        </a>
+
+                        {% else %}
+
+                        <a href="https://www.youtube.com/results?search_query={{ (place.get('name', '') ~ ' ' ~ place.get('area', '') ~ ' Hyderabad review')|urlencode }}"
+                            target="_blank" rel="noopener noreferrer" class="link-button text-pink-400">
+                            🎥 Search YouTube Videos
+                        </a>
+
+                        {% endif %}
+
+                    </article>
+
+                    {% endfor %}
+
+                    {% else %}
+
+                    <p class="text-gray-400">
+                        No places found within your budget.
+                    </p>
+
+                    {% endif %}
+
+                </div>
+
+
+                <!-- Upgrade Picks -->
+                <div class="glass">
+
+                    <h2 class="text-2xl text-yellow-400 font-bold mb-5">
+                        Upgrade Picks ⬆️
+                    </h2>
+
+                    {% if above_budget %}
+
+                    {% for place in above_budget[:10] %}
+
+                    <article class="mb-5 border-b border-white/10 pb-4">
+
+                        <p class="place-name font-semibold text-lg">
+                            {{ place.get("name", "Unknown place") }}
+                        </p>
+
+                        <p class="text-sm text-gray-400 mt-1">
+                            📍 {{ place.get("area", "Area unavailable") }}
+                        </p>
+
+
+                        <!-- Source -->
+                        {% if place.get("source", "")|lower == "geoapify" %}
+
+                        <span class="inline-block mt-2 px-2 py-1 rounded-full bg-green-500/20 text-green-300 text-xs">
+                            📍 Geoapify Result
+                        </span>
+
+                        {% else %}
+
+                        <span class="inline-block mt-2 px-2 py-1 rounded-full bg-blue-500/20 text-blue-300 text-xs">
+                            ⭐ Curated Place
+                        </span>
+
+                        {% endif %}
+
+
+                        <!-- Rating -->
+                        {% set rating = place.get("rating") %}
+
+                        {% if rating is not none and rating|float > 0 %}
+
+                        <p class="text-yellow-400 mt-2">
+                            ⭐ {{ "%.1f"|format(rating|float) }}
+                        </p>
+
+                        {% else %}
+
+                        <p class="text-gray-500 mt-2">
+                            ⭐ Rating unavailable
+                        </p>
+
+                        {% endif %}
+
+
+                        <!-- Price -->
+                        <p class="text-sm text-gray-400 mt-1">
+                            ₹{{ place.get("price_range", place.get("cost", "Price unavailable")) }}
+                        </p>
+
+
+                        <!-- Google Maps -->
+                        {% set maps_link = place.get("maps_link") %}
+
+                        {% if maps_link %}
+
+                        <a href="{{ maps_link }}" target="_blank" rel="noopener noreferrer"
+                            class="link-button text-cyan-300">
+                            📍 Get Directions
+                        </a>
+
+                        {% else %}
+
+                        <a href="https://www.google.com/maps/search/?api=1&query={{ (place.get('name', '') ~ ' ' ~ place.get('area', '') ~ ' Hyderabad')|urlencode }}"
+                            target="_blank" rel="noopener noreferrer" class="link-button text-cyan-300">
+                            📍 Find on Google Maps
+                        </a>
+
+                        {% endif %}
+
+
+                        <!-- YouTube -->
+                        {% set youtube_link = place.get("youtube_link") %}
+
+                        {% if youtube_link %}
+
+                        <a href="{{ youtube_link }}" target="_blank" rel="noopener noreferrer"
+                            class="link-button text-pink-400">
+                            🎥 Search YouTube Videos
+                        </a>
+
+                        {% else %}
+
+                        <a href="https://www.youtube.com/results?search_query={{ (place.get('name', '') ~ ' ' ~ place.get('area', '') ~ ' Hyderabad review')|urlencode }}"
+                            target="_blank" rel="noopener noreferrer" class="link-button text-pink-400">
+                            🎥 Search YouTube Videos
+                        </a>
+
+                        {% endif %}
+
+                    </article>
+
+                    {% endfor %}
+
+                    {% else %}
+
+                    <p class="text-gray-400">
+                        No upgrade places found.
+                    </p>
+
+                    {% endif %}
+
+                </div>
+
+
+                <!-- Premium Picks -->
+                <div class="glass">
+
+                    <h2 class="text-2xl text-pink-400 font-bold mb-5">
+                        Premium ✨
+                    </h2>
+
+                    {% if premium %}
+
+                    {% for place in premium[:10] %}
+
+                    <article class="mb-5 border-b border-white/10 pb-4">
+
+                        <p class="place-name font-semibold text-lg">
+                            {{ place.get("name", "Unknown place") }}
+                        </p>
+
+                        <p class="text-sm text-gray-400 mt-1">
+                            📍 {{ place.get("area", "Area unavailable") }}
+                        </p>
+
+
+                        <!-- Source -->
+                        {% if place.get("source", "")|lower == "geoapify" %}
+
+                        <span class="inline-block mt-2 px-2 py-1 rounded-full bg-green-500/20 text-green-300 text-xs">
+                            📍 Geoapify Result
+                        </span>
+
+                        {% else %}
+
+                        <span class="inline-block mt-2 px-2 py-1 rounded-full bg-blue-500/20 text-blue-300 text-xs">
+                            ⭐ Curated Place
+                        </span>
+
+                        {% endif %}
+
+
+                        <!-- Rating -->
+                        {% set rating = place.get("rating") %}
+
+                        {% if rating is not none and rating|float > 0 %}
+
+                        <p class="text-yellow-400 mt-2">
+                            ⭐ {{ "%.1f"|format(rating|float) }}
+                        </p>
+
+                        {% else %}
+
+                        <p class="text-gray-500 mt-2">
+                            ⭐ Rating unavailable
+                        </p>
+
+                        {% endif %}
+
+
+                        <!-- Price -->
+                        <p class="text-sm text-gray-400 mt-1">
+                            ₹{{ place.get("price_range", place.get("cost", "Price unavailable")) }}
+                        </p>
+
+
+                        <!-- Google Maps -->
+                        {% set maps_link = place.get("maps_link") %}
+
+                        {% if maps_link %}
+
+                        <a href="{{ maps_link }}" target="_blank" rel="noopener noreferrer"
+                            class="link-button text-cyan-300">
+                            📍 Get Directions
+                        </a>
+
+                        {% else %}
+
+                        <a href="https://www.google.com/maps/search/?api=1&query={{ (place.get('name', '') ~ ' ' ~ place.get('area', '') ~ ' Hyderabad')|urlencode }}"
+                            target="_blank" rel="noopener noreferrer" class="link-button text-cyan-300">
+                            📍 Find on Google Maps
+                        </a>
+
+                        {% endif %}
+
+
+                        <!-- YouTube -->
+                        {% set youtube_link = place.get("youtube_link") %}
+
+                        {% if youtube_link %}
+
+                        <a href="{{ youtube_link }}" target="_blank" rel="noopener noreferrer"
+                            class="link-button text-pink-400">
+                            🎥 Search YouTube Videos
+                        </a>
+
+                        {% else %}
+
+                        <a href="https://www.youtube.com/results?search_query={{ (place.get('name', '') ~ ' ' ~ place.get('area', '') ~ ' Hyderabad review')|urlencode }}"
+                            target="_blank" rel="noopener noreferrer" class="link-button text-pink-400">
+                            🎥 Search YouTube Videos
+                        </a>
+
+                        {% endif %}
+
+                    </article>
+
+                    {% endfor %}
+
+                    {% else %}
+
+                    <p class="text-gray-400">
+                        No premium places found.
+                    </p>
+
+                    {% endif %}
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Estimated Total Cost -->
+        <section class="glass text-center mb-10" aria-labelledby="cost-heading">
+
+            <p id="cost-heading" class="text-gray-400">
+                Estimated Total Cost
+            </p>
+
+            <h2 class="text-4xl md:text-5xl font-extrabold gradientText mt-2">
+                ₹{{ total_cost | default("0") }}
+            </h2>
+
+            <p class="text-gray-500 text-sm mt-2">
+                This is an estimated amount and may vary.
+            </p>
+
+        </section>
+
+
+        <!-- Action Buttons -->
+        <nav class="flex flex-col md:flex-row gap-4 justify-center" aria-label="Page actions">
+
+            <a href="/planner" class="action-button bg-cyan-500 text-black">
+                Plan Again 🚀
+            </a>
+
+            <a href="/" class="action-button border border-white/20 text-white">
+                Back Home
+            </a>
+
+            <a href="{{ url_for('download_pdf') }}" class="action-button bg-green-500 text-black">
+                📄 Download PDF
+            </a>
+
+        </nav>
+
+    </main>
+
+
+    <!-- Particle Background Script -->
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+
+    <script>
+        if (typeof tsParticles !== "undefined") {
+
+            tsParticles.load("particles-js", {
+
+                fullScreen: {
+                    enable: false
+                },
+
+                particles: {
+                    number: {
+                        value: 40
+                    },
+
+                    color: {
+                        value: [
+                            "#00ffff",
+                            "#ffffff",
+                            "#ffd700"
+                        ]
+                    },
+
+                    size: {
+                        value: {
+                            min: 3,
+                            max: 8
+                        }
+                    },
+
+                    move: {
+                        enable: true,
+                        speed: 1
+                    },
+
+                    opacity: {
+                        value: 0.8
+                    }
+                }
+
+            });
+
+        }
+    </script>
 
 </body>
+
 </html>

@@ -1,4 +1,7 @@
-venv/
+flask_session/
+.env
 __pycache__/
 *.pyc
-.env
+venv/
+.venv/
+travel_plan.pdf
