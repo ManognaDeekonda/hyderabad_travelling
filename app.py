@@ -2,6 +2,7 @@ from flask import Flask, render_template, request
 import requests
 import json
 import os
+from db import get_all_places
 from pathlib import Path
 from dotenv import load_dotenv
 from flask import send_file,session
@@ -251,15 +252,11 @@ def remove_duplicates(places):
 
 
 # ---------------------------
-# LOAD DATA SAFELY
+# LOAD DATA FROM POSTGRESQL
 # ---------------------------
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-json_path = os.path.join(BASE_DIR, "places.json")
-
 try:
 
-    with open(json_path, "r", encoding="utf-8") as file:
-        places = json.load(file)
+    places = get_all_places()
 
     for place in places:
 
@@ -286,12 +283,16 @@ try:
         except (TypeError, ValueError):
             place["price_range"] = 500
 
-        place["source"] = "places.json"
+        # Keep the existing source-based logic working
+        place["source"] = "postgresql"
+    app.logger.info(
+        f"Loaded {len(places)} places from PostgreSQL"
+    )
 
 except Exception as e:
 
     app.logger.error(
-        f"Failed to load places.json: {e}"
+        f"Failed to load places from PostgreSQL: {e}"
     )
 
     places = []
@@ -1358,8 +1359,8 @@ def plan():
 
     # Limit results
     json_budget = [
-    p for p in within_budget
-    if p["source"] == "places.json"
+      p for p in within_budget
+      if p["source"] == "postgresql"
     ]
 
     geo_budget = [
@@ -1411,7 +1412,7 @@ def plan():
 
     json_places = [
         p for p in source
-        if p.get("source") == "places.json"
+        if p.get("source") == "postgresql"
     ]
 
     # Prefer curated places, then add Geoapify places
