@@ -61,3 +61,53 @@ def get_all_places():
     ]
 
     return [dict(zip(columns, row)) for row in rows]
+
+
+def get_place_by_id(place_id):
+    conn = get_connection()
+    cursor = conn.cursor()
+
+    cursor.execute("""
+        SELECT
+            id,
+            name,
+            area,
+            category,
+            subcategory,
+            price_range,
+            best_time,
+            mood_tags,
+            company_tags,
+            time_needed,
+            rating,
+            maps_link,
+            youtube_link
+        FROM places
+        WHERE id = %s
+    """, (place_id,))
+
+    row = cursor.fetchone()
+
+    cursor.close()
+    conn.close()
+
+    if row is None:
+        return None
+
+    columns = [
+        "id",
+        "name",
+        "area",
+        "category",
+        "subcategory",
+        "price_range",
+        "best_time",
+        "mood_tags",
+        "company_tags",
+        "time_needed",
+        "rating",
+        "maps_link",
+        "youtube_link"
+    ]
+
+    return dict(zip(columns, row))

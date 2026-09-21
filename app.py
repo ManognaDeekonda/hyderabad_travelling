@@ -2,7 +2,7 @@ from flask import Flask, render_template, request
 import requests
 import json
 import os
-from db import get_all_places
+from db import get_connection, get_all_places, get_place_by_id
 from pathlib import Path
 from dotenv import load_dotenv
 from flask import send_file,session
@@ -845,6 +845,236 @@ def test_api():
     response.raise_for_status()
 
     return response.json()
+
+
+# ---------------------------
+# REST API - PLACES
+# ---------------------------
+@app.route("/api/places", methods=["GET"])
+def api_get_places():
+    try:
+        category = request.args.get("category")
+        area = request.args.get("area")
+        max_price = request.args.get("max_price")
+
+        places = get_all_places()
+
+        if category:
+            places = [
+                place for place in places
+                if place["category"] and
+                place["category"].lower() == category.lower()
+            ]
+
+        if area:
+            places = [
+                place for place in places
+                if place["area"] and
+                place["area"].lower() == area.lower()
+            ]
+
+        if max_price:
+            places = [
+                place for place in places
+                if place["price_range"] is not None
+                and place["price_range"] <= float(max_price)
+            ]
+
+        return {
+            "count": len(places),
+            "places": places
+        }, 200
+
+    except Exception as e:
+        return {
+            "error": str(e)
+        }, 500
+
+@app.route("/api/places/<int:place_id>", methods=["GET"])
+def api_get_place(place_id):
+    try:
+        place = get_place_by_id(place_id)
+
+        if place is None:
+            return {
+                "error": "Place not found"
+            }, 404
+
+        return place, 200
+
+    except Exception as e:
+        return {
+            "error": str(e)
+        }, 500
+
+
+@app.route("/api/places", methods=["POST"])
+def api_create_place():
+    try:
+        data = request.get_json()
+
+        conn = get_connection()
+        cursor = conn.cursor()
+
+        cursor.execute("""
+            INSERT INTO places (
+                name,
+                area,
+                category,
+                subcategory,
+                price_range,
+                best_time,
+                mood_tags,
+                company_tags,
+                time_needed,
+                rating,
+                maps_link,
+                youtube_link
+            )
+            VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+            RETURNING id
+        """, (
+            data.get("name"),
+            data.get("area"),
+            data.get("category"),
+            data.get("subcategory"),
+            data.get("price_range"),
+            data.get("best_time"),
+            data.get("mood_tags"),
+            data.get("company_tags"),
+            data.get("time_needed"),
+            data.get("rating"),
+            data.get("maps_link"),
+            data.get("youtube_link")
+        ))
+
+        place_id = cursor.fetchone()[0]
+
+        conn.commit()
+
+        cursor.close()
+        conn.close()
+
+        return {
+            "message": "Place created successfully",
+            "id": place_id
+        }, 201
+
+    except Exception as e:
+        return {
+            "error": str(e)
+        }, 500
+
+
+
+@app.route("/api/places/<int:place_id>", methods=["PUT"])
+def api_update_place(place_id):
+    try:
+        data = request.get_json()
+
+        conn = get_connection()
+        cursor = conn.cursor()
+
+        cursor.execute("""
+            UPDATE places
+            SET
+                name = %s,
+                area = %s,
+                category = %s,
+                subcategory = %s,
+                price_range = %s,
+                best_time = %s,
+                mood_tags = %s,
+                company_tags = %s,
+                time_needed = %s,
+                rating = %s,
+                maps_link = %s,
+                youtube_link = %s
+            WHERE id = %s
+            RETURNING id
+        """, (
+            data.get("name"),
+            data.get("area"),
+            data.get("category"),
+            data.get("subcategory"),
+            data.get("price_range"),
+            data.get("best_time"),
+            data.get("mood_tags"),
+            data.get("company_tags"),
+            data.get("time_needed"),
+            data.get("rating"),
+            data.get("maps_link"),
+            data.get("youtube_link"),
+            place_id
+        ))
+
+        result = cursor.fetchone()
+
+        if result is None:
+            conn.rollback()
+            cursor.close()
+            conn.close()
+
+            return {
+                "error": "Place not found"
+            }, 404
+
+        conn.commit()
+
+        cursor.close()
+        conn.close()
+
+        return {
+            "message": "Place updated successfully",
+            "id": place_id
+        }, 200
+
+    except Exception as e:
+        return {
+            "error": str(e)
+        }, 500
+
+
+
+@app.route("/api/places/<int:place_id>", methods=["DELETE"])
+def api_delete_place(place_id):
+    try:
+        conn = get_connection()
+        cursor = conn.cursor()
+
+        cursor.execute("""
+            DELETE FROM places
+            WHERE id = %s
+            RETURNING id
+        """, (place_id,))
+
+        result = cursor.fetchone()
+
+        if result is None:
+            conn.rollback()
+            cursor.close()
+            conn.close()
+
+            return {
+                "error": "Place not found"
+            }, 404
+
+        conn.commit()
+
+        cursor.close()
+        conn.close()
+
+        return {
+            "message": "Place deleted successfully",
+            "id": place_id
+        }, 200
+
+    except Exception as e:
+        return {
+            "error": str(e)
+        }, 500
+
+
 
 # ---------------------------
 # HOME PAGE
