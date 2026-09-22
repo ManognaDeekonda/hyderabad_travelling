@@ -4,17 +4,21 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-DB_CONFIG = {
-    "host": "localhost",
-    "port": 5432,
-    "database": "hyderabad_trip_planner",
-    "user": "postgres",
-    "password": os.getenv("POSTGRES_PASSWORD")
-}
+DATABASE_URL = os.getenv("DATABASE_URL")
 
 
 def get_connection():
-    return psycopg2.connect(**DB_CONFIG)
+    if DATABASE_URL:
+        return psycopg2.connect(DATABASE_URL)
+
+    return psycopg2.connect(
+        host="localhost",
+        port=5432,
+        database="hyderabad_trip_planner",
+        user="postgres",
+        password=os.getenv("POSTGRES_PASSWORD")
+    )
+
 
 
 def get_all_places():
