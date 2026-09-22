@@ -424,17 +424,19 @@ class="hidden fixed top-16 left-0 w-full bg-black/95 backdrop-blur-xl z-40 flex 
 ✨ Features
 </a>
 
-<a href="#" class="mobileLink">
-👤 Personal Info
+<a href="/personal-info" class="mobileLink">
+    👤 Personal Info
 </a>
 
-<a href="#" class="mobileLink">
-🕘 Recent Search
+<a href="/recent-search" class="mobileLink">
+    🕘 Recent Search
 </a>
 
-<a href="#" class="mobileLink text-red-400">
-🚪 Logout
-</a>
+<button type="button"
+        class="mobileLink text-red-400 w-full"
+        id="mobileLogoutBtn">
+    🚪 Logout
+</button>
 
 </div>
 
@@ -584,6 +586,16 @@ link.addEventListener("click", () => {
 mobileMenu.classList.add("hidden");
 });
 
+});
+
+
+const mobileLogoutBtn = document.getElementById("mobileLogoutBtn");
+
+mobileLogoutBtn.addEventListener("click", (event) => {
+    event.preventDefault();
+
+    localStorage.removeItem("token");
+    window.location.href = "/login";
 });
 
 /* PROFILE */
