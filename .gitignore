@@ -1,7 +1,28 @@
-flask_session/
+# Environment variables / secrets
 .env
+
+# Python
 __pycache__/
-*.pyc
+*.py[cod]
+*.pyo
+
+# Virtual environment
 venv/
 .venv/
-travel_plan.pdf
+
+# Flask session files
+flask_session/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Generated files
+*.pdf
+
+# Logs
+*.log
