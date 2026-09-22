@@ -373,8 +373,8 @@ Features
 
 <div class="profileBtn">
 
-<div class="profileCircle">
-M
+<div class="profileCircle" id="profileCircle">
+    ?
 </div>
 
 <div class="profileName">
@@ -390,18 +390,15 @@ Profile
 <!-- DROPDOWN -->
 <div class="profileDropdown">
 
-<a href="#" class="dropdownItem">
-👤 Personal Info
+<a href="/personal-info" class="dropdownItem" id="personalInfoBtn">👤 Personal Info</a>
+
+<a href="/recent-search" class="dropdownItem">
+    🕘 Recent Search
 </a>
 
-<a href="#" class="dropdownItem">
-🕘 Recent Search
+<a href="#" class="dropdownItem" id="logoutBtn">
+    🚪 Logout
 </a>
-
-<a href="#" class="dropdownItem">
-🚪 Logout
-</a>
-
 </div>
 
 </div>
@@ -592,9 +589,62 @@ mobileMenu.classList.add("hidden");
 /* PROFILE */
 const profileWrapper = document.getElementById("profileWrapper");
 
+
+
+const profileCircle = document.getElementById("profileCircle");
+
+async function loadProfileCircle() {
+
+    const token = localStorage.getItem("token");
+
+    if (!token) {
+        profileCircle.textContent = "?";
+        return;
+    }
+
+    try {
+
+        const response = await fetch("/api/profile", {
+            method: "GET",
+            headers: {
+                "Authorization": `Bearer ${token}`
+            }
+        });
+
+        const data = await response.json();
+
+        if (response.ok && data.name) {
+
+            profileCircle.textContent =
+                data.name.charAt(0).toUpperCase();
+
+        }
+
+    } catch (error) {
+
+        console.error("Profile circle error:", error);
+
+    }
+}
+
+loadProfileCircle();
+
 profileWrapper.addEventListener("click", () => {
 profileWrapper.classList.toggle("active");
 });
+
+const logoutBtn = document.getElementById("logoutBtn");
+
+logoutBtn.addEventListener("click", (event) => {
+    event.preventDefault();
+
+    localStorage.removeItem("token");
+
+    window.location.href = "/login";
+});
+
+
+
 
 /* CLOSE DROPDOWN */
 document.addEventListener("click", (e) => {

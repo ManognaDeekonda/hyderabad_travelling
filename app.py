@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect
 import requests
 import json
 import os
@@ -16,6 +16,12 @@ from math import radians, sin, cos, sqrt, atan2
 import itertools
 from flask_session import Session
 from io import BytesIO
+from werkzeug.security import generate_password_hash, check_password_hash
+import jwt
+from datetime import datetime, timedelta
+
+
+
 
 # ============================================================
 # DESTINATION COORDINATES
@@ -161,6 +167,43 @@ def extract_rating(properties):
             return rating
 
     return 0.0
+
+
+
+def verify_token():
+    auth_header = request.headers.get("Authorization")
+
+    if not auth_header:
+        return None, {
+            "error": "Authorization token is required"
+        }, 401
+
+    if not auth_header.startswith("Bearer "):
+        return None, {
+            "error": "Invalid authorization format"
+        }, 401
+
+    token = auth_header.split(" ")[1]
+
+    try:
+        payload = jwt.decode(
+            token,
+            JWT_SECRET,
+            algorithms=["HS256"]
+        )
+
+        return payload, None, None
+
+    except jwt.ExpiredSignatureError:
+        return None, {
+            "error": "Token has expired"
+        }, 401
+
+    except jwt.InvalidTokenError:
+        return None, {
+            "error": "Invalid token"
+        }, 401
+
 
 
 app = Flask(__name__)
@@ -1075,14 +1118,318 @@ def api_delete_place(place_id):
         }, 500
 
 
+@app.route("/api/auth/register", methods=["POST"])
+def register():
+    try:
+        data = request.get_json()
+
+        name = data.get("name")
+        email = data.get("email")
+        password = data.get("password")
+
+        if not name or not email or not password:
+            return {
+                "error": "Name, email and password are required"
+            }, 400
+
+        password_hash = generate_password_hash(password)
+
+        conn = get_connection()
+        cursor = conn.cursor()
+
+        cursor.execute("""
+            INSERT INTO users (name, email, password_hash)
+            VALUES (%s, %s, %s)
+            RETURNING id
+        """, (name, email, password_hash))
+
+        user_id = cursor.fetchone()[0]
+
+        conn.commit()
+
+        cursor.close()
+        conn.close()
+
+        return {
+            "message": "User registered successfully",
+            "id": user_id
+        }, 201
+
+    except Exception as e:
+        return {
+            "error": str(e)
+        }, 500
+
+
+
+JWT_SECRET = os.getenv("JWT_SECRET")
+
+@app.route("/api/auth/login", methods=["POST"])
+def login():
+    try:
+        data = request.get_json()
+
+        email = data.get("email")
+        password = data.get("password")
+
+        if not email or not password:
+            return {
+                "error": "Email and password are required"
+            }, 400
+
+        conn = get_connection()
+        cursor = conn.cursor()
+
+        cursor.execute("""
+            SELECT id, name, email, password_hash
+            FROM users
+            WHERE email = %s
+        """, (email,))
+
+        user = cursor.fetchone()
+
+        cursor.close()
+        conn.close()
+
+        if user is None:
+            return {
+                "error": "Invalid email or password"
+            }, 401
+
+        user_id, name, user_email, password_hash = user
+
+        if not check_password_hash(password_hash, password):
+            return {
+                "error": "Invalid email or password"
+            }, 401
+
+        token = jwt.encode(
+            {
+                "user_id": user_id,
+                "email": user_email,
+                "exp": datetime.utcnow() + timedelta(hours=24)
+            },
+            JWT_SECRET,
+            algorithm="HS256"
+        )
+
+
+        session["user_id"] = user_id
+        session["user_email"] = user_email
+
+        return {
+            "message": "Login successful",
+            "token": token,
+            "user": {
+                "id": user_id,
+                "name": name,
+                "email": user_email
+            }
+        }, 200
+
+    except Exception as e:
+        return {
+            "error": str(e)
+        }, 500
+
+
+@app.route("/api/profile", methods=["GET"])
+def get_profile():
+    payload, error, status = verify_token()
+
+    if error:
+        return error, status
+
+    user_id = payload["user_id"]
+
+    try:
+        conn = get_connection()
+        cursor = conn.cursor()
+
+        cursor.execute("""
+            SELECT id, name, email, created_at
+            FROM users
+            WHERE id = %s
+        """, (user_id,))
+
+        user = cursor.fetchone()
+
+        cursor.close()
+        conn.close()
+
+        if user is None:
+            return {
+                "error": "User not found"
+            }, 404
+
+        return {
+            "id": user[0],
+            "name": user[1],
+            "email": user[2],
+            "created_at": user[3]
+        }, 200
+
+    except Exception as e:
+        return {
+            "error": str(e)
+        }, 500
+
+
+@app.route("/api/recent-searches", methods=["POST"])
+def create_recent_search():
+
+    payload, error, status = verify_token()
+
+    if error:
+        return error, status
+
+    user_id = payload["user_id"]
+
+    try:
+        data = request.get_json()
+
+        destination = data.get("destination")
+        budget = data.get("budget")
+        mood = data.get("mood")
+        interests = data.get("interests")
+        time = data.get("time")
+
+        if not destination:
+            return {
+                "error": "Destination is required"
+            }, 400
+
+        conn = get_connection()
+        cursor = conn.cursor()
+
+        cursor.execute("""
+            INSERT INTO recent_searches
+            (user_id, destination, budget, mood, interests, time)
+            VALUES (%s, %s, %s, %s, %s, %s)
+            RETURNING id, created_at
+        """, (
+            user_id,
+            destination,
+            budget,
+            mood,
+            interests,
+            time
+        ))
+
+        search = cursor.fetchone()
+
+        conn.commit()
+
+        cursor.close()
+        conn.close()
+
+        return {
+            "message": "Recent search saved successfully",
+            "id": search[0],
+            "created_at": search[1]
+        }, 201
+
+    except Exception as e:
+
+        return {
+            "error": str(e)
+        }, 500
+
+
+@app.route("/api/recent-searches", methods=["GET"])
+def get_recent_searches():
+
+    payload, error, status = verify_token()
+
+    if error:
+        return error, status
+
+    user_id = payload["user_id"]
+
+    try:
+        conn = get_connection()
+        cursor = conn.cursor()
+
+        cursor.execute("""
+            SELECT
+                id,
+                destination,
+                budget,
+                mood,
+                interests,
+                time,
+                created_at
+            FROM recent_searches
+            WHERE user_id = %s
+            ORDER BY created_at DESC
+            LIMIT 10
+        """, (user_id,))
+
+        searches = cursor.fetchall()
+
+        cursor.close()
+        conn.close()
+
+        results = []
+
+        for search in searches:
+            results.append({
+                "id": search[0],
+                "destination": search[1],
+                "budget": search[2],
+                "mood": search[3],
+                "interests": search[4],
+                "time": search[5],
+                "created_at": search[6]
+            })
+
+        return {
+            "searches": results
+        }, 200
+
+    except Exception as e:
+
+        return {
+            "error": str(e)
+        }, 500
+
+
+# token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJlbWFpbCI6InNhaUBleGFtcGxlLmNvbSIsImV4cCI6MTc5MDE0NjM0NX0.bdqJj476dUjSUvuPaOUoFY84rXnADOSEa5CO9QshHLk
+
+@app.route("/login")
+def login_page():
+    return render_template("login.html")
+
+
+@app.route("/register")
+def register_page():
+    return render_template("register.html")
+
+
+# ---------------------------
+# ENTRY PAGE
+# ---------------------------
+@app.route("/")
+def register_entry():
+    return redirect("/register")
+
 
 # ---------------------------
 # HOME PAGE
 # ---------------------------
-@app.route("/")
+@app.route("/home")
 def home():
     return render_template("index.html")
 
+
+@app.route("/personal-info")
+def personal_info():
+    return render_template("personal_info.html")
+
+
+@app.route("/recent-search")
+def recent_search():
+    return render_template("recent_search.html")
 
 # ---------------------------
 # PLANNER PAGE
@@ -1122,6 +1469,8 @@ def plan():
        budget = 2000
     duration = request.form.get("duration", "1 day").lower()
 
+
+    
     # ---------------------------
     # TIME SLOTS
     # ---------------------------
@@ -1859,6 +2208,66 @@ def plan():
     for p in premium[:10]
    ],
   }
+    # ---------------------------
+    # SAVE RECENT SEARCH
+    # ---------------------------
+    try:
+
+        user_id = session.get("user_id")
+
+        if user_id:
+
+            # Convert interest into a PostgreSQL array
+            interests = []
+
+            if interest:
+                interests = [
+                    item.strip().title()
+                    for item in interest.split(",")
+                    if item.strip()
+                ]
+
+            conn = get_connection()
+            cursor = conn.cursor()
+
+            cursor.execute("""
+                INSERT INTO recent_searches
+                (user_id, destination, budget, mood, interests, time)
+                VALUES (%s, %s, %s, %s, %s, %s)
+            """, (
+                user_id,
+                destination.title(),
+                budget,
+                mood.title(),
+                interests,
+                duration.title()
+            ))
+
+            conn.commit()
+
+            cursor.close()
+            conn.close()
+
+            print(
+                "RECENT SEARCH SAVED:",
+                destination,
+                budget,
+                mood,
+                interests,
+                duration,
+                flush=True
+            )
+
+    except Exception as e:
+
+        print(
+            "RECENT SEARCH SAVE ERROR:",
+            str(e),
+            flush=True
+        )
+
+
+    
     # ---------------------------
     # RENDER RESULT
     # ---------------------------

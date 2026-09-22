@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login | Hyderabad Trip Planner</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background: #03050a;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* =========================================
+           MAIN BACKGROUND
+        ========================================= */
+
+        .page {
+            min-height: 100vh;
+            position: relative;
+            overflow: hidden;
+
+            background:
+                radial-gradient(circle at 20% 45%,
+                    rgba(0, 207, 255, 0.16),
+                    transparent 35%),
+                radial-gradient(circle at 80% 70%,
+                    rgba(217, 70, 239, 0.13),
+                    transparent 35%),
+                #03050a;
+        }
+
+
+        /* =========================================
+           HYDERABAD IMAGE
+        ========================================= */
+
+        .city-background {
+            position: absolute;
+            inset: 0;
+
+            background-image:
+                linear-gradient(90deg,
+                    rgba(3, 5, 10, 0.15) 0%,
+                    rgba(3, 5, 10, 0.15) 35%,
+                    rgba(3, 5, 10, 0.72) 58%,
+                    rgba(3, 5, 10, 0.96) 100%),
+                linear-gradient(0deg,
+                    rgba(3, 5, 10, 0.65),
+                    transparent 45%),
+                url("/static/images/hyderabad-night.jpg");
+
+            background-size: cover;
+            background-position: center;
+
+            opacity: 0.75;
+        }
+
+
+        /* =========================================
+           TOP NAVBAR
+        ========================================= */
+
+        .navbar {
+            position: relative;
+            z-index: 5;
+
+            height: 70px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 0 4.5%;
+        }
+
+        .brand {
+            font-size: 25px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            text-decoration: none;
+            color: white;
+        }
+
+        .brand-gradient {
+            background: linear-gradient(90deg,
+                    #00cfff,
+                    #d946ef);
+
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+
+
+
+        /* =========================================
+           MAIN CONTENT
+        ========================================= */
+
+        .content {
+            position: relative;
+            z-index: 2;
+
+            min-height: calc(100vh - 70px);
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+            align-items: center;
+
+            padding: 0 6% 25px;
+        }
+
+
+        /* =========================================
+           LEFT HERO
+        ========================================= */
+
+        .hero {
+            max-width: 560px;
+            padding-left: 2%;
+            margin-top: -10px;
+        }
+
+        .hero-small {
+            font-size: 13px;
+            letter-spacing: 7px;
+            color: #aeb9c9;
+
+            margin-bottom: 14px;
+        }
+
+        .hero-title {
+            margin: 0;
+
+            font-size: clamp(52px, 5vw, 78px);
+            line-height: 0.95;
+
+            font-weight: 800;
+            letter-spacing: -3px;
+        }
+
+        .hero-title-gradient {
+            display: block;
+
+            background: linear-gradient(90deg,
+                    #00cfff,
+                    #8b7cff,
+                    #d946ef);
+
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-subtitle {
+            margin-top: 18px;
+
+            font-size: 25px;
+            letter-spacing: 6px;
+
+            color: rgba(255, 255, 255, 0.76);
+        }
+
+        .hero-line {
+            width: 42px;
+            height: 2px;
+
+            margin: 24px 0;
+
+            background: linear-gradient(90deg,
+                    #00cfff,
+                    #d946ef);
+        }
+
+        .hero-description {
+            color: rgba(255, 255, 255, 0.55);
+
+            font-size: 14px;
+            letter-spacing: 4px;
+
+            line-height: 1.8;
+        }
+
+        .hero-tagline {
+            position: absolute;
+
+            left: 6%;
+            bottom: 35px;
+
+            font-size: 10px;
+            letter-spacing: 4px;
+
+            color: rgba(255, 255, 255, 0.4);
+        }
+
+        .hero-tagline::before {
+            content: "";
+
+            display: inline-block;
+
+            width: 34px;
+            height: 1px;
+
+            margin-right: 14px;
+
+            vertical-align: middle;
+
+            background: #00cfff;
+        }
+
+
+        /* =========================================
+           LOGIN AREA
+        ========================================= */
+
+        .login-area {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            padding-left: 5%;
+            transform: translateY(-15px);
+        }
+
+        .login-container {
+            width: 100%;
+            max-width: 515px;
+        }
+
+
+        /* =========================================
+           LOGIN HEADING
+        ========================================= */
+
+        .login-heading {
+            text-align: center;
+            margin-bottom: 18px;
+        }
+
+        .login-heading-small {
+            font-size: 13px;
+
+            letter-spacing: 4px;
+
+            color: #00d9ff;
+
+            font-weight: 600;
+
+            margin-bottom: 12px;
+        }
+
+        .login-heading h1 {
+            margin: 0;
+
+            font-size: 52px;
+            line-height: 1;
+
+            letter-spacing: -2px;
+
+            font-weight: 800;
+        }
+
+        .login-heading h1 span {
+            background: linear-gradient(90deg,
+                    #00cfff,
+                    #d946ef);
+
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .login-heading p {
+            margin: 13px 0 0;
+
+            font-size: 16px;
+
+            color: rgba(255, 255, 255, 0.58);
+        }
+
+
+        /* =========================================
+           GLASS LOGIN CARD
+        ========================================= */
+
+        .login-card {
+            position: relative;
+
+            padding: 30px 38px 27px;
+
+            border-radius: 25px;
+
+            background: linear-gradient(135deg,
+                    rgba(255, 255, 255, 0.075),
+                    rgba(255, 255, 255, 0.025));
+
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
+
+            border: 1px solid rgba(255, 255, 255, 0.15);
+
+            box-shadow:
+                0 30px 80px rgba(0, 0, 0, 0.55),
+                inset 0 0 40px rgba(255, 255, 255, 0.015);
+        }
+
+        .login-card::before {
+            content: "";
+
+            position: absolute;
+            inset: -1px;
+
+            border-radius: 25px;
+
+            padding: 1px;
+
+            background: linear-gradient(135deg,
+                    rgba(0, 207, 255, 0.35),
+                    transparent 45%,
+                    rgba(217, 70, 239, 0.45));
+
+            -webkit-mask:
+                linear-gradient(#fff 0 0) content-box,
+                linear-gradient(#fff 0 0);
+
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+
+            pointer-events: none;
+        }
+
+
+        /* =========================================
+           FORM
+        ========================================= */
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-label {
+            display: block;
+
+            margin-bottom: 9px;
+
+            font-size: 14px;
+
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+        .input-wrapper {
+            position: relative;
+        }
+
+        .input-icon {
+            position: absolute;
+
+            left: 17px;
+            top: 50%;
+
+            transform: translateY(-50%);
+
+            font-size: 19px;
+
+            color: rgba(255, 255, 255, 0.75);
+
+            pointer-events: none;
+        }
+
+        .input-field {
+            width: 100%;
+
+            height: 57px;
+
+            padding: 0 18px 0 50px;
+
+            border-radius: 14px;
+
+            border: 1px solid rgba(255, 255, 255, 0.14);
+
+            background: rgba(255, 255, 255, 0.065);
+
+            color: white;
+
+            font-size: 15px;
+
+            transition:
+                border-color 0.2s ease,
+                background 0.2s ease,
+                box-shadow 0.2s ease;
+        }
+
+        .input-field::placeholder {
+            color: rgba(255, 255, 255, 0.36);
+        }
+
+        .input-field:focus {
+            outline: none;
+
+            border-color: rgba(0, 207, 255, 0.65);
+
+            background: rgba(255, 255, 255, 0.085);
+
+            box-shadow:
+                0 0 0 3px rgba(0, 207, 255, 0.08);
+        }
+
+
+        /* =========================================
+           PASSWORD EYE
+        ========================================= */
+
+        .password-eye {
+            position: absolute;
+
+            right: 17px;
+            top: 50%;
+
+            transform: translateY(-50%);
+
+            cursor: pointer;
+
+            color: rgba(255, 255, 255, 0.7);
+
+            font-size: 18px;
+        }
+
+
+        /* =========================================
+           REMEMBER / FORGOT
+        ========================================= */
+
+        .login-options {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            margin: 3px 0 22px;
+        }
+
+        .remember {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            font-size: 14px;
+
+            color: rgba(255, 255, 255, 0.72);
+        }
+
+        .remember input {
+            appearance: none;
+
+            width: 19px;
+            height: 19px;
+
+            border-radius: 5px;
+
+            border: 1px solid rgba(0, 207, 255, 0.7);
+
+            background: rgba(255, 255, 255, 0.04);
+
+            cursor: pointer;
+        }
+
+        .remember input:checked {
+            background: linear-gradient(135deg,
+                    #00cfff,
+                    #8b7cff);
+        }
+
+        .forgot {
+            color: #00d9ff;
+
+            text-decoration: none;
+
+            font-size: 14px;
+        }
+
+
+        /* =========================================
+           LOGIN BUTTON
+        ========================================= */
+
+        .login-button {
+            width: 100%;
+
+            height: 58px;
+
+            border: none;
+
+            border-radius: 14px;
+
+            background: linear-gradient(90deg,
+                    #00cfff,
+                    #8b7cff,
+                    #d946ef);
+
+            color: #050509;
+
+            font-size: 16px;
+
+            font-weight: 700;
+
+            cursor: pointer;
+
+            transition:
+                transform 0.2s ease,
+                box-shadow 0.2s ease;
+        }
+
+        .login-button:hover {
+            transform: translateY(-2px);
+
+            box-shadow:
+                0 12px 35px rgba(0, 207, 255, 0.2);
+        }
+
+
+        /* =========================================
+           DIVIDER
+        ========================================= */
+
+        .divider {
+            display: flex;
+
+            align-items: center;
+
+            gap: 15px;
+
+            margin: 22px 0 18px;
+
+            color: rgba(255, 255, 255, 0.55);
+
+            font-size: 14px;
+        }
+
+        .divider::before,
+        .divider::after {
+            content: "";
+
+            flex: 1;
+
+            height: 1px;
+
+            background: rgba(255, 255, 255, 0.13);
+        }
+
+
+        /* =========================================
+           REGISTER
+        ========================================= */
+
+        .register-text {
+            text-align: center;
+
+            color: rgba(255, 255, 255, 0.72);
+
+            font-size: 14px;
+        }
+
+        .register-text a {
+            color: #00d9ff;
+
+            font-weight: 600;
+
+            text-decoration: none;
+        }
+
+        .register-text a:hover {
+            color: #55e5ff;
+        }
+
+
+        /* =========================================
+           FEATURES
+        ========================================= */
+
+        .features {
+            display: flex;
+
+            justify-content: center;
+
+            margin-top: 24px;
+        }
+
+        .feature {
+            min-width: 145px;
+
+            padding: 0 24px;
+
+            text-align: center;
+
+            border-right: 1px solid rgba(255, 255, 255, 0.13);
+        }
+
+        .feature:last-child {
+            border-right: none;
+        }
+
+        .feature-icon {
+            font-size: 22px;
+
+            margin-bottom: 8px;
+
+            color: #b7c4d8;
+        }
+
+        .feature-text {
+            font-size: 13px;
+
+            color: rgba(255, 255, 255, 0.65);
+
+            white-space: nowrap;
+        }
+
+
+        /* =========================================
+           RESPONSIVE
+        ========================================= */
+
+        @media (max-width: 1000px) {
+
+            .content {
+                grid-template-columns: 1fr;
+
+                padding-top: 35px;
+            }
+
+            .hero {
+                display: none;
+            }
+
+            .login-area {
+                padding-left: 0;
+            }
+
+            .hero-tagline {
+                display: none;
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .navbar {
+                height: 70px;
+
+                padding: 0 20px;
+            }
+
+            .brand {
+                font-size: 19px;
+            }
+
+            .back-home {
+                font-size: 13px;
+            }
+
+            .content {
+                min-height: calc(100vh - 70px);
+
+                padding: 20px 18px 35px;
+            }
+
+            .login-heading {
+                margin-bottom: 18px;
+            }
+
+            .login-heading-small {
+                font-size: 11px;
+            }
+
+            .login-heading h1 {
+                font-size: 40px;
+            }
+
+            .login-heading p {
+                font-size: 14px;
+            }
+
+            .login-card {
+                padding: 25px 20px 23px;
+            }
+
+            .features {
+                display: none;
+            }
+
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+    <div class="page">
+
+        <!-- BACKGROUND -->
+        <div class="city-background"></div>
+
+
+        <!-- NAVBAR -->
+        <nav class="navbar">
+
+            <a href="/" class="brand">
+                Hyderabad
+                <span class="brand-gradient">Trip Planner</span>
+            </a>
+
+
+        </nav>
+
+
+        <!-- MAIN -->
+        <main class="content">
+
+
+            <!-- =====================================
+             LEFT SIDE
+        ====================================== -->
+
+            <section class="hero">
+
+                <div class="hero-small">
+                    EXPLORE
+                </div>
+
+                <h2 class="hero-title">
+
+                    <span class="hero-title-gradient">
+                        Hyderabad
+                    </span>
+
+                </h2>
+
+                <div class="hero-subtitle">
+                    Beyond the Usual
+                </div>
+
+                <div class="hero-line"></div>
+
+                <div class="hero-description">
+                    Plan&nbsp;&nbsp;·&nbsp;&nbsp;Explore&nbsp;&nbsp;·&nbsp;&nbsp;Experience
+                </div>
+
+            </section>
+
+
+            <!-- =====================================
+             RIGHT SIDE LOGIN
+        ====================================== -->
+
+            <section class="login-area">
+
+                <div class="login-container">
+
+
+                    <!-- LOGIN HEADING -->
+
+                    <div class="login-heading">
+
+                        <div class="login-heading-small">
+                            EXPLORE HYDERABAD
+                        </div>
+
+                        <h1>
+                            Welcome
+                            <span>Back</span>
+                        </h1>
+
+                        <p>
+                            Login to continue planning your Hyderabad experience.
+                        </p>
+
+                    </div>
+
+
+                    <!-- LOGIN CARD -->
+
+                    <div class="login-card">
+
+                        <form id="loginForm">
+
+
+                            <!-- EMAIL -->
+
+                            <div class="form-group">
+
+                                <label class="form-label" for="email">
+                                    Email
+                                </label>
+
+                                <div class="input-wrapper">
+
+                                    <span class="input-icon">
+                                        ✉
+                                    </span>
+
+                                    <input type="email" id="email" name="email" class="input-field"
+                                        placeholder="Enter your email" required>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- PASSWORD -->
+
+                            <div class="form-group">
+
+                                <label class="form-label" for="password">
+                                    Password
+                                </label>
+
+                                <div class="input-wrapper">
+
+                                    <span class="input-icon">
+                                        🔒
+                                    </span>
+
+                                    <input type="password" id="password" name="password" class="input-field"
+                                        placeholder="Enter your password" required>
+
+                                    <span class="password-eye" id="togglePassword">
+                                        ◉
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- OPTIONS -->
+
+                            <div class="login-options">
+
+                                <label class="remember">
+
+                                    <input type="checkbox" id="remember">
+
+                                    <span>
+                                        Remember me
+                                    </span>
+
+                                </label>
+
+                                <a href="#" class="forgot">
+                                    Forgot password?
+                                </a>
+
+                            </div>
+
+
+                            <!-- LOGIN -->
+
+                            <button type="submit" class="login-button">
+                                Login
+                            </button>
+
+
+                        </form>
+
+
+                        <!-- DIVIDER -->
+
+                        <div class="divider">
+                            or
+                        </div>
+
+
+                        <!-- REGISTER -->
+
+                        <div class="register-text">
+
+                            Don't have an account?
+
+                            <a href="/register">
+                                Create one
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- FEATURES -->
+
+                    <div class="features">
+
+                        <div class="feature">
+
+                            <div class="feature-icon">
+                                ♧
+                            </div>
+
+                            <div class="feature-text">
+                                Curated Places
+                            </div>
+
+                        </div>
+
+
+                        <div class="feature">
+
+                            <div class="feature-icon">
+                                ▣
+                            </div>
+
+                            <div class="feature-text">
+                                Smart Itineraries
+                            </div>
+
+                        </div>
+
+
+                        <div class="feature">
+
+                            <div class="feature-icon">
+                                ♡
+                            </div>
+
+                            <div class="feature-text">
+                                Unforgettable Experiences
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+
+        </main>
+
+
+        <!-- TAGLINE -->
+
+        <div class="hero-tagline">
+            HYDERABAD · MORE THAN A DESTINATION
+        </div>
+
+    </div>
+
+
+
+    <script>
+
+        /* ================================
+           PASSWORD TOGGLE
+        ================================ */
+
+        const passwordInput =
+            document.getElementById("password");
+
+        const togglePassword =
+            document.getElementById("togglePassword");
+
+        togglePassword.addEventListener("click", () => {
+
+            if (passwordInput.type === "password") {
+
+                passwordInput.type = "text";
+
+            } else {
+
+                passwordInput.type = "password";
+
+            }
+
+        });
+
+
+        /* ================================
+           LOGIN
+        ================================ */
+
+        const loginForm =
+            document.getElementById("loginForm");
+
+        loginForm.addEventListener("submit", async (event) => {
+
+            event.preventDefault();
+
+            const email =
+                document.getElementById("email").value.trim();
+
+            const password =
+                document.getElementById("password").value;
+
+
+            try {
+
+                const response = await fetch("/api/auth/login", {
+
+                    method: "POST",
+
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+
+                    body: JSON.stringify({
+                        email: email,
+                        password: password
+                    })
+
+                });
+
+
+                const data = await response.json();
+
+
+                if (!response.ok) {
+
+                    alert(data.error || "Login failed.");
+
+                    return;
+                }
+
+
+                /* STORE JWT */
+
+                localStorage.setItem("token", data.token);
+
+
+                /* TEMPORARY SUCCESS MESSAGE */
+
+                window.location.href = "/home";
+
+            } catch (error) {
+
+                console.error("Login error:", error);
+
+                alert("Could not connect to the server.");
+
+            }
+
+        });
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Recent Searches - Hyderabad Planner</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #000;
+            color: white;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, .05);
+            backdrop-filter: blur(14px);
+            border: 1px solid rgba(255, 255, 255, .08);
+            box-shadow:
+                0 0 15px rgba(0, 255, 255, .08),
+                0 0 24px rgba(217, 70, 239, .06);
+        }
+
+        .brandGlow {
+            background: linear-gradient(90deg, #00eaff, #d946ef);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-black/40 border-b border-white/10 px-6 py-4">
+        <h1 class="text-xl md:text-2xl font-bold brandGlow">
+            Hyderabad Planner
+        </h1>
+    </nav>
+
+    <section class="min-h-screen flex items-center justify-center px-6 pt-24">
+
+        <div class="glass rounded-3xl p-10 w-full max-w-3xl text-center">
+
+            <h1 class="text-4xl font-bold mb-4">
+                Recent Searches
+            </h1>
+
+            <p class="text-gray-400 mb-8">
+                Your recent trip searches will appear here.
+            </p>
+
+            <div id="recentSearches" class="space-y-5 text-left">
+
+                <div class="glass rounded-2xl p-6 text-center text-gray-400">
+                    Loading recent searches...
+                </div>
+
+            </div>
+
+            <a href="/home" class="inline-block mt-8 px-6 py-3 rounded-full
+                  bg-gradient-to-r from-cyan-400 to-purple-500
+                  font-semibold">
+                ← Back to Home
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+
+    <script>
+
+        async function loadRecentSearches() {
+
+            const token = localStorage.getItem("token");
+
+            if (!token) {
+                window.location.href = "/login";
+                return;
+            }
+
+            const container = document.getElementById("recentSearches");
+
+            try {
+
+                const response = await fetch("/api/recent-searches", {
+                    method: "GET",
+                    headers: {
+                        "Authorization": `Bearer ${token}`
+                    }
+                });
+
+                const data = await response.json();
+
+                if (!response.ok) {
+
+                    localStorage.removeItem("token");
+                    window.location.href = "/login";
+
+                    return;
+                }
+
+                container.innerHTML = "";
+
+                if (!data.searches || data.searches.length === 0) {
+
+                    container.innerHTML = `
+                <div class="glass rounded-2xl p-8 text-center text-gray-400">
+                    No recent searches yet.
+                </div>
+            `;
+
+                    return;
+                }
+
+
+                data.searches.forEach((search, index) => {
+
+                    // ---------------------------
+                    // DATE HANDLING
+                    // ---------------------------
+
+                    const date = new Date(search.created_at);
+
+                    const year = date.getUTCFullYear();
+                    const month = date.getUTCMonth();
+                    const day = date.getUTCDate();
+
+                    const today = new Date();
+
+                    const todayYear = today.getUTCFullYear();
+                    const todayMonth = today.getUTCMonth();
+                    const todayDay = today.getUTCDate();
+
+                    const yesterdayDate = new Date(
+                        Date.UTC(todayYear, todayMonth, todayDay - 1)
+                    );
+
+                    const searchDate = Date.UTC(year, month, day);
+
+                    const todayDate = Date.UTC(
+                        todayYear,
+                        todayMonth,
+                        todayDay
+                    );
+
+                    const yesterdayDateValue = yesterdayDate.getTime();
+
+                    let dateLabel;
+
+                    if (searchDate === todayDate) {
+
+                        dateLabel = "Today";
+
+                    } else if (searchDate === yesterdayDateValue) {
+
+                        dateLabel = "Yesterday";
+
+                    } else {
+
+                        dateLabel = new Date(
+                            Date.UTC(year, month, day)
+                        ).toLocaleDateString("en-US", {
+                            month: "short",
+                            day: "numeric",
+                            timeZone: "UTC"
+                        });
+
+                    }
+
+
+                    const interests = Array.isArray(search.interests)
+                        ? search.interests.join(", ")
+                        : search.interests || "—";
+
+
+                    const card = document.createElement("div");
+
+                    card.className = "glass rounded-2xl p-6";
+
+
+                    card.innerHTML = `
+
+                <div class="flex justify-between items-center mb-5">
+
+                    <h2 class="text-xl font-bold">
+                        Hyderabad Trip
+                    </h2>
+
+                    <span class="text-sm text-cyan-400">
+                        ${dateLabel}
+                    </span>
+
+                </div>
+
+
+                <div class="space-y-3 text-gray-300">
+
+                    <p>
+                        <span class="font-semibold text-white">
+                            Destination:
+                        </span>
+                        ${search.destination}
+                    </p>
+
+                    <p>
+                        <span class="font-semibold text-white">
+                            Budget:
+                        </span>
+                        ₹${Number(search.budget || 0).toLocaleString("en-IN")}
+                    </p>
+
+                    <p>
+                        <span class="font-semibold text-white">
+                            Mood:
+                        </span>
+                        ${search.mood || "—"}
+                    </p>
+
+                    <p>
+                        <span class="font-semibold text-white">
+                            Interests:
+                        </span>
+                        ${interests}
+                    </p>
+
+                    <p>
+                        <span class="font-semibold text-white">
+                            Time:
+                        </span>
+                        ${search.time || "—"}
+                    </p>
+
+                </div>
+
+            `;
+
+                    container.appendChild(card);
+
+                });
+
+            } catch (error) {
+
+                console.error("Recent searches error:", error);
+
+                container.innerHTML = `
+            <div class="glass rounded-2xl p-8 text-center text-red-400">
+                Could not load recent searches.
+            </div>
+        `;
+            }
+        }
+
+
+        loadRecentSearches();
+
+    </script>
+
+
+</body>
+
+</html>

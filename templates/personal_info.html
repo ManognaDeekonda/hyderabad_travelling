@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Personal Info | Hyderabad Trip Planner</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+
+            font-family: Arial, Helvetica, sans-serif;
+
+            color: white;
+
+            background:
+                radial-gradient(
+                    circle at 20% 30%,
+                    rgba(0, 207, 255, 0.12),
+                    transparent 35%
+                ),
+                radial-gradient(
+                    circle at 80% 70%,
+                    rgba(217, 70, 239, 0.12),
+                    transparent 35%
+                ),
+                #03050a;
+        }
+
+
+        /* ================================
+           NAVBAR
+        ================================= */
+
+        .navbar {
+            height: 76px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 0 5%;
+
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+
+            background: rgba(3,5,10,0.55);
+
+            backdrop-filter: blur(15px);
+        }
+
+        .brand {
+            color: white;
+
+            font-size: 24px;
+            font-weight: 700;
+
+            text-decoration: none;
+        }
+
+        .gradient-text {
+            background: linear-gradient(
+                90deg,
+                #00cfff,
+                #d946ef
+            );
+
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .back-home {
+            color: rgba(255,255,255,0.72);
+
+            text-decoration: none;
+
+            font-size: 14px;
+
+            transition: 0.2s ease;
+        }
+
+        .back-home:hover {
+            color: white;
+        }
+
+
+        /* ================================
+           MAIN
+        ================================= */
+
+        .main {
+            min-height: calc(100vh - 76px);
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            padding: 45px 20px;
+        }
+
+        .container {
+            width: 100%;
+
+            max-width: 650px;
+        }
+
+
+        /* ================================
+           HEADING
+        ================================= */
+
+        .heading {
+            text-align: center;
+
+            margin-bottom: 30px;
+        }
+
+        .heading-small {
+            color: #00d9ff;
+
+            font-size: 12px;
+
+            font-weight: 600;
+
+            letter-spacing: 5px;
+
+            margin-bottom: 10px;
+        }
+
+        .heading h1 {
+            margin: 0;
+
+            font-size: 46px;
+
+            font-weight: 800;
+
+            letter-spacing: -2px;
+        }
+
+        .heading h1 span {
+            background: linear-gradient(
+                90deg,
+                #00cfff,
+                #d946ef
+            );
+
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .heading p {
+            margin-top: 12px;
+
+            color: rgba(255,255,255,0.55);
+
+            font-size: 15px;
+        }
+
+
+        /* ================================
+           PROFILE CARD
+        ================================= */
+
+        .profile-card {
+            position: relative;
+
+            padding: 38px;
+
+            border-radius: 28px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(255,255,255,0.075),
+                    rgba(255,255,255,0.025)
+                );
+
+            backdrop-filter: blur(25px);
+
+            -webkit-backdrop-filter: blur(25px);
+
+            border: 1px solid rgba(255,255,255,0.14);
+
+            box-shadow:
+                0 30px 80px rgba(0,0,0,0.50);
+        }
+
+
+        /* ================================
+           AVATAR
+        ================================= */
+
+        .avatar-wrapper {
+            display: flex;
+
+            justify-content: center;
+
+            margin-bottom: 30px;
+        }
+
+        .avatar {
+            width: 95px;
+            height: 95px;
+
+            border-radius: 50%;
+
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+
+            font-size: 38px;
+
+            font-weight: 700;
+
+            color: white;
+
+            background: linear-gradient(
+                135deg,
+                #00cfff,
+                #8b7cff,
+                #d946ef
+            );
+
+            box-shadow:
+                0 12px 35px rgba(0,207,255,0.18);
+        }
+
+
+        /* ================================
+           INFO ROW
+        ================================= */
+
+        .info-row {
+            padding: 20px 5px;
+
+            border-bottom: 1px solid rgba(255,255,255,0.10);
+        }
+
+        .info-row:last-child {
+            border-bottom: none;
+        }
+
+        .info-label {
+            font-size: 12px;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+
+            color: rgba(255,255,255,0.45);
+
+            margin-bottom: 8px;
+        }
+
+        .info-value {
+            font-size: 17px;
+
+            color: rgba(255,255,255,0.92);
+        }
+
+
+        /* ================================
+           BACK BUTTON
+        ================================= */
+
+        .back-button-wrapper {
+            text-align: center;
+
+            margin-top: 28px;
+        }
+
+        .back-button {
+            display: inline-block;
+
+            padding: 12px 25px;
+
+            border-radius: 12px;
+
+            color: white;
+
+            text-decoration: none;
+
+            font-size: 14px;
+
+            background: rgba(255,255,255,0.06);
+
+            border: 1px solid rgba(255,255,255,0.12);
+
+            transition: 0.2s ease;
+        }
+
+        .back-button:hover {
+            background: rgba(255,255,255,0.10);
+
+            border-color: rgba(0,207,255,0.40);
+
+            transform: translateY(-1px);
+        }
+
+
+        /* ================================
+           MOBILE
+        ================================= */
+
+        @media (max-width: 600px) {
+
+            .navbar {
+                padding: 0 20px;
+            }
+
+            .brand {
+                font-size: 19px;
+            }
+
+            .main {
+                padding: 30px 16px;
+            }
+
+            .heading h1 {
+                font-size: 36px;
+            }
+
+            .profile-card {
+                padding: 25px 22px;
+            }
+
+            .avatar {
+                width: 80px;
+                height: 80px;
+
+                font-size: 32px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ================================
+         NAVBAR
+    ================================= -->
+
+    <nav class="navbar">
+
+        <a href="/home" class="brand">
+
+            Hyderabad
+
+            <span class="gradient-text">
+                Trip Planner
+            </span>
+
+        </a>
+
+
+        <a href="/home" class="back-home">
+            ← Back to Home
+        </a>
+
+    </nav>
+
+
+    <!-- ================================
+         MAIN
+    ================================= -->
+
+    <main class="main">
+
+        <div class="container">
+
+
+            <!-- HEADING -->
+
+            <div class="heading">
+
+                <div class="heading-small">
+                    YOUR PROFILE
+                </div>
+
+                <h1>
+                    Personal
+                    <span>Information</span>
+                </h1>
+
+                <p>
+                    Manage your Hyderabad Trip Planner account.
+                </p>
+
+            </div>
+
+
+            <!-- PROFILE CARD -->
+
+            <div class="profile-card">
+
+
+                <!-- AVATAR -->
+
+                <div class="avatar-wrapper">
+
+                    <div class="avatar" id="profileAvatar">
+                        ?
+                    </div>
+
+                </div>
+
+
+                <!-- NAME -->
+
+                <div class="info-row">
+
+                    <div class="info-label">
+                        Full Name
+                    </div>
+
+                    <div
+                        class="info-value"
+                        id="profileName"
+                    >
+                        Loading...
+                    </div>
+
+                </div>
+
+
+                <!-- EMAIL -->
+
+                <div class="info-row">
+
+                    <div class="info-label">
+                        Email
+                    </div>
+
+                    <div
+                        class="info-value"
+                        id="profileEmail"
+                    >
+                        Loading...
+                    </div>
+
+                </div>
+
+
+                <!-- JOINED -->
+
+                <div class="info-row">
+
+                    <div class="info-label">
+                        Member Since
+                    </div>
+
+                    <div
+                        class="info-value"
+                        id="profileJoined"
+                    >
+                        Loading...
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+            <!-- BACK -->
+
+            <div class="back-button-wrapper">
+
+                <a
+                    href="/home"
+                    class="back-button"
+                >
+                    ← Back to Home
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </main>
+
+
+</body>
+
+<script>
+
+async function loadPersonalInfo() {
+
+    const token = localStorage.getItem("token");
+
+    // User is not logged in
+    if (!token) {
+
+        window.location.href = "/login";
+
+        return;
+    }
+
+
+    try {
+
+        const response = await fetch("/api/profile", {
+
+            method: "GET",
+
+            headers: {
+                "Authorization": `Bearer ${token}`
+            }
+
+        });
+
+
+        const data = await response.json();
+
+
+        // Token is invalid or expired
+        if (!response.ok) {
+
+            localStorage.removeItem("token");
+
+            window.location.href = "/login";
+
+            return;
+        }
+
+
+        // Name
+        document.getElementById("profileName").textContent =
+            data.name;
+
+
+        // Email
+        document.getElementById("profileEmail").textContent =
+            data.email;
+
+
+        // First letter
+        if (data.name) {
+
+            document.getElementById("profileAvatar").textContent =
+                data.name.charAt(0).toUpperCase();
+
+        }
+
+
+        // Joined date
+        if (data.created_at) {
+
+            const date = new Date(data.created_at);
+
+            document.getElementById("profileJoined").textContent =
+                date.toLocaleDateString("en-US", {
+                    month: "long",
+                    year: "numeric"
+                });
+
+        }
+
+    } catch (error) {
+
+        console.error("Profile loading error:", error);
+
+        alert("Could not load your profile.");
+
+    }
+
+}
+
+
+loadPersonalInfo();
+
+</script>
+
+</html>
