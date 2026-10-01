@@ -1,0 +1,1662 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Travel Planner | Hyderabad Planner</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #000;
+            color: white;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        #particles-js {
+            position: fixed;
+            inset: 0;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        nav,
+        main {
+            position: relative;
+            z-index: 10;
+        }
+
+        .brandGlow {
+            background: linear-gradient(90deg, #00eaff, #d946ef);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.045);
+            backdrop-filter: blur(14px);
+            border: 1px solid rgba(255, 255, 255, 0.09);
+            box-shadow: 0 0 22px rgba(0, 255, 255, 0.04);
+        }
+
+        .glowBtn {
+            background: linear-gradient(90deg, #00cfff, #d946ef);
+            color: white;
+            box-shadow: 0 0 18px rgba(0, 255, 255, 0.22);
+            transition: 0.3s ease;
+        }
+
+        .glowBtn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 25px rgba(0, 255, 255, 0.4);
+        }
+
+        .backBtn {
+            border: 1px solid rgba(0, 234, 255, 0.3);
+            background: rgba(255, 255, 255, 0.04);
+            transition: 0.3s ease;
+        }
+
+        .backBtn:hover {
+            background: rgba(0, 234, 255, 0.1);
+            border-color: #00eaff;
+        }
+
+        .optionBtn {
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            background: rgba(255, 255, 255, 0.035);
+            transition: 0.25s ease;
+        }
+
+        .optionBtn:hover,
+        .optionBtn.selected {
+            border-color: #00eaff;
+            background: rgba(0, 234, 255, 0.12);
+            color: #67e8f9;
+        }
+
+        .chatArea {
+            scrollbar-width: thin;
+            scrollbar-color: #343442 transparent;
+        }
+
+        .message {
+            width: fit-content;
+            max-width: 85%;
+            overflow-wrap: anywhere;
+        }
+
+        .userMessage {
+            background: linear-gradient(135deg, #12323a, #29203b);
+            border: 1px solid rgba(0, 234, 255, 0.18);
+            border-radius: 18px 18px 4px 18px;
+        }
+
+        .aiMessage {
+            background: rgba(255, 255, 255, 0.045);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 4px 18px 18px 18px;
+        }
+
+
+        /* AI Planner result cards */
+        .resultMessage {
+            width: 100%;
+            max-width: 100%;
+            min-width: 0;
+        }
+
+        .result-section {
+            margin-top: 18px;
+            padding: 14px;
+            border: 1px solid rgba(255, 255, 255, 0.10);
+            border-radius: 16px;
+            background: rgba(255, 255, 255, 0.035);
+            min-width: 0;
+        }
+
+        .result-section-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            overflow-wrap: anywhere;
+        }
+
+        .result-place-card {
+            padding: 12px;
+            margin-bottom: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.09);
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.035);
+            min-width: 0;
+            overflow-wrap: anywhere;
+        }
+
+        .result-place-card:last-child {
+            margin-bottom: 0;
+        }
+
+        .result-place-name {
+            font-size: 15px;
+            font-weight: 700;
+            overflow-wrap: anywhere;
+        }
+
+        .result-meta {
+            color: #9ca3af;
+            font-size: 12px;
+            margin-top: 5px;
+        }
+
+        .result-link {
+            display: inline-block;
+            margin: 8px 12px 0 0;
+            font-size: 12px;
+            text-decoration: underline;
+            overflow-wrap: anywhere;
+        }
+
+        .result-total {
+            margin-top: 16px;
+            padding: 18px;
+            border: 1px solid rgba(0, 234, 255, 0.25);
+            border-radius: 14px;
+            text-align: center;
+            background: rgba(0, 234, 255, 0.05);
+        }
+
+        .result-total-amount {
+            font-size: 28px;
+            font-weight: 800;
+            color: #67e8f9;
+            overflow-wrap: anywhere;
+        }
+
+        .result-category-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 12px;
+        }
+
+
+        /* ChatGPT-style planner layout */
+        #conversationList button {
+            width: 100%;
+            text-align: left;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        @media (max-width: 767px) {
+            #conversationList {
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+
+            #conversationList button {
+                width: auto;
+                max-width: 100%;
+            }
+        }
+
+        @media (min-width: 640px) {
+            .result-category-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        .inputBox:focus {
+            outline: none;
+            border-color: rgba(0, 234, 255, 0.65);
+            box-shadow: 0 0 0 3px rgba(0, 234, 255, 0.06);
+        }
+
+        @media (max-width: 640px) {
+            .message {
+                max-width: 94%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- BACKGROUND PARTICLES -->
+    <div id="particles-js"></div>
+
+    <!-- NAVBAR -->
+    <nav class="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-black/70 border-b border-white/10 px-5 md:px-8 py-4">
+
+        <div class="max-w-7xl mx-auto flex items-center justify-between gap-4">
+
+            <a href="/home" class="backBtn rounded-full px-4 py-2 text-sm font-medium whitespace-nowrap">
+                ← Back to Home
+            </a>
+
+            <h1 class="text-lg md:text-2xl font-bold brandGlow text-center">
+                Hyderabad Planner
+            </h1>
+
+            <div class="hidden sm:flex items-center gap-2 text-sm text-gray-400">
+                <span class="w-2 h-2 rounded-full bg-cyan-400"></span>
+                AI Planner
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="min-h-screen pt-20">
+        <div class="flex min-h-[calc(100vh-5rem)] w-full">
+
+
+            <!-- LEFT SIDEBAR: CONVERSATION HISTORY -->
+            <aside class="w-64 shrink-0 border-r border-white/10 bg-black/40 p-4">
+                <button id="newChatBtn" type="button"
+                    class="glowBtn w-full rounded-xl px-4 py-3 text-sm font-medium mb-6">
+                    + New Chat
+                </button>
+
+                <h3 class="font-semibold text-sm text-gray-300 mb-3">
+                    Your Conversations
+                </h3>
+
+                <div id="conversationList" class="flex flex-col gap-2">
+                    <p class="text-xs text-gray-500">
+                        Loading conversations...
+                    </p>
+                </div>
+            </aside>
+            <section class="flex min-w-0 flex-1 justify-start p-3 md:pl-4 md:pr-6">
+                <div class="flex w-full max-w-none flex-col">
+
+
+                    <!-- CHAT CARD -->
+
+                    <section
+                        class="glass flex h-[calc(100vh-7rem)] min-h-[500px] w-full flex-col overflow-hidden rounded-3xl">
+
+                        <!-- CHAT HEADER -->
+                        <div class="flex items-center gap-3 px-5 md:px-7 py-4 border-b border-white/10">
+
+                            <div class="w-11 h-11 rounded-2xl flex items-center justify-center text-xl"
+                                style="background:linear-gradient(135deg,#00cfff,#d946ef)">
+                                ✨
+                            </div>
+
+                            <div class="flex-1">
+                                <h3 class="font-semibold">Hyderabad AI Assistant</h3>
+                                <p class="text-xs text-gray-400 mt-1">
+                                    Your next adventure starts here
+                                </p>
+                            </div>
+
+                            <button id="clearChat" type="button"
+                                class="text-xs text-gray-400 hover:text-cyan-300 transition">
+                                Clear messages
+                            </button>
+
+                        </div>
+
+
+                        <!-- CHAT MESSAGES -->
+
+                        <div id="chatArea" class="chatArea min-h-0 flex-1 overflow-y-auto p-4 md:p-7 space-y-5">
+
+                            <!-- INITIAL AI MESSAGE -->
+                            <div id="welcomeMessage" class="flex items-start gap-3">
+
+                                <div
+                                    class="w-8 h-8 shrink-0 rounded-xl flex items-center justify-center bg-cyan-400/10 text-cyan-300">
+                                    ✨
+                                </div>
+
+                                <div class="message aiMessage p-4">
+
+
+
+                                    <p id="welcomeGreeting" class="text-gray-100 leading-relaxed">
+                                        Hi! 👋 I'm Hyderabad Trip Planner. Let's plan your trip!
+                                    </p>
+                                    <p class="text-gray-300 text-sm leading-relaxed mt-3">
+                                        I can help you plan a personalized trip based on your budget,
+                                        available time and interests.
+                                    </p>
+
+
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- QUICK START OPTIONS -->
+                            <div id="quickOptions" class="ml-10 space-y-4">
+
+                                <div>
+                                    <p class="text-xs text-gray-400 mb-2">
+                                        CHOOSE YOUR TRIP DURATION
+                                    </p>
+
+                                    <div class="flex flex-wrap gap-2">
+
+                                        <button type="button" class="optionBtn rounded-full px-4 py-2 text-sm"
+                                            data-duration="4_hours">
+                                            ⏱ 4 Hours
+                                        </button>
+
+                                        <button type="button" class="optionBtn rounded-full px-4 py-2 text-sm"
+                                            data-duration="1_day">
+                                            ☀️ 1 Day
+                                        </button>
+
+                                        <button type="button" class="optionBtn rounded-full px-4 py-2 text-sm"
+                                            data-duration="night">
+                                            🌙 Night
+                                        </button>
+
+                                        <button type="button" class="optionBtn rounded-full px-4 py-2 text-sm"
+                                            data-duration="weekend">
+                                            🗓 Weekend
+                                        </button>
+
+                                    </div>
+                                </div>
+
+
+                                <div>
+                                    <p class="text-xs text-gray-400 mb-2">
+                                        EXPLORE YOUR INTERESTS
+                                    </p>
+
+                                    <div class="flex flex-wrap gap-2">
+
+                                        <button type="button" class="optionBtn rounded-full px-3 py-2 text-sm"
+                                            data-interest="history">
+                                            🏛 History
+                                        </button>
+
+                                        <button type="button" class="optionBtn rounded-full px-3 py-2 text-sm"
+                                            data-interest="food">
+                                            🍜 Food
+                                        </button>
+
+                                        <button type="button" class="optionBtn rounded-full px-3 py-2 text-sm"
+                                            data-interest="nature">
+                                            🌿 Nature
+                                        </button>
+
+                                        <button type="button" class="optionBtn rounded-full px-3 py-2 text-sm"
+                                            data-interest="entertainment">
+                                            🎡 Entertainment
+                                        </button>
+
+                                        <button type="button" class="optionBtn rounded-full px-3 py-2 text-sm"
+                                            data-interest="shopping">
+                                            🛍 Shopping
+                                        </button>
+
+                                        <button type="button" class="optionBtn rounded-full px-3 py-2 text-sm"
+                                            data-interest="nightlife">
+                                            🌃 Nightlife
+                                        </button>
+
+                                    </div>
+
+                                    <p class="text-xs text-gray-500 mt-2">
+                                        You can select multiple interests.
+                                    </p>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- MESSAGE INPUT -->
+                        <div class="border-t border-white/10 p-4 md:p-5">
+
+                            <form id="chatForm" class="flex items-end gap-3">
+
+                                <div class="flex-1">
+                                    <textarea id="messageInput" rows="1" maxlength="2000"
+                                        placeholder="Describe your ideal Hyderabad trip..."
+                                        class="inputBox w-full resize-none rounded-2xl border border-white/10 bg-black/50 px-4 py-3 text-sm text-white placeholder-gray-500"></textarea>
+
+                                    <p class="text-xs text-gray-500 mt-2 ml-1">
+                                        You can type naturally. For example: budget ₹3000, one day, history and food.
+                                    </p>
+                                </div>
+
+                                <button type="submit"
+                                    class="glowBtn w-12 h-12 shrink-0 rounded-2xl flex items-center justify-center text-xl"
+                                    aria-label="Send message">
+                                    ➤
+                                </button>
+
+                            </form>
+
+                            <p class="text-center text-xs text-gray-500 mt-4">
+                                Hyderabad Planner · Personalized travel experiences
+                            </p>
+
+                        </div>
+
+                    </section>
+
+                    <p class="text-center text-xs text-gray-600 mt-5">
+                        AI-generated itinerary features will be connected in the next step.
+                    </p>
+                </div>
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <!-- PARTICLE LIBRARY -->
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+
+    <script>
+        // Background particles
+        if (window.tsParticles) {
+            tsParticles.load("particles-js", {
+                fullScreen: { enable: false },
+                particles: {
+                    number: { value: 40 },
+                    color: { value: ["#00ffff", "#ffffff", "#d946ef"] },
+                    shape: { type: "circle" },
+                    opacity: { value: 0.5 },
+                    size: { value: { min: 1, max: 3 } },
+                    move: { enable: true, speed: 0.7 },
+                    links: { enable: false }
+                }
+            });
+        }
+
+        const chatArea = document.getElementById("chatArea");
+        const chatForm = document.getElementById("chatForm");
+        const messageInput = document.getElementById("messageInput");
+        const quickOptions = document.getElementById("quickOptions");
+        const clearChat = document.getElementById("clearChat");
+
+
+
+
+        async function loadWelcomeGreeting() {
+            const greeting = document.getElementById("welcomeGreeting");
+            const token = localStorage.getItem("token");
+
+            const defaultGreeting =
+                "Hi! 👋 I'm Hyderabad Trip Planner. Let's plan your trip!";
+
+            if (!token) {
+                greeting.textContent = defaultGreeting;
+                return;
+            }
+
+            try {
+                const response = await fetch("/api/profile", {
+                    method: "GET",
+                    headers: {
+                        "Authorization": `Bearer ${token}`
+                    }
+                });
+
+                if (!response.ok) {
+                    greeting.textContent = defaultGreeting;
+                    return;
+                }
+
+                const data = await response.json();
+                const name = typeof data.name === "string"
+                    ? data.name.trim()
+                    : "";
+
+                greeting.textContent = name
+                    ? `Hi, ${name}! 👋 I'm Hyderabad Trip Planner. Let's plan your trip!`
+                    : defaultGreeting;
+
+            } catch (error) {
+                console.error("Welcome greeting error:", error);
+                greeting.textContent = defaultGreeting;
+            }
+        }
+
+        loadWelcomeGreeting();
+
+
+        let selectedDuration = null;
+        const selectedInterests = new Set();
+
+        // Handle duration and interest clicks, even after chatArea is refreshed
+        chatArea.addEventListener("click", event => {
+            const durationButton = event.target.closest("[data-duration]");
+            const interestButton = event.target.closest("[data-interest]");
+
+            // Select one trip duration
+            if (durationButton) {
+                chatArea.querySelectorAll("[data-duration]").forEach(button => {
+                    button.classList.remove("selected");
+                });
+
+                durationButton.classList.add("selected");
+                selectedDuration = durationButton.dataset.duration;
+
+                updateDraft();
+                return;
+            }
+
+            // Select or deselect multiple interests
+            if (interestButton) {
+                const interest = interestButton.dataset.interest;
+
+                if (selectedInterests.has(interest)) {
+                    selectedInterests.delete(interest);
+                    interestButton.classList.remove("selected");
+                } else {
+                    selectedInterests.add(interest);
+                    interestButton.classList.add("selected");
+                }
+
+                updateDraft();
+            }
+        });
+        // Select multiple interests
+        document.querySelectorAll("[data-interest]").forEach(button => {
+            button.addEventListener("click", () => {
+                const interest = button.dataset.interest;
+
+                if (selectedInterests.has(interest)) {
+                    selectedInterests.delete(interest);
+                    button.classList.remove("selected");
+                } else {
+                    selectedInterests.add(interest);
+                    button.classList.add("selected");
+                }
+
+                updateDraft();
+            });
+        });
+
+        // Reflect selections in the message box
+        function updateDraft() {
+            const durationLabels = {
+                "4_hours": "4 hours",
+                "1_day": "1 day",
+                "night": "a night",
+                "weekend": "a weekend"
+            };
+
+            const parts = [];
+
+            if (selectedDuration) {
+                parts.push("I want to plan " + durationLabels[selectedDuration]);
+            }
+
+            if (selectedInterests.size > 0) {
+                parts.push("with interests in " + [...selectedInterests].join(", "));
+            }
+
+            if (parts.length > 0) {
+                messageInput.value = parts.join(" ") + ". ";
+                messageInput.focus();
+            }
+        }
+
+        function addMessage(text, type) {
+            const row = document.createElement("div");
+            row.className = type === "user"
+                ? "flex justify-end"
+                : "flex items-start gap-3";
+
+            if (type === "assistant") {
+                const icon = document.createElement("div");
+                icon.className = "w-8 h-8 shrink-0 rounded-xl flex items-center justify-center bg-cyan-400/10 text-cyan-300";
+                icon.textContent = "✨";
+                row.appendChild(icon);
+            }
+
+            const bubble = document.createElement("div");
+            bubble.className = "message p-4 " +
+                (type === "user" ? "userMessage" : "aiMessage");
+
+            const paragraph = document.createElement("p");
+            paragraph.className = "text-sm leading-relaxed text-gray-100";
+            paragraph.textContent = text;
+
+            bubble.appendChild(paragraph);
+            row.appendChild(bubble);
+            chatArea.appendChild(row);
+
+            chatArea.scrollTop = chatArea.scrollHeight;
+        }
+
+        // Frontend preview only. Backend/LLM connection comes later.
+        // Conversation persistence and history
+        const conversationList = document.getElementById("conversationList");
+        const newChatBtn = document.getElementById("newChatBtn");
+
+        const token = localStorage.getItem("token");
+        const initialChatHTML = chatArea.innerHTML;
+
+        let activeConversationId = localStorage.getItem("activeConversationId");
+        let conversations = [];
+
+        async function apiRequest(url, options = {}) {
+            if (!token) {
+                throw new Error("Please log in before using the AI Planner.");
+            }
+
+            const response = await fetch(url, {
+                ...options,
+                headers: {
+                    "Content-Type": "application/json",
+                    "Authorization": `Bearer ${token}`,
+                    ...(options.headers || {})
+                }
+            });
+
+            const data = await response.json();
+
+            if (!response.ok) {
+                throw new Error(data.error || data.message || "Request failed.");
+            }
+
+            return data;
+        }
+
+        // Display a message in the chat
+
+        function addMessage(text, type, options = []) {
+            const row = document.createElement("div");
+
+            row.className = type === "user"
+                ? "flex justify-end"
+                : "flex items-start gap-2";
+
+            if (type === "assistant") {
+                const icon = document.createElement("div");
+                icon.className =
+                    "w-7 h-7 shrink-0 rounded-lg flex items-center justify-center bg-cyan-400/10 text-cyan-300 text-sm";
+                icon.textContent = "✨";
+                row.appendChild(icon);
+            }
+
+            const bubble = document.createElement("div");
+            bubble.className = "message p-3 " +
+                (type === "user" ? "userMessage" : "aiMessage");
+
+            const paragraph = document.createElement("p");
+            paragraph.className = "text-sm leading-relaxed text-gray-100 whitespace-pre-line";
+            paragraph.textContent = text;
+
+            bubble.appendChild(paragraph);
+
+            if (type === "assistant" && options.length > 0) {
+                const optionContainer = document.createElement("div");
+
+                optionContainer.className =
+                    "flex flex-wrap gap-2 mt-3";
+
+                options.forEach(option => {
+                    const button = document.createElement("button");
+
+                    button.type = "button";
+                    button.textContent = option.label;
+
+                    button.className =
+                        "px-3 py-1.5 text-xs rounded-full border border-cyan-400/40 " +
+                        "bg-cyan-400/10 text-cyan-200 hover:bg-cyan-400/20 " +
+                        "transition-colors";
+
+                    button.addEventListener("click", () => {
+                        if (button.disabled) return;
+
+                        // Prevent selecting multiple options for this question.
+                        optionContainer.querySelectorAll("button").forEach(btn => {
+                            btn.disabled = true;
+                            btn.classList.add("opacity-50");
+                        });
+
+                        messageInput.value = option.value;
+                        chatForm.requestSubmit();
+                    });
+
+                    optionContainer.appendChild(button);
+                });
+
+                bubble.appendChild(optionContainer);
+            }
+
+            row.appendChild(bubble);
+            chatArea.appendChild(row);
+
+            chatArea.scrollTop = chatArea.scrollHeight;
+        }
+
+
+        // Render trip results as structured recommendation cards.
+        function addTripResult(trip, data) {
+            const row = document.createElement("div");
+            row.className = "flex items-start gap-2 w-full";
+
+            const icon = document.createElement("div");
+            icon.className =
+                "w-7 h-7 shrink-0 rounded-lg flex items-center justify-center " +
+                "bg-cyan-400/10 text-cyan-300 text-sm";
+            icon.textContent = "✨";
+            row.appendChild(icon);
+
+            const container = document.createElement("div");
+            container.className =
+                "message resultMessage p-4 aiMessage";
+
+            function addText(parent, text, className = "") {
+                const element = document.createElement("div");
+                element.textContent = text ?? "";
+                if (className) element.className = className;
+                parent.appendChild(element);
+                return element;
+            }
+
+            function addLink(parent, label, url) {
+                if (!url) return;
+
+                try {
+                    const parsed = new URL(url, window.location.origin);
+
+                    if (!["http:", "https:"].includes(parsed.protocol)) return;
+
+                    const link = document.createElement("a");
+                    link.href = parsed.href;
+                    link.target = "_blank";
+                    link.rel = "noopener noreferrer";
+                    link.textContent = label;
+                    link.className = "result-link text-cyan-300";
+
+                    parent.appendChild(link);
+                } catch {
+                    // Skip invalid links.
+                }
+            }
+
+            function getPlace(item) {
+                return item?.place || item || {};
+            }
+
+            function getPrice(place) {
+                return place.price_range ?? place.cost ?? place.price ?? "Not specified";
+            }
+
+            function getMapLink(place) {
+                return place.maps_link ||
+                    place.map_link ||
+                    `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+                        [place.name, place.area, "Hyderabad"].filter(Boolean).join(", ")
+                    )
+                    }`;
+            }
+
+            function getVideoLink(place) {
+                return place.youtube_link ||
+                    `https://www.youtube.com/results?search_query=${encodeURIComponent(
+                        [place.name, place.area, "Hyderabad"].filter(Boolean).join(" ")
+                    )
+                    }`;
+            }
+
+            function addPlaceCard(parent, item, index, showSlot = false) {
+                const place = getPlace(item);
+                const card = document.createElement("div");
+                card.className = "result-place-card";
+
+                if (showSlot && item.slot) {
+                    addText(card, item.slot, "text-xs text-cyan-300 mb-2");
+                } else if (showSlot) {
+                    addText(card, `Stop ${index + 1}`, "text-xs text-cyan-300 mb-2");
+                }
+
+                addText(
+                    card,
+                    place.name || "Recommended place",
+                    "result-place-name"
+                );
+
+                if (place.area) {
+                    addText(card, `📍 ${place.area}`, "result-meta");
+                }
+
+                if (place.category) {
+                    addText(card, `Category: ${place.category}`, "result-meta");
+                }
+
+                if (place.source) {
+                    addText(card, `Source: ${place.source}`, "result-meta");
+                }
+
+                addText(card, `Estimated price: ₹${getPrice(place)}`, "result-meta");
+
+                if (place.time_needed) {
+                    addText(card, `Time needed: ${place.time_needed}`, "result-meta");
+                }
+
+                if (place.rating !== undefined && place.rating !== null) {
+                    addText(card, `⭐ Rating: ${place.rating}/5`, "result-meta");
+                }
+
+                const links = document.createElement("div");
+                addLink(links, "📍 Open Map", getMapLink(place));
+                addLink(links, "▶ Watch Videos", getVideoLink(place));
+
+                if (links.childElementCount > 0) {
+                    card.appendChild(links);
+                }
+
+                parent.appendChild(card);
+            }
+
+            // Heading
+            addText(
+                container,
+                "Your Hyderabad Trip Plan 🗺️",
+                "text-xl font-bold text-cyan-300 mb-3"
+            );
+
+            if (data.summary) {
+                addText(container, data.summary, "text-sm text-gray-300 mb-4");
+            }
+
+            // Trip summary
+            const summary = document.createElement("div");
+            summary.className = "result-section";
+
+            addText(summary, "Trip Summary", "result-section-title");
+
+            const summaryGrid = document.createElement("div");
+            summaryGrid.className = "grid grid-cols-2 gap-3 text-sm";
+
+            const summaryItems = [
+                ["Duration", trip.duration],
+                ["Interest", trip.interest],
+                ["Budget", trip.budget != null ? `₹${trip.budget}` : null],
+                ["Traveling with", trip.company],
+                ["Travel mood", trip.mood]
+            ];
+
+            summaryItems.forEach(([label, value]) => {
+                if (value !== undefined && value !== null && value !== "") {
+                    const item = document.createElement("div");
+                    item.className = "min-w-0";
+
+                    addText(item, label, "text-xs text-gray-400");
+                    addText(item, String(value), "font-semibold text-gray-100");
+
+                    summaryGrid.appendChild(item);
+                }
+            });
+
+            summary.appendChild(summaryGrid);
+            container.appendChild(summary);
+
+            // Itinerary
+            const itinerary = Array.isArray(data.itinerary) ? data.itinerary : [];
+
+            const itinerarySection = document.createElement("section");
+            itinerarySection.className = "result-section";
+
+            addText(
+                itinerarySection,
+                "Your Recommended Itinerary",
+                "result-section-title"
+            );
+
+            if (itinerary.length > 0) {
+                itinerary.forEach((item, index) => {
+                    addPlaceCard(itinerarySection, item, index, true);
+                });
+            } else {
+                addText(
+                    itinerarySection,
+                    "No itinerary stops were found. Try adjusting your budget or interests.",
+                    "text-sm text-gray-300"
+                );
+            }
+
+            container.appendChild(itinerarySection);
+
+            // Recommendation categories, matching result.html
+            const categories = [
+                {
+                    key: "within_budget",
+                    title: "Within Your Budget"
+                },
+                {
+                    key: "above_budget",
+                    title: "Upgrade Picks"
+                },
+                {
+                    key: "premium",
+                    title: "Premium Experiences"
+                }
+            ];
+
+            categories.forEach(category => {
+                const places = Array.isArray(data[category.key])
+                    ? data[category.key].slice(0, 10)
+                    : [];
+
+                if (places.length === 0) return;
+
+                const section = document.createElement("section");
+                section.className = "result-section";
+
+                addText(section, category.title, "result-section-title");
+
+                const grid = document.createElement("div");
+                grid.className = "result-category-grid";
+
+                places.forEach((place, index) => {
+                    addPlaceCard(grid, place, index);
+                });
+
+                section.appendChild(grid);
+                container.appendChild(section);
+            });
+
+            // Estimated total cost
+            if (data.total_cost !== undefined && data.total_cost !== null) {
+                const total = document.createElement("div");
+                total.className = "result-total";
+
+                addText(total, "Estimated Total Trip Cost", "text-sm text-gray-300");
+                addText(
+                    total,
+                    `₹${Number(data.total_cost).toLocaleString("en-IN")}`,
+                    "result-total-amount"
+                );
+
+                container.appendChild(total);
+            }
+
+
+            // Download PDF button
+            const pdfButton = document.createElement("button");
+
+            pdfButton.type = "button";
+            pdfButton.textContent = "📄 Download Trip Plan PDF";
+
+            pdfButton.className =
+                "glowBtn mt-4 w-full rounded-xl px-4 py-3 text-sm font-semibold " +
+                "flex items-center justify-center gap-2";
+
+            pdfButton.addEventListener("click", () => {
+                window.location.href = "/download-pdf";
+            });
+
+            container.appendChild(pdfButton);
+
+            row.appendChild(container);
+            chatArea.appendChild(row);
+            chatArea.scrollTop = chatArea.scrollHeight;
+        }
+
+
+
+        // Show or restore the initial greeting
+        function showWelcomeScreen(showGreeting = true) {
+            chatArea.innerHTML = initialChatHTML;
+
+            const welcomeMessage = document.getElementById("welcomeMessage");
+
+            if (welcomeMessage) {
+                welcomeMessage.classList.toggle("hidden", !showGreeting);
+            }
+
+            loadWelcomeGreeting();
+        }
+
+        // Load the conversation history list
+        async function loadConversations() {
+            const data = await apiRequest("/api/ai/conversations");
+
+            conversations = data.conversations || [];
+            conversationList.innerHTML = "";
+
+            if (conversations.length === 0) {
+                conversationList.innerHTML =
+                    '<p class="text-xs text-gray-500">No previous conversations yet.</p>';
+                return;
+            }
+
+            conversations.forEach(conversation => {
+                const button = document.createElement("button");
+
+                button.type = "button";
+                button.textContent = conversation.title || "New Chat";
+                button.title = conversation.title || "New Chat";
+
+                button.className =
+                    "optionBtn rounded-full px-3 py-2 text-xs truncate max-w-full";
+
+                if (String(conversation.id) === String(activeConversationId)) {
+                    button.classList.add("selected");
+                }
+
+                button.addEventListener("click", () => {
+                    openConversation(conversation.id);
+                });
+
+                conversationList.appendChild(button);
+            });
+        }
+
+        // Load messages belonging to one conversation
+        async function openConversation(conversationId) {
+            try {
+                activeConversationId = String(conversationId);
+
+                localStorage.setItem(
+                    "activeConversationId",
+                    activeConversationId
+                );
+
+                chatArea.innerHTML = "";
+
+                const data = await apiRequest(
+                    `/api/ai/conversations/${conversationId}/messages`
+                );
+
+                const messages = data.messages || [];
+
+                if (messages.length === 0) {
+                    showWelcomeScreen(false);
+                } else {
+                    messages.forEach(message => {
+                        if (
+                            message.role === "assistant" &&
+                            message.content?.startsWith("TRIP_RESULT_JSON:")
+                        ) {
+                            try {
+                                const saved = JSON.parse(
+                                    message.content.substring("TRIP_RESULT_JSON:".length)
+                                );
+
+                                if (saved.trip && saved.data) {
+                                    addTripResult(saved.trip, saved.data);
+                                } else {
+                                    addMessage(message.content, message.role);
+                                }
+                            } catch (error) {
+                                console.error("Failed to restore saved trip:", error);
+                                addMessage(message.content, message.role);
+                            }
+                        } else {
+                            addMessage(message.content, message.role);
+                        }
+                    });
+                }
+
+                await loadConversations();
+
+            } catch (error) {
+                console.error("Could not open conversation:", error);
+                alert(error.message);
+            }
+        }
+
+        // Create a new conversation without deleting previous ones
+        async function startNewChat() {
+            try {
+                const data = await apiRequest("/api/ai/conversations", {
+                    method: "POST",
+                    body: JSON.stringify({})
+                });
+
+                activeConversationId = String(data.conversation.id);
+
+                localStorage.setItem(
+                    "activeConversationId",
+                    activeConversationId
+                );
+
+                showWelcomeScreen(false);
+
+                messageInput.value = "";
+
+                await loadConversations();
+
+            } catch (error) {
+                console.error("Could not create conversation:", error);
+                alert(error.message);
+            }
+        }
+
+        // Save one message in PostgreSQL
+        async function saveMessage(role, content) {
+            return await apiRequest(
+                `/api/ai/conversations/${activeConversationId}/messages`,
+                {
+                    method: "POST",
+                    body: JSON.stringify({
+                        role: role,
+                        content: content
+                    })
+                }
+            );
+        }
+
+        // Send and save the user's message
+
+
+        chatForm.addEventListener("submit", async event => {
+            event.preventDefault();
+
+            const message = messageInput.value.trim();
+            if (!message) return;
+
+            if (!activeConversationId) {
+                alert("Please start a new chat first.");
+                return;
+            }
+
+            const conversationId = String(activeConversationId);
+            const storageKey = `aiTripState_${conversationId}`;
+            const text = message.toLowerCase();
+
+            // Detect whether the user is asking to start a new trip.
+            const isFollowUp =
+                /\b(make it|change|update|increase|decrease|reduce|raise|lower|replace|remove|add|instead|cheaper|modify|revise|extend|shorten)\b/i.test(text);
+
+
+            const isStandalonePlaceRequest =
+                /\b(suggest|recommend|show|find|explore)\b/i.test(text) &&
+                /\b(places|spots|restaurants|cafes|food|things to do)\b/i.test(text) &&
+                /\b(in|around|near|at|within)\s+[\w]/i.test(text);
+
+            const startsNewTrip =
+                (
+                    !isFollowUp &&
+                    /\b(new trip|another trip|different trip|start over|start a new trip)\b/i.test(text)
+                ) ||
+                (
+                    !isFollowUp &&
+                    /\b(plan|create)\b.*\b(trip|itinerary|day|weekend|night|hours?|outing|visit)\b/i.test(text)
+                ) ||
+                isStandalonePlaceRequest;
+
+            // Start with empty details for a new trip.
+            let trip = {
+                budget: null,
+                duration: null,
+                interest: null,
+                destination: "",
+                company: "",
+                mood: ""
+            };
+
+            // Reuse saved details only when continuing the current trip.
+            if (!startsNewTrip) {
+                try {
+                    trip = {
+                        ...trip,
+                        ...JSON.parse(localStorage.getItem(storageKey) || "{}")
+                    };
+                } catch (error) {
+                    console.warn("Could not load trip preferences:", error);
+                }
+            }
+
+            messageInput.value = "";
+            addMessage(message, "user");
+
+            const sendButton = chatForm.querySelector(
+                'button[type="submit"]'
+            );
+            sendButton.disabled = true;
+
+            try {
+                await saveMessage("user", message);
+
+
+
+                // Detect interests and interest changes.
+                const categories = [
+                    { name: "food", pattern: /\b(food|restaurant|restaurants|cafe|cafes|biryani|foodie)\b/i },
+                    { name: "history", pattern: /\b(history|historical|heritage|fort|forts|museum|museums|monument|monuments)\b/i },
+                    { name: "nature", pattern: /\b(nature|park|parks|lake|lakes|garden|gardens)\b/i },
+                    { name: "shopping", pattern: /\b(shopping|mall|malls|market|markets)\b/i },
+                    { name: "nightlife", pattern: /\b(nightlife|bar|bars|pub|pubs)\b/i },
+                    { name: "entertainment", pattern: /\b(entertainment|movies|amusement)\b/i }
+                ];
+
+                // If the user specifies a new interest, prioritize the new value.
+                const interestChangeMatch = text.match(
+                    /\b(?:change|update|switch|replace|set|make)\b.*?\b(?:to|into|with)\s+(.+)/i
+                );
+
+                const newInterest = interestChangeMatch
+                    ? categories.find(category =>
+                        category.pattern.test(interestChangeMatch[1])
+                    )
+                    : null;
+
+                if (newInterest) {
+                    trip.interest = newInterest.name;
+                } else {
+                    // Normal interest detection for new trip requests.
+                    const detectedCategories = categories
+                        .filter(category => category.pattern.test(text))
+                        .map(category => category.name);
+
+                    if (detectedCategories.length > 0) {
+                        trip.interest = detectedCategories[0];
+                    }
+                }
+
+
+                // 2. Detect budget.
+                const numberPattern = String.raw`[\d,]+`;
+
+                // First, detect a change from an old budget to a new budget.
+                // Examples: "change 2000 to 3000", "change budget 2000 to 3000"
+                const changeBudgetMatch = text.match(
+                    new RegExp(
+                        String.raw`\b(?:change|update|increase|decrease|raise|lower|modify|replace)\b` +
+                        String.raw`.*?${numberPattern}\s+(?:to|into|with)\s*(?:₹|rs\.?\s*|inr\s*)?(${numberPattern})`,
+                        "i"
+                    )
+                );
+
+                // Detect a budget stated with currency.
+                // Examples: "₹3000", "Rs 3000", "3000 rupees"
+                const currencyBudgetMatch = text.match(
+                    new RegExp(
+                        String.raw`(?:₹|rs\.?\s*|inr\s*)([\d,]+)|([\d,]+)\s*(?:rupees|rs\b)`,
+                        "i"
+                    )
+                );
+
+                // Detect a budget stated with context.
+                // Examples: "change budget to 3000", "my budget is 3000"
+                const contextualBudgetMatch = text.match(
+                    /\b(?:budget|spend|spending|under|within|upto|up to|maximum|max)\b.*?(?:₹|rs\.?\s*|inr\s*)?([\d,]+)/i
+                );
+
+                // Detect a message containing only a number, e.g. "3000"
+                const plainNumberMatch = text.match(/^\s*([\d,]+)\s*$/);
+
+                let amountText = null;
+
+                if (changeBudgetMatch) {
+                    // Use the NEW amount, not the old amount.
+                    amountText = changeBudgetMatch[1];
+                } else if (currencyBudgetMatch) {
+                    amountText = currencyBudgetMatch[1] || currencyBudgetMatch[2];
+                } else if (contextualBudgetMatch) {
+                    amountText = contextualBudgetMatch[1];
+                } else if (plainNumberMatch) {
+                    amountText = plainNumberMatch[1];
+                }
+
+                if (amountText) {
+                    const amount = Number(amountText.replace(/,/g, ""));
+
+                    if (Number.isFinite(amount) && amount > 0) {
+                        trip.budget = amount;
+                    }
+                }
+
+
+                // Detect duration and duration changes.
+                const durationOptions = [
+                    {
+                        value: "4 hours",
+                        pattern: /\b(4 hours?|four hours?|4-hour|four-hour)\b/i
+                    },
+                    {
+                        value: "weekend",
+                        pattern: /\b(weekend|two days|2 days|2-day|2 day)\b/i
+                    },
+                    {
+                        value: "3 days",
+                        pattern: /\b(three days|3 days|3-day|3 day)\b/i
+                    },
+                    {
+                        value: "1 day",
+                        pattern: /\b(one day|1 day|one-day|1-day|day trip|full day)\b/i
+                    },
+                    {
+                        value: "night",
+                        pattern: /\b(night|night trip|evening trip)\b/i
+                    }
+                ];
+
+                const durationChangeMatch = text.match(
+                    /\b(?:change|update|switch|replace|set|make|extend|shorten)\b.*?\b(?:to|into|with)\s+(.+)/i
+                );
+
+                const newDuration = durationChangeMatch
+                    ? durationOptions.find(option =>
+                        option.pattern.test(durationChangeMatch[1])
+                    )
+                    : null;
+
+                if (newDuration) {
+                    trip.duration = newDuration.value;
+                } else {
+                    // Normal duration detection for new trip requests.
+                    const detectedDuration = durationOptions.find(option =>
+                        option.pattern.test(text)
+                    );
+
+                    if (detectedDuration) {
+                        trip.duration = detectedDuration.value;
+                    }
+                }
+                // 4. Detect optional travel companions and mood.
+                if (/\b(solo|alone|by myself)\b/.test(text)) {
+                    trip.company = "solo";
+                } else if (/\b(friends|friend|group)\b/.test(text)) {
+                    trip.company = "friends";
+                } else if (/\b(family|parents|kids|children)\b/.test(text)) {
+                    trip.company = "family";
+                } else if (/\b(partner|couple|romantic)\b/.test(text)) {
+                    trip.company = "couple";
+                }
+
+                if (/\b(relax|relaxing|peaceful|calm)\b/.test(text)) {
+                    trip.mood = "relaxing";
+                } else if (/\b(adventure|adventurous|thrilling)\b/.test(text)) {
+                    trip.mood = "adventure";
+                } else if (/\b(budget-friendly|cheap|affordable)\b/.test(text)) {
+                    trip.mood = "budget-friendly";
+                }
+
+
+
+                /* Detect destination from different ways users express a location. */
+
+                // First handle destination changes.
+                // Examples:
+                // "change Madhapur to Uppal"
+                // "change my destination from Madhapur to Uppal"
+                // "switch Madhapur to Uppal"
+                // "replace Madhapur with Uppal"
+
+                const destinationChangeMatch = text.match(
+                    /\b(?:change|update|switch|replace|move)\b.*?(?:from\s+[\w\s]+?\s+)?\b(?:to|into|with)\s+([a-z][a-z\s-]*?)(?:\s*[?.!,]|$)/i
+                );
+
+                let detectedDestination = "";
+
+                if (destinationChangeMatch) {
+                    detectedDestination = destinationChangeMatch[1]
+                        .trim()
+                        .replace(/[?.!,]+$/, "")
+                        .trim();
+                } else {
+
+                    const destinationPatterns = [
+                        /\b(?:plan|planning|trip|itinerary|places|spots|restaurants|food|cafes|shopping|visit|explore|recommendations?|suggestions?)\s+(?:a\s+trip\s+)?(?:in|around|near|at|within|for|to)\s+(.+)/i,
+
+                        /\b(?:in|around|near|at|within|inside|outside|across|through|from)\s+(.+)/i,
+
+                        /\b(?:plan|explore|visit|show|find|suggest|recommend)\s+(?:me\s+)?(?:places|spots|restaurants|cafes|food|things\s+to\s+do)?\s*(?:in|around|near|at|within|for|to)\s+(.+)/i
+                    ];
+
+                    const stopWords =
+                        /\b(?:for|with|under|budget|tomorrow|today|tonight|this weekend|next week|and|that|which|where)\b/i;
+
+                    for (const pattern of destinationPatterns) {
+                        const match = text.match(pattern);
+
+                        if (match) {
+                            detectedDestination = match[1]
+                                .replace(/[?.!,]+$/, "")
+                                .trim();
+
+                            const stopMatch = detectedDestination.match(stopWords);
+
+                            if (stopMatch && stopMatch.index > 0) {
+                                detectedDestination = detectedDestination
+                                    .slice(0, stopMatch.index)
+                                    .trim();
+                            }
+
+                            if (detectedDestination) {
+                                break;
+                            }
+                        }
+                    }
+                }
+
+                if (detectedDestination) {
+                    trip.destination = detectedDestination;
+                }
+
+
+
+                // Save the updated preferences for this conversation.
+                localStorage.setItem(storageKey, JSON.stringify(trip));
+
+                // 5. Ask for missing required information.
+
+                // 5. Ask for all missing required trip information.
+                let reply = "";
+
+                if (!trip.duration) {
+                    reply = "How long would you like to explore " +
+                        (trip.destination || "Hyderabad") + "?";
+                } else if (!trip.budget) {
+                    reply =
+                        "Got it! You're planning a " + trip.duration +
+                        " trip in " + (trip.destination || "Hyderabad") +
+                        ". 💰 What's your approximate total budget in rupees?";
+                } else if (!trip.interest) {
+                    reply =
+                        "Great! Your budget is ₹" + trip.budget +
+                        ". What would you like to explore?";
+                } else {
+                    reply = null;
+                }
+
+                if (reply) {
+                    const durationOptions = !trip.duration
+                        ? [
+                            { label: "4 Hours", value: "4 hours" },
+                            { label: "1 Day", value: "1 day" },
+                            { label: "Night", value: "night" },
+                            { label: "Weekend", value: "weekend" }
+                        ]
+                        : [];
+
+                    const interestOptions = (
+                        trip.duration && trip.budget && !trip.interest
+                    )
+                        ? [
+                            { label: "🍜 Food", value: "food" },
+                            { label: "🏛️ History", value: "history" },
+                            { label: "🌳 Nature", value: "nature" },
+                            { label: "🎭 Entertainment", value: "entertainment" },
+                            { label: "🛍️ Shopping", value: "shopping" },
+                            { label: "🌙 Nightlife", value: "nightlife" }
+                        ]
+                        : [];
+
+                    addMessage(
+                        reply,
+                        "assistant",
+                        durationOptions.length ? durationOptions : interestOptions
+                    );
+
+                    await saveMessage("assistant", reply);
+                    await loadConversations();
+                    return;
+                }
+
+                const response = await fetch("/plan", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+                        destination: trip.destination || "anywhere",
+                        interest: trip.interest,
+                        budget: trip.budget,
+                        duration: trip.duration,
+                        company: trip.company,
+                        mood: trip.mood,
+                        current_location: ""
+                    })
+                });
+
+                const data = await response.json();
+
+                if (!response.ok || !data.success) {
+                    throw new Error(
+                        data.error || "Unable to generate your itinerary."
+                    );
+                }
+
+                // Display the existing /plan response using recommendation cards.
+                addTripResult(trip, data);
+
+                // Save a readable text summary in conversation history for now.
+                let itineraryReply =
+                    `Here is your ${trip.destination || "selected"} trip plan! 🗺️\n\n` +
+                    `Duration: ${trip.duration}\n` +
+                    `Interest: ${trip.interest}\n` +
+                    `Budget: ₹${trip.budget}\n` +
+                    `Estimated total: ₹${data.total_cost ?? "Not available"}\n\n`;
+
+                if (data.summary) {
+                    itineraryReply += data.summary + "\n\n";
+                }
+
+                if (Array.isArray(data.itinerary) && data.itinerary.length > 0) {
+                    itineraryReply += "YOUR ITINERARY\n\n";
+
+                    data.itinerary.forEach((item, index) => {
+                        const place = item.place || item;
+
+                        itineraryReply +=
+                            `${index + 1}. ${item.slot || "Visit"}: ${place.name || "Recommended place"}\n`;
+
+                        if (place.area) {
+                            itineraryReply += `Area: ${place.area}\n`;
+                        }
+
+                        const price =
+                            place.price_range ?? place.cost ?? place.price;
+
+                        if (price !== undefined && price !== null) {
+                            itineraryReply += `Estimated price: ₹${price}\n`;
+                        }
+
+                        itineraryReply += "\n";
+                    });
+                }
+
+                const savedTripMessage =
+                    "TRIP_RESULT_JSON:" + JSON.stringify({ trip, data });
+
+                await saveMessage("assistant", savedTripMessage);
+                await loadConversations();
+            } catch (error) {
+                console.error("Conversational planning error:", error);
+
+                const errorReply =
+                    "I couldn't process your trip request. Please try again.";
+
+                addMessage(errorReply, "assistant");
+
+                try {
+                    await saveMessage("assistant", errorReply);
+                } catch (saveError) {
+                    console.error("Could not save error message:", saveError);
+                }
+
+            } finally {
+                sendButton.disabled = false;
+                messageInput.focus();
+            }
+        });
+
+        // Enter sends; Shift+Enter adds a new line
+        messageInput.addEventListener("keydown", event => {
+            if (event.key === "Enter" && !event.shiftKey) {
+                event.preventDefault();
+                chatForm.requestSubmit();
+            }
+        });
+
+        // New Chat creates a separate saved conversation
+        newChatBtn.addEventListener("click", startNewChat);
+
+        // Clear messages starts a new conversation, preserving history
+        clearChat.addEventListener("click", startNewChat);
+
+        // Initialize the page
+        async function initializePlanner() {
+            try {
+                if (!token) {
+                    conversationList.innerHTML =
+                        '<p class="text-xs text-gray-400">Please log in to save and restore conversations.</p>';
+                    return;
+                }
+
+                await loadConversations();
+
+                if (
+                    activeConversationId &&
+                    conversations.some(
+                        conversation =>
+                            String(conversation.id) ===
+                            String(activeConversationId)
+                    )
+                ) {
+                    await openConversation(activeConversationId);
+                } else if (conversations.length > 0) {
+                    await openConversation(conversations[0].id);
+                } else {
+                    await startNewChat();
+
+                    const welcomeMessage = document.getElementById("welcomeMessage");
+                    if (welcomeMessage) {
+                        welcomeMessage.classList.remove("hidden");
+                    }
+                }
+
+            } catch (error) {
+                console.error("Planner initialization error:", error);
+
+                conversationList.innerHTML =
+                    '<p class="text-xs text-red-400">Could not load conversations. Please log in again if your session has expired.</p>';
+            }
+        }
+
+        initializePlanner();
+    </script>
+
+</body>
+
+</html>

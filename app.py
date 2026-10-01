@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect
+from flask import Flask, render_template, request, redirect, jsonify
 import requests
 import json
 import os
@@ -1406,6 +1406,280 @@ def register_page():
     return render_template("register.html")
 
 
+@app.route("/ai-planner")
+def ai_planner():
+    return render_template("ai_planner.html")
+
+
+# =========================================================
+# AI TRAVEL PLANNER - CONVERSATION APIs
+# =========================================================
+
+# GET all conversations belonging to the logged-in user
+@app.route("/api/ai/conversations", methods=["GET"])
+def get_ai_conversations():
+    payload, error, status = verify_token()
+
+    if error:
+        return error, status
+
+    user_id = payload["user_id"]
+    conn = None
+
+    try:
+        conn = get_connection()
+        cursor = conn.cursor()
+
+        cursor.execute("""
+            SELECT id, title, created_at, updated_at
+            FROM ai_conversations
+            WHERE user_id = %s
+            ORDER BY updated_at DESC
+        """, (user_id,))
+
+        rows = cursor.fetchall()
+
+        conversations = [
+            {
+                "id": row[0],
+                "title": row[1],
+                "created_at": row[2],
+                "updated_at": row[3]
+            }
+            for row in rows
+        ]
+
+        cursor.close()
+
+        return {"conversations": conversations}, 200
+
+    except Exception:
+        if conn:
+            conn.rollback()
+
+        app.logger.exception("Failed to fetch AI conversations")
+        return {"error": "Could not load conversations"}, 500
+
+    finally:
+        if conn:
+            conn.close()
+
+
+# POST create a new conversation
+@app.route("/api/ai/conversations", methods=["POST"])
+def create_ai_conversation():
+    payload, error, status = verify_token()
+
+    if error:
+        return error, status
+
+    user_id = payload["user_id"]
+    conn = None
+
+    try:
+        conn = get_connection()
+        cursor = conn.cursor()
+
+        cursor.execute("""
+            INSERT INTO ai_conversations (user_id, title)
+            VALUES (%s, %s)
+            RETURNING id, title, created_at, updated_at
+        """, (user_id, "New Chat"))
+
+        row = cursor.fetchone()
+        conn.commit()
+        cursor.close()
+
+        return {
+            "message": "Conversation created successfully",
+            "conversation": {
+                "id": row[0],
+                "title": row[1],
+                "created_at": row[2],
+                "updated_at": row[3]
+            }
+        }, 201
+
+    except Exception:
+        if conn:
+            conn.rollback()
+
+        app.logger.exception("Failed to create AI conversation")
+        return {"error": "Could not create conversation"}, 500
+
+    finally:
+        if conn:
+            conn.close()
+
+
+# GET messages from a conversation
+@app.route(
+    "/api/ai/conversations/<int:conversation_id>/messages",
+    methods=["GET"]
+)
+def get_ai_messages(conversation_id):
+    payload, error, status = verify_token()
+
+    if error:
+        return error, status
+
+    user_id = payload["user_id"]
+    conn = None
+
+    try:
+        conn = get_connection()
+        cursor = conn.cursor()
+
+        # Verify that this conversation belongs to the logged-in user
+        cursor.execute("""
+            SELECT id
+            FROM ai_conversations
+            WHERE id = %s AND user_id = %s
+        """, (conversation_id, user_id))
+
+        if cursor.fetchone() is None:
+            cursor.close()
+            return {"error": "Conversation not found"}, 404
+
+        cursor.execute("""
+            SELECT id, role, content, created_at
+            FROM ai_messages
+            WHERE conversation_id = %s
+            ORDER BY created_at ASC, id ASC
+        """, (conversation_id,))
+
+        rows = cursor.fetchall()
+
+        messages = [
+            {
+                "id": row[0],
+                "role": row[1],
+                "content": row[2],
+                "created_at": row[3]
+            }
+            for row in rows
+        ]
+
+        cursor.close()
+
+        return {"messages": messages}, 200
+
+    except Exception:
+        if conn:
+            conn.rollback()
+
+        app.logger.exception("Failed to fetch AI messages")
+        return {"error": "Could not load messages"}, 500
+
+    finally:
+        if conn:
+            conn.close()
+
+
+# POST save a message to a conversation
+@app.route(
+    "/api/ai/conversations/<int:conversation_id>/messages",
+    methods=["POST"]
+)
+def save_ai_message(conversation_id):
+    payload, error, status = verify_token()
+
+    if error:
+        return error, status
+
+    user_id = payload["user_id"]
+    data = request.get_json(silent=True) or {}
+
+    role = data.get("role")
+    content = data.get("content")
+
+    if role not in ("user", "assistant"):
+        return {"error": "Role must be user or assistant"}, 400
+
+    if not isinstance(content, str) or not content.strip():
+        return {"error": "Message content is required"}, 400
+
+    content = content.strip()
+
+    if len(content) > 20000:
+        return {"error": "Message is too long"}, 400
+
+    conn = None
+
+    try:
+        conn = get_connection()
+        cursor = conn.cursor()
+
+        # Check ownership before saving anything
+        cursor.execute("""
+            SELECT id, title
+            FROM ai_conversations
+            WHERE id = %s AND user_id = %s
+        """, (conversation_id, user_id))
+
+        conversation = cursor.fetchone()
+
+        if conversation is None:
+            cursor.close()
+            return {"error": "Conversation not found"}, 404
+
+        cursor.execute("""
+            INSERT INTO ai_messages
+                (conversation_id, role, content)
+            VALUES (%s, %s, %s)
+            RETURNING id, role, content, created_at
+        """, (conversation_id, role, content))
+
+        row = cursor.fetchone()
+
+        # Use the first user message as the conversation title
+        if role == "user" and conversation[1] == "New Chat":
+            title = content.replace("\n", " ").strip()
+
+            if len(title) > 60:
+                title = title[:57] + "..."
+
+            cursor.execute("""
+                UPDATE ai_conversations
+                SET title = %s,
+                    updated_at = CURRENT_TIMESTAMP
+                WHERE id = %s AND user_id = %s
+            """, (title, conversation_id, user_id))
+
+        else:
+            cursor.execute("""
+                UPDATE ai_conversations
+                SET updated_at = CURRENT_TIMESTAMP
+                WHERE id = %s AND user_id = %s
+            """, (conversation_id, user_id))
+
+        conn.commit()
+        cursor.close()
+
+        return {
+            "message": "Message saved successfully",
+            "saved_message": {
+                "id": row[0],
+                "role": row[1],
+                "content": row[2],
+                "created_at": row[3]
+            }
+        }, 201
+
+    except Exception:
+        if conn:
+            conn.rollback()
+
+        app.logger.exception("Failed to save AI message")
+        return {"error": "Could not save message"}, 500
+
+    finally:
+        if conn:
+            conn.close()
+
+
+
+
 # ---------------------------
 # ENTRY PAGE
 # ---------------------------
@@ -1454,20 +1728,47 @@ def plan():
     print("========== /plan ROUTE CALLED ==========", flush=True)
     print("PLAN ROUTE CALLED", flush=True)
     print("========== PLAN ROUTE CALLED ==========", flush=True)
-
+    print("DEBUG: request.is_json =", request.is_json)
+    print("DEBUG: content_type =", request.content_type)
     # ---------------------------
     # USER INPUTS
     # ---------------------------
-    current_location = request.form.get("current_location", "")
-    destination = request.form.get("destination", "Anywhere").strip().lower()
-    interest = request.form.get("interest", "").strip().lower()
-    company = request.form.get("company", "").strip().lower()
-    mood = request.form.get("mood", "").strip().lower()
+
+    chat_data = request.get_json(silent=True) or {}
+
+    def get_plan_value(name, default=""):
+        if name in chat_data:
+            return chat_data.get(name, default)
+        return request.form.get(name, default)
+
+    current_location = str(
+        get_plan_value("current_location", "") or ""
+    )
+
+    destination = str(
+        get_plan_value("destination", "Anywhere") or "Anywhere"
+    ).strip().lower()
+
+    interest = str(
+        get_plan_value("interest", "") or ""
+    ).strip().lower()
+
+    company = str(
+        get_plan_value("company", "") or ""
+    ).strip().lower()
+
+    mood = str(
+        get_plan_value("mood", "") or ""
+    ).strip().lower()
+
     try:
-       budget = int(request.form.get("budget", 2000))
+        budget = int(get_plan_value("budget", 2000))
     except (ValueError, TypeError):
-       budget = 2000
-    duration = request.form.get("duration", "1 day").lower()
+        budget = 2000
+
+    duration = str(
+        get_plan_value("duration", "1 day") or "1 day"
+    ).lower()
 
 
     
@@ -2005,7 +2306,6 @@ def plan():
     print("\nITINERARY SOURCE\n")
 
     for p in source:
-
         print(
             p.get("name"),
             "|",
@@ -2019,88 +2319,55 @@ def plan():
     # Shuffle for variety
     # random.shuffle(source)
 
-    itinerary = []
-
-    used_categories = set()
-    used_places = set()
-
-    # Fixed order of categories
-    CATEGORY_ORDER = [
-        "history",
-        "nature",
-        "food",
-        "shopping",
-        "entertainment",
-        "nightlife"
+    # Prioritize the interests selected by the user
+    selected_categories = [
+        item.strip().lower()
+        for item in str(interest or "").split(",")
+        if item.strip()
     ]
 
-    # Select one unique place from each category
-    for slot in slots:
+    itinerary = []
+    used_places = set()
 
+    for slot in slots:
         selected = None
 
-        # Use the slot index to choose the required category
-        slot_index = slots.index(slot)
+        # Priority 1: Find a unique place matching a selected interest
+        for place in source:
+            category = str(
+                place.get("category", "")
+            ).strip().lower()
 
-        if slot_index < len(CATEGORY_ORDER):
-            required_category = CATEGORY_ORDER[slot_index]
-        else:
-            required_category = None
+            normalized_name = normalize_place_name(
+                place.get("name")
+            )
 
-        # Priority 1:
-        # Select a new place from the required category
-        if required_category:
+            if (
+                category in selected_categories
+                and normalized_name not in used_places
+            ):
+                selected = place
+                used_places.add(normalized_name)
+                break
 
-            for place in source:
-
-                category = str(
-                    place.get("category", "")
-                ).strip().lower()
-
-                normalized_name = normalize_place_name(
-                    place.get("name")
-                )
-
-                if (
-                    category == required_category
-                    and category not in used_categories
-                    and normalized_name not in used_places
-                ):
-
-                    selected = place
-
-                    used_categories.add(category)
-                    used_places.add(normalized_name)
-
-                    break
-
-        # Priority 2:
-        # If that category is unavailable, select any new place
+        # Priority 2: If no matching place remains, use another unique place
         if not selected:
-
             for place in source:
-
                 normalized_name = normalize_place_name(
                     place.get("name")
                 )
 
                 if normalized_name not in used_places:
-
                     selected = place
                     used_places.add(normalized_name)
-
                     break
 
         # Add selected place to itinerary
-
-
         if selected:
-
             itinerary.append({
                 "slot": slot,
                 "place": selected
             })
-
     # ============================================================
     # FINAL GOOGLE MAPS LINKS
     # ============================================================
@@ -2271,6 +2538,65 @@ def plan():
     # ---------------------------
     # RENDER RESULT
     # ---------------------------
+
+    print("DEBUG: request.is_json =", request.is_json)
+    print("DEBUG: request.content_type =", request.content_type)
+
+    
+    # Return JSON to the AI chat, but preserve the existing planner page.
+    if request.is_json:
+        return jsonify({
+            "success": True,
+            "destination": destination,
+            "interest": interest,
+            "budget": budget,
+            "duration": duration,
+            "summary": summary,
+            "total_cost": total_cost,
+            "itinerary": [
+                {
+                    "slot": item["slot"],
+                    "name": item["place"].get("name", ""),
+                    "area": item["place"].get("area", ""),
+                    "category": item["place"].get("category", ""),
+                    "price": item["place"].get("price_range", 0),
+                    "rating": item["place"].get("rating", 0),
+                    "maps_link": item["place"].get("maps_link", "")
+                }
+                for item in itinerary
+            ],
+            "within_budget": [
+                {
+                    "name": p.get("name", ""),
+                    "area": p.get("area", ""),
+                    "price": p.get("price_range", 0),
+                    "rating": p.get("rating", 0),
+                    "maps_link": p.get("maps_link", "")
+                }
+                for p in within_budget
+            ],
+            "above_budget": [
+                {
+                    "name": p.get("name", ""),
+                    "area": p.get("area", ""),
+                    "price": p.get("price_range", 0),
+                    "rating": p.get("rating", 0),
+                    "maps_link": p.get("maps_link", "")
+                }
+                for p in above_budget
+            ],
+            "premium": [
+                {
+                    "name": p.get("name", ""),
+                    "area": p.get("area", ""),
+                    "price": p.get("price_range", 0),
+                    "rating": p.get("rating", 0),
+                    "maps_link": p.get("maps_link", "")
+                }
+                for p in premium
+            ]
+        })
+
     return render_template(
         "result.html",
         current_location=current_location,
