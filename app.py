@@ -1735,6 +1735,7 @@ def plan():
     # ---------------------------
 
     chat_data = request.get_json(silent=True) or {}
+    print("DEBUG: /plan chat_data =", chat_data, flush=True)
 
     def get_plan_value(name, default=""):
         if name in chat_data:
