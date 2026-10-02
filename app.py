@@ -1747,8 +1747,8 @@ def plan():
     )
 
     destination = str(
-        get_plan_value("destination", "Anywhere") or "Anywhere"
-    ).strip().lower()
+    get_plan_value("destination", "Hyderabad") or "Hyderabad").strip().lower()
+    
 
     interest = str(
         get_plan_value("interest", "") or ""
@@ -1849,8 +1849,7 @@ def plan():
     # ANYWHERE: DO NOT FILTER BY DESTINATION
     # ============================================================
 
-    if destination == "anywhere":
-
+    if destination in ("anywhere", "hyderabad", "hyd"):
         print(
             "🌍 Destination is 'anywhere'. "
             "Skipping destination filtering."
