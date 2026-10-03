@@ -203,6 +203,105 @@
         }
 
 
+        /* NEW CHAT BUTTON */
+
+        .newChatMobileBtn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+
+            flex-shrink: 0;
+
+            min-height: 36px;
+            padding: 8px 14px;
+
+            border-radius: 10px;
+            border: 1px solid rgba(0, 234, 255, 0.45);
+
+            background: linear-gradient(135deg,
+                    rgba(0, 234, 255, 0.14),
+                    rgba(168, 85, 247, 0.14));
+
+            color: #67e8f9;
+
+            font-size: 12px;
+            font-weight: 600;
+
+            box-shadow:
+                0 0 12px rgba(0, 234, 255, 0.08),
+                inset 0 0 12px rgba(168, 85, 247, 0.04);
+
+            cursor: pointer;
+            pointer-events: auto;
+            touch-action: manipulation;
+
+            transition:
+                transform 0.2s ease,
+                border-color 0.2s ease,
+                box-shadow 0.2s ease,
+                background 0.2s ease;
+        }
+
+        .newChatMobileBtn:hover {
+            border-color: rgba(0, 234, 255, 0.8);
+
+            background: linear-gradient(135deg,
+                    rgba(0, 234, 255, 0.22),
+                    rgba(168, 85, 247, 0.20));
+
+            box-shadow:
+                0 0 16px rgba(0, 234, 255, 0.18),
+                0 0 24px rgba(168, 85, 247, 0.08);
+        }
+
+        .newChatMobileBtn:active {
+            transform: scale(0.94);
+        }
+
+
+        /* CONVERSATION HEADER - ALL LAYOUTS */
+
+        .conversationHeader {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            width: 100%;
+            min-height: 40px;
+
+            margin-bottom: 14px;
+            gap: 6px;
+
+            box-sizing: border-box;
+        }
+
+        .conversationHeader h3 {
+            flex: 1;
+            min-width: 0;
+
+            margin: 0;
+            padding: 0;
+
+            font-size: 13px;
+            line-height: 20px;
+
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .conversationHeader .newChatMobileBtn {
+            flex-shrink: 0;
+
+            min-height: 34px;
+            padding: 7px 10px;
+
+            font-size: 11px;
+        }
+
+
+
 
         /*=========================================
         RESPONSIVE MOBILE LAYOUT
@@ -228,8 +327,8 @@
 
             /* Mobile history button */
             /* =========================================
-   MOBILE HISTORY DRAWER
-   ========================================= */
+            MOBILE HISTORY DRAWER
+            ========================================= */
 
             .mobileHistoryBtn {
                 display: flex;
@@ -278,11 +377,11 @@
             #conversationSidebar {
                 position: fixed;
 
-                top: 0;
+                top: 80px;
                 left: 0;
 
                 width: min(82vw, 320px);
-                height: 100vh;
+                height: calc(100vh - 80px);
 
                 z-index: 100;
 
@@ -307,6 +406,17 @@
             #conversationSidebar.mobile-open {
                 transform: translateX(0);
             }
+
+
+
+            #conversationSidebar .newChatMobileBtn {
+                display: inline-flex !important;
+                cursor: pointer;
+                pointer-events: auto;
+                touch-action: manipulation;
+            }
+
+
 
 
             /* SIDEBAR OVERLAY */
@@ -371,23 +481,7 @@
             }
 
 
-            /* NEW CHAT BUTTON */
 
-            #newChatBtn {
-                position: relative;
-
-                z-index: 101;
-
-                width: 100%;
-
-                min-height: 48px;
-
-                cursor: pointer;
-
-                pointer-events: auto;
-
-                touch-action: manipulation;
-            }
 
             /* Main content uses entire screen */
             main {
@@ -570,6 +664,9 @@
                 overflow: hidden;
                 text-overflow: ellipsis;
             }
+
+
+
         }
 
 
@@ -619,6 +716,8 @@
             .message {
                 max-width: 94%;
             }
+
+
         }
 
         @media (min-width: 640px) {
@@ -686,14 +785,15 @@
 
             <!-- LEFT SIDEBAR: CONVERSATION HISTORY -->
             <aside id="conversationSidebar" class="w-64 shrink-0 border-r border-white/10 bg-black/40 p-4">
-                <button id="newChatBtn" type="button"
-                    class="glowBtn w-full rounded-xl px-4 py-3 text-sm font-medium mb-6">
-                    + New Chat
-                </button>
+                <div class="conversationHeader">
+                    <h3 class="font-semibold text-sm text-gray-300">
+                        Your Conversations
+                    </h3>
 
-                <h3 class="font-semibold text-sm text-gray-300 mb-3">
-                    Your Conversations
-                </h3>
+                    <button id="newChatBtn" type="button" class="newChatMobileBtn">
+                        ＋ New Chat
+                    </button>
+                </div>
 
                 <div id="conversationList" class="flex flex-col gap-2">
                     <p class="text-xs text-gray-500">
@@ -1518,11 +1618,11 @@
         async function openConversation(conversationId) {
             try {
 
-                
+
 
                 activeConversationId = String(conversationId);
 
-                
+
                 localStorage.setItem(
                     "activeConversationId",
                     activeConversationId
