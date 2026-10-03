@@ -202,6 +202,8 @@
             white-space: nowrap;
         }
 
+
+
         /*=========================================
         RESPONSIVE MOBILE LAYOUT
         ========================================= */
@@ -225,12 +227,18 @@
             }
 
             /* Mobile history button */
+            /* =========================================
+   MOBILE HISTORY DRAWER
+   ========================================= */
+
             .mobileHistoryBtn {
                 display: flex;
                 position: fixed;
+
                 top: 82px;
                 left: 12px;
-                z-index: 60;
+
+                z-index: 110;
 
                 width: 42px;
                 height: 42px;
@@ -241,19 +249,32 @@
                 border-radius: 12px;
                 border: 1px solid rgba(255, 255, 255, 0.15);
 
-                background: rgba(0, 0, 0, 0.75);
+                background: rgba(0, 0, 0, 0.85);
                 color: white;
 
                 font-size: 20px;
 
                 backdrop-filter: blur(10px);
+
+                cursor: pointer;
+                pointer-events: auto;
+
+                transition: 0.2s ease;
             }
 
             .mobileHistoryBtn:active {
                 transform: scale(0.95);
             }
 
-            /* Sidebar becomes a mobile drawer */
+            /* Hide hamburger while drawer is open */
+            .mobileHistoryBtn.drawer-open {
+                opacity: 0;
+                pointer-events: none;
+            }
+
+
+            /* MOBILE SIDEBAR */
+
             #conversationSidebar {
                 position: fixed;
 
@@ -265,7 +286,7 @@
 
                 z-index: 100;
 
-                background: rgba(5, 5, 10, 0.97);
+                background: rgba(5, 5, 10, 0.98);
 
                 border-right: 1px solid rgba(255, 255, 255, 0.12);
 
@@ -275,18 +296,26 @@
                 transition: transform 0.25s ease;
 
                 overflow-y: auto;
+                overflow-x: hidden;
+
+                pointer-events: auto;
+                touch-action: pan-y;
             }
 
-            /* Sidebar open */
+            /* Sidebar OPEN */
+
             #conversationSidebar.mobile-open {
                 transform: translateX(0);
             }
 
-            /* Dark background behind sidebar */
+
+            /* SIDEBAR OVERLAY */
+
             .sidebarOverlay {
                 display: block;
 
                 position: fixed;
+
                 inset: 0;
 
                 z-index: 90;
@@ -294,6 +323,7 @@
                 background: rgba(0, 0, 0, 0.65);
 
                 opacity: 0;
+
                 pointer-events: none;
 
                 transition: opacity 0.25s ease;
@@ -302,6 +332,61 @@
             .sidebarOverlay.active {
                 opacity: 1;
                 pointer-events: auto;
+            }
+
+
+            /* CONVERSATION BUTTONS */
+
+            #conversationList {
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            #conversationList button {
+                width: 100%;
+                max-width: 100%;
+
+                min-height: 48px;
+
+                display: block;
+
+                padding: 12px 14px;
+
+                text-align: left;
+
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+
+                cursor: pointer;
+
+                pointer-events: auto;
+
+                touch-action: manipulation;
+
+                position: relative;
+
+                z-index: 101;
+            }
+
+
+            /* NEW CHAT BUTTON */
+
+            #newChatBtn {
+                position: relative;
+
+                z-index: 101;
+
+                width: 100%;
+
+                min-height: 48px;
+
+                cursor: pointer;
+
+                pointer-events: auto;
+
+                touch-action: manipulation;
             }
 
             /* Main content uses entire screen */
@@ -586,14 +671,16 @@
 
     <!-- MAIN CONTENT -->
 
-    <!-- MOBILE HISTORY BUTTON -->
-    <button id="mobileHistoryBtn" type="button" class="mobileHistoryBtn" aria-label="Open conversation history">
-        ☰
-    </button>
-
-    <!-- MOBILE SIDEBAR OVERLAY -->
-    <div id="sidebarOverlay" class="sidebarOverlay"></div>
     <main class="min-h-screen pt-20">
+
+        <!-- MOBILE HISTORY BUTTON -->
+        <button id="mobileHistoryBtn" type="button" class="mobileHistoryBtn" aria-label="Open conversation history">
+            ☰
+        </button>
+
+        <!-- MOBILE SIDEBAR OVERLAY -->
+        <div id="sidebarOverlay" class="sidebarOverlay"></div>
+
         <div class="flex min-h-[calc(100vh-5rem)] w-full">
 
 
@@ -997,15 +1084,18 @@
         function openMobileSidebar() {
             conversationSidebar.classList.add("mobile-open");
             sidebarOverlay.classList.add("active");
+            mobileHistoryBtn.classList.add("drawer-open");
+
             document.body.style.overflow = "hidden";
         }
 
         function closeMobileSidebar() {
             conversationSidebar.classList.remove("mobile-open");
             sidebarOverlay.classList.remove("active");
+            mobileHistoryBtn.classList.remove("drawer-open");
+
             document.body.style.overflow = "";
         }
-
         mobileHistoryBtn.addEventListener("click", openMobileSidebar);
 
         sidebarOverlay.addEventListener("click", closeMobileSidebar);
@@ -1383,7 +1473,9 @@
                 welcomeMessage.classList.toggle("hidden", !showGreeting);
             }
 
-            loadWelcomeGreeting();
+            if (showGreeting) {
+                loadWelcomeGreeting();
+            }
         }
 
         // Load the conversation history list
@@ -1413,8 +1505,9 @@
                     button.classList.add("selected");
                 }
 
-                button.addEventListener("click", () => {
-                    openConversation(conversation.id);
+                button.addEventListener("click", async () => {
+                    await openConversation(conversation.id);
+                    closeMobileSidebar();
                 });
 
                 conversationList.appendChild(button);
@@ -1425,11 +1518,11 @@
         async function openConversation(conversationId) {
             try {
 
-                // Close mobile history drawer after selecting a conversation
-                closeMobileSidebar();
+                
 
                 activeConversationId = String(conversationId);
 
+                
                 localStorage.setItem(
                     "activeConversationId",
                     activeConversationId
@@ -1480,7 +1573,7 @@
         }
 
         // Create a new conversation without deleting previous ones
-        async function startNewChat() {
+        async function startNewChat(showGreeting = false) {
             try {
                 const data = await apiRequest("/api/ai/conversations", {
                     method: "POST",
@@ -1494,7 +1587,7 @@
                     activeConversationId
                 );
 
-                showWelcomeScreen(false);
+                showWelcomeScreen(showGreeting);
 
                 messageInput.value = "";
 
@@ -1962,15 +2055,16 @@
             }
         });
 
-        // New Chat creates a separate saved conversation
-        newChatBtn.addEventListener("click", () => {
+        // New Chat creates a separate saved conversation without the greeting
+        newChatBtn.addEventListener("click", async () => {
             closeMobileSidebar();
-            startNewChat();
+            await startNewChat(false);
         });
 
         // Clear messages starts a new conversation, preserving history
-        clearChat.addEventListener("click", startNewChat);
-
+        clearChat.addEventListener("click", () => {
+            startNewChat(false);
+        });
         // Initialize the page
         async function initializePlanner() {
             try {
@@ -1980,27 +2074,13 @@
                     return;
                 }
 
-                await loadConversations();
-
-                if (
-                    activeConversationId &&
-                    conversations.some(
-                        conversation =>
-                            String(conversation.id) ===
-                            String(activeConversationId)
-                    )
-                ) {
-                    await openConversation(activeConversationId);
-                } else if (conversations.length > 0) {
-                    await openConversation(conversations[0].id);
-                } else {
-                    await startNewChat();
-
-                    const welcomeMessage = document.getElementById("welcomeMessage");
-                    if (welcomeMessage) {
-                        welcomeMessage.classList.remove("hidden");
-                    }
-                }
+                /*
+                 * Every fresh opening of the AI Planner creates a NEW
+                 * conversation and shows the greeting.
+                 *
+                 * Previous conversations remain safely in History.
+                 */
+                await startNewChat(true);
 
             } catch (error) {
                 console.error("Planner initialization error:", error);
@@ -2009,6 +2089,7 @@
                     '<p class="text-xs text-red-400">Could not load conversations. Please log in again if your session has expired.</p>';
             }
         }
+
 
         initializePlanner();
     </script>
